@@ -1,34 +1,38 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
+const root = resolve(import.meta.dirname,"..");
+const read = file => readFile(resolve(root,file),"utf8");
 
-const root = resolve(import.meta.dirname, "..");
-
-test("site includes core guest-guide routes", async () => {
-  const js = await readFile(resolve(root, "assets/app.js"), "utf8");
-  for (const route of ["checkin", "checkout", "wifi", "appliances", "laundry", "trash", "rules", "location", "nearby", "gallery"]) {
-    assert.match(js, new RegExp(`\\b${route}\\b`));
-  }
+test("single lodging data source contains all guide routes and four languages",async()=>{
+  const data = await read("assets/site-data.js");
+  for(const route of ["checkin","checkout","transport","wifi","appliances","laundry","trash","rules","nearby","guidebook"]) assert.match(data,new RegExp("\\b"+route+"\\b"));
+  assert.ok(data.includes("const I = (ko, en, ja, zh)"));
+  assert.doesNotMatch(data,/FAQ|faq|EXTAY|guide-extay/);
 });
 
-test("public navigation keeps the browser URL on the root domain", async () => {
-  const html = await readFile(resolve(root, "index.html"), "utf8");
-  const js = await readFile(resolve(root, "assets/app.js"), "utf8");
-  assert.doesNotMatch(html, /http-equiv="refresh"/i);
-  assert.doesNotMatch(html, /href="#/);
-  assert.doesNotMatch(js, /location\.hash\s*=/);
-  assert.match(js, /history\.replaceState/);
+test("navigation stays on the root URL and uses no hash routes",async()=>{
+  const html = await read("index.html"); const app = await read("assets/app.js");
+  assert.doesNotMatch(html,/http-equiv="refresh"|href="#/i);
+  assert.doesNotMatch(app,/location\.hash\s*=/);
+  assert.match(app,/history\.replaceState/);
 });
 
-test("public files do not expose private access credentials", async () => {
-  const html = await readFile(resolve(root, "index.html"), "utf8");
-  const js = await readFile(resolve(root, "assets/app.js"), "utf8");
-  assert.equal(html.includes("8282") || js.includes("8282"), false);
-  assert.equal(html.includes("another1234") || js.includes("another1234"), false);
+test("public bundle excludes credentials and duplicate FAQ data",async()=>{
+  const bundle = (await Promise.all(["index.html","assets/app.js","assets/site-data.js"].map(read))).join("\n");
+  for(const forbidden of ["8282","another1234","faqData","faq-data"]) assert.equal(bundle.includes(forbidden),false);
 });
 
-test("four guest languages are present", async () => {
-  const js = await readFile(resolve(root, "assets/app.js"), "utf8");
-  for (const lang of ["ko:", "en:", "ja:", "zh:"]) assert.match(js, new RegExp(lang));
+test("hero motion matches the master timing contract",async()=>{
+  const css = await read("assets/styles.css"); const app = await read("assets/app.js");
+  assert.match(css,/scale\(1\.10\)/); assert.match(css,/heroZoomOut 3\.2s cubic-bezier\(\.22,1,\.36,1\)/); assert.match(css,/prefers-reduced-motion/);
+  assert.match(app,/visibilitychange/); assert.match(app,/pageshow/); assert.match(app,/image\.decode/);
+});
+
+test("SEO and OG assets are complete",async()=>{
+  const html = await read("index.html");
+  for(const token of ["canonical","og:image","twitter:card","application/ld+json"]) assert.ok(html.includes(token));
+  await access(resolve(root,"assets/images/another-house-og-20260727.jpg"));
+  await access(resolve(root,"assets/fonts/oxanium-latin.woff2"));
 });

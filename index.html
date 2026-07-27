@@ -3,249 +3,152 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#a6482f">
+  <meta name="theme-color" content="#a64b35">
   <meta name="color-scheme" content="light">
-  <title>어나더하우스 | 여성 전용 프라이빗 스테이</title>
-  <meta name="description" content="동대문역 도보 30초, 서울의 하루를 조용히 마무리하는 여성 전용 프라이빗 스테이 어나더하우스.">
+  <title>Another House | 여성 전용 프라이빗 스테이</title>
+  <meta name="description" content="동대문역 6번 출구 도보 30초. 서울 종로의 여성 전용 프라이빗 스테이 Another House 공식 게스트 가이드.">
+  <link rel="canonical" href="https://anotherstay-guide.vercel.app/">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anotherstay-guide.vercel.app/">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="Another House">
   <meta property="og:title" content="Another House — Stay Another Life">
   <meta property="og:description" content="동대문역 도보 30초, 오롯이 여성을 위한 프라이빗 스테이.">
-  <meta property="og:image" content="/assets/images/og.jpg">
+  <meta property="og:image" content="https://anotherstay-guide.vercel.app/assets/images/another-house-og-20260727.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Another House — Stay Another Life">
+  <meta name="twitter:description" content="동대문역 도보 30초, 오롯이 여성을 위한 프라이빗 스테이.">
+  <meta name="twitter:image" content="https://anotherstay-guide.vercel.app/assets/images/another-house-og-20260727.jpg">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/images/hero.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script src="/assets/app.js" defer></script>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260727d">
+  <script src="/assets/site-data.js?v=20260727d" defer></script>
+  <script src="/assets/app.js?v=20260727d" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Another House","description":"Women-only private stay near Dongdaemun Station in Seoul.","url":"https://anotherstay-guide.vercel.app/","image":"https://anotherstay-guide.vercel.app/assets/images/hero.webp","address":{"@type":"PostalAddress","streetAddress":"종로 294 선일빌딩 5층","addressLocality":"종로구","addressRegion":"서울","addressCountry":"KR"}}</script>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="site-header" id="siteHeader">
-      <button class="header-btn menu-btn" id="menuButton" type="button" aria-label="메뉴 열기">
-        <span></span><span></span>
-      </button>
-      <a class="wordmark" href="/" data-route="home" aria-label="Another House 홈">ANOTHER HOUSE</a>
-      <button class="language-btn" id="languageButton" type="button" aria-haspopup="listbox" aria-expanded="false">
-        <span id="languageLabel">KO</span>
-        <span aria-hidden="true">⌄</span>
-      </button>
-      <div class="language-menu" id="languageMenu" role="listbox" aria-label="언어 선택">
-        <button type="button" data-lang="ko" role="option">한국어 <small>KO</small></button>
-        <button type="button" data-lang="en" role="option">English <small>EN</small></button>
-        <button type="button" data-lang="ja" role="option">日本語 <small>JA</small></button>
-        <button type="button" data-lang="zh" role="option">中文 <small>ZH</small></button>
+  <div class="site-shell">
+    <header class="topbar" id="topbar">
+      <button class="icon-button menu-trigger" type="button" aria-label="메뉴 열기"><span></span><span></span></button>
+      <button class="top-brand route-trigger" type="button" data-route="home">ANOTHER HOUSE</button>
+      <button class="lang-trigger" id="langTrigger" type="button" aria-expanded="false"><span id="langLabel">KO</span><i>⌄</i></button>
+      <div class="lang-menu" id="langMenu" role="listbox">
+        <button type="button" data-lang="ko">한국어 <small>KO</small></button>
+        <button type="button" data-lang="en">English <small>EN</small></button>
+        <button type="button" data-lang="ja">日本語 <small>JA</small></button>
+        <button type="button" data-lang="zh">中文 <small>ZH</small></button>
       </div>
     </header>
 
-    <main id="main">
-      <div id="homeView">
-        <section class="hero" aria-labelledby="heroTitle">
-          <div class="hero-image" aria-hidden="true"></div>
-          <div class="hero-wash" aria-hidden="true"></div>
-          <div class="hero-content">
-            <p class="hero-eyebrow" data-i18n="heroEyebrow">WOMEN ONLY · DONGDAEMUN</p>
+    <main id="appMain">
+      <div id="homeScreen" class="screen active">
+        <section class="landing-hero" aria-labelledby="heroTitle">
+          <div class="hero-overlay"></div>
+          <div class="hero-copy">
+            <p>SEOUL · WOMEN ONLY</p>
             <h1 id="heroTitle"><span>ANOTHER</span><span>HOUSE</span></h1>
-            <p class="hero-copy" data-i18n="heroCopy">서울의 하루를 조용히 마무리하는<br>여성 전용 프라이빗 스테이</p>
-            <div class="hero-actions">
-              <button class="pill-btn light" type="button" data-open-booking data-i18n="book">예약하기</button>
-              <a class="pill-btn glass" href="/" data-route="checkin" data-i18n="guestGuide">게스트 가이드</a>
-            </div>
+            <em>STAY ANOTHER LIFE</em>
           </div>
-          <a class="scroll-mark" href="/" data-scroll="story" aria-label="아래로 이동"><span></span></a>
+          <button class="hero-scroll" type="button" data-scroll="concierge" aria-label="아래로 이동"><span></span><small>SCROLL</small></button>
         </section>
 
-        <section class="intro section-pad reveal" id="story">
-          <p class="section-kicker">STAY ANOTHER LIFE</p>
-          <h2 data-i18n="introTitle">낯선 서울에서도<br>나답게 쉬어가는 작은 집</h2>
-          <p class="body-copy" data-i18n="introBody">화려함보다 온전한 휴식에 집중했습니다. 부드러운 빛과 따뜻한 목재, 잠글 수 있는 나만의 방이 여행의 긴장을 조용히 내려놓게 합니다.</p>
-          <div class="facts" aria-label="숙소 핵심 정보">
-            <div><strong>30 sec</strong><span data-i18n="factStation">동대문역</span></div>
-            <div><strong>Women</strong><span data-i18n="factWomen">여성 전용</span></div>
-            <div><strong>12 rooms</strong><span data-i18n="factRooms">프라이빗 객실</span></div>
+        <section class="concierge section" id="concierge">
+          <div class="section-label"><span>01</span><b>CONCIERGE</b></div>
+          <h2 data-ui="askTitle">무엇을 도와드릴까요?</h2>
+          <p class="section-lead">Check in smoothly. Stay beautifully.</p>
+          <form class="search-box" id="homeSearch">
+            <input id="homeSearchInput" type="search" autocomplete="off" data-ui-placeholder="askPlaceholder" placeholder="체크인, 교통, Wi-Fi를 검색해 보세요" aria-label="검색">
+            <button type="submit" data-ui-aria="search" aria-label="검색">⌕</button>
+          </form>
+          <div class="quick-grid">
+            <button type="button" data-route="checkin"><span>01</span><b>CHECK-IN</b><small>15:00</small></button>
+            <button type="button" data-route="transport"><span>02</span><b>TRANSPORT</b><small>EXIT 6</small></button>
+            <button type="button" data-route="wifi"><span>03</span><b>WI-FI</b><small>another</small></button>
+            <button type="button" data-route="appliances"><span>04</span><b>FACILITIES</b><small>4 GUIDE</small></button>
           </div>
+          <div class="search-results" id="searchResults" hidden></div>
         </section>
 
-        <section class="brand-story reveal">
-          <img src="/assets/images/brand.webp" alt="STAY ANOTHER LIFE 문구가 새겨진 어나더하우스 복도" loading="lazy">
-          <div class="brand-caption">
-            <span>01</span>
-            <p data-i18n="brandCaption">머무는 동안만큼은<br>조금 다른 삶을 살아보세요.</p>
-          </div>
-        </section>
-
-        <section class="section-pad room-section reveal">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker" data-i18n="roomsKicker">PRIVATE ROOMS</p>
-              <h2 data-i18n="roomsTitle">혼자여도, 함께여도<br>나만의 문이 있는 방</h2>
-            </div>
-            <span class="swipe-hint" data-i18n="swipe">SWIPE →</span>
-          </div>
-          <div class="room-scroll">
-            <article class="room-card">
-              <img src="/assets/images/single-window.webp" alt="큰 창이 있는 어나더하우스 싱글룸" loading="lazy">
-              <div>
-                <span>01 · SINGLE</span>
-                <h3 data-i18n="singleWindowTitle">창가 싱글룸</h3>
-                <p data-i18n="singleWindowCopy">서울의 빛을 품은 1인실 · 최대 1인</p>
-              </div>
-            </article>
-            <article class="room-card">
-              <img src="/assets/images/single-room.webp" alt="아늑한 어나더하우스 싱글룸" loading="lazy">
-              <div>
-                <span>02 · SINGLE</span>
-                <h3 data-i18n="singleCozyTitle">코지 싱글룸</h3>
-                <p data-i18n="singleCozyCopy">잠글 수 있는 온전한 휴식 · 최대 1인</p>
-              </div>
-            </article>
-            <article class="room-card">
-              <img src="/assets/images/double-bed.webp" alt="맞춤 제작한 2층 침대가 있는 더블룸" loading="lazy">
-              <div>
-                <span>03 · DOUBLE</span>
-                <h3 data-i18n="doubleTitle">벙커 더블룸</h3>
-                <p data-i18n="doubleCopy">친구 또는 가족과 함께 · 최대 2인</p>
-              </div>
-            </article>
+        <section class="essentials section warm-section">
+          <div class="section-label"><span>02</span><b>STAY ESSENTIALS</b></div>
+          <div class="section-heading-row"><h2>Everything you need,<br>right when you need it.</h2><p data-home="essentialsLead"></p></div>
+          <div class="essential-grid" id="essentialGrid"></div>
+          <div class="inline-actions">
+            <button type="button" data-route="checkin"><span>ARRIVAL GUIDE</span><i>↗</i></button>
+            <button type="button" data-route="guidebook"><span>GUEST GUIDEBOOK</span><i>↗</i></button>
           </div>
         </section>
 
-        <section class="section-pad spaces reveal">
-          <p class="section-kicker" data-i18n="spacesKicker">SHARED, YET SERENE</p>
-          <h2 data-i18n="spacesTitle">함께 쓰는 공간도<br>조용하고 섬세하게</h2>
-          <button class="space-main" type="button" data-gallery-index="5">
-            <img src="/assets/images/kitchen.webp" alt="어나더하우스 공용 주방" loading="lazy">
-            <span><b data-i18n="kitchenTitle">공용 키친</b><small data-i18n="kitchenCopy">요리와 세탁, 잠시 머무는 창가 자리</small></span>
-          </button>
-          <div class="space-grid">
-            <button type="button" data-gallery-index="7">
-              <img src="/assets/images/powder-room.webp" alt="어나더하우스 파우더룸" loading="lazy">
-              <span data-i18n="powder">파우더룸</span>
-            </button>
-            <button type="button" data-gallery-index="8">
-              <img src="/assets/images/entrance-brand.webp" alt="어나더하우스 로고가 있는 곡선 벽" loading="lazy">
-              <span data-i18n="entrance">입구</span>
-            </button>
-          </div>
-          <button class="text-link" type="button" data-route="gallery"><span data-i18n="viewGallery">공간 전체 보기</span><span>↗</span></button>
+        <section class="gallery-preview section">
+          <div class="section-label"><span>03</span><b>THE HOUSE</b></div>
+          <div class="section-heading-row"><h2>A quiet house<br>for another life.</h2><button type="button" data-route="gallery">VIEW ALL ↗</button></div>
+          <div class="mosaic" id="galleryPreview"></div>
         </section>
 
-        <section class="guide-preview reveal">
-          <div class="guide-backdrop" aria-hidden="true"></div>
-          <div class="guide-content">
-            <p class="section-kicker">YOUR STAY, MADE EASY</p>
-            <div class="smart-line">
-              <span class="smart-dot"></span>
-              <span id="smartTime">NOW</span>
-            </div>
-            <h2 id="smartTitle">도착하셨나요?</h2>
-            <p id="smartCopy">체크인 순서와 입구 사진을 먼저 확인해 보세요.</p>
-            <button class="pill-btn terracotta" id="smartAction" type="button" data-route="checkin">체크인 안내 보기</button>
+        <section class="transport-preview section dark-section">
+          <div class="section-label"><span>04</span><b>LOCATION & TRANSPORT</b></div>
+          <p class="station-line" data-field="station"></p>
+          <h2>At the heart<br>of old Seoul.</h2>
+          <p class="address-line" data-field="address"></p>
+          <div class="map-actions">
+            <a href="https://maps.app.goo.gl/iAPWD2MCEwrLBeon9" target="_blank" rel="noopener">GOOGLE MAPS <i>↗</i></a>
+            <a href="https://naver.me/5neUlzsA" target="_blank" rel="noopener">NAVER MAP <i>↗</i></a>
           </div>
-          <div class="guide-grid">
-            <button type="button" data-route="checkin"><span>01</span><b data-i18n="guideCheckin">체크인</b><small>15:00</small></button>
-            <button type="button" data-route="wifi"><span>02</span><b>Wi-Fi</b><small>another</small></button>
-            <button type="button" data-route="appliances"><span>03</span><b data-i18n="guideDevices">기기 사용법</b><small>5 GUIDE</small></button>
-            <button type="button" data-route="checkout"><span>04</span><b data-i18n="guideCheckout">체크아웃</b><small>11:00</small></button>
-          </div>
+          <button class="airport-card" type="button" data-route="transport"><span>ICN · GMP</span><div><b>AIRPORT TO ANOTHER HOUSE</b><small>AREX → SEOUL STATION → LINE 4</small></div><i>↗</i></button>
+          <button class="text-route" type="button" data-route="nearby">NEARBY FOOD & PLACES <i>↗</i></button>
         </section>
 
-        <section class="section-pad location reveal">
-          <p class="section-kicker">AT THE HEART OF SEOUL</p>
-          <h2 data-i18n="locationTitle">동대문에서 시작하는<br>가벼운 서울 여행</h2>
-          <div class="location-card">
-            <div class="location-copy">
-              <span data-i18n="stationDistance">동대문역 6번 출구 · 도보 30초</span>
-              <h3>서울 종로구 종로 294<br>선일빌딩 5층</h3>
-              <p data-i18n="locationCopy">1·4호선으로 종로, 명동, 서울역까지 빠르게 이동하세요.</p>
-            </div>
-            <div class="location-actions">
-              <a href="https://maps.app.goo.gl/iAPWD2MCEwrLBeon9" target="_blank" rel="noopener"><span>G</span><b data-i18n="googleMap">Google 지도</b></a>
-              <a href="https://naver.me/5neUlzsA" target="_blank" rel="noopener"><span>N</span><b data-i18n="naverMap">Naver 지도</b></a>
-            </div>
+        <section class="stay-guide section">
+          <div class="section-label"><span>05</span><b>STAY GUIDE</b></div>
+          <h2>Make yourself<br>at home.</h2>
+          <div class="guide-links">
+            <button type="button" data-route="appliances"><span>01</span><div><b>APPLIANCES</b><small>Climate · Microwave · Cooktop · Water</small></div><i>↗</i></button>
+            <button type="button" data-route="laundry"><span>02</span><div><b>LAUNDRY</b><small>Wash · Dry · Care</small></div><i>↗</i></button>
+            <button type="button" data-route="trash"><span>03</span><div><b>WASTE</b><small>Sort · Recycle · Leave clean</small></div><i>↗</i></button>
           </div>
-          <div class="nearby-list">
-            <a href="https://www.google.com/maps/search/?api=1&query=흥인지문" target="_blank" rel="noopener"><span>01</span><div><b data-i18n="placeGate">흥인지문</b><small data-i18n="placeGateSub">서울 성곽의 동쪽 문 · 산책</small></div><i>↗</i></a>
-            <a href="https://www.google.com/maps/search/?api=1&query=동대문디자인플라자" target="_blank" rel="noopener"><span>02</span><div><b>DDP</b><small data-i18n="placeDdpSub">디자인과 야경 · 전시</small></div><i>↗</i></a>
-            <a href="https://www.google.com/maps/search/?api=1&query=광장시장" target="_blank" rel="noopener"><span>03</span><div><b data-i18n="placeMarket">광장시장</b><small data-i18n="placeMarketSub">서울의 오래된 맛 · 로컬 푸드</small></div><i>↗</i></a>
-          </div>
-          <button class="text-link" type="button" data-route="nearby"><span data-i18n="nearFood">주변 맛집 가이드</span><span>↗</span></button>
-        </section>
-
-        <section class="closing-cta reveal">
-          <img src="/assets/images/double-window.webp" alt="" loading="lazy">
-          <div>
-            <p>STAY ANOTHER LIFE</p>
-            <h2 data-i18n="closingTitle">서울에서 만나는<br>또 하나의 작은 집</h2>
-            <button class="pill-btn light" type="button" data-open-booking data-i18n="book">예약하기</button>
-          </div>
+          <div class="host-card"><small>NEED HELP?</small><h3 data-contact></h3><button type="button" id="openChatFromHost">ASK CONCIERGE ↗</button></div>
         </section>
 
         <footer>
-          <img src="/assets/images/logo.webp" alt="Another House">
-          <p>ANOTHER HOUSE · WOMEN ONLY</p>
-          <address>서울시 종로구 종로 294 선일빌딩 5층</address>
-          <small>© 2026 Another House. All rights reserved.</small>
+          <p>STAY ANOTHER LIFE</p><h2>ANOTHER<br>HOUSE</h2><address data-field="address"></address><small>© 2026 ANOTHER HOUSE · WOMEN ONLY</small>
         </footer>
       </div>
 
-      <article class="page-view" id="pageView" hidden>
-        <div id="pageContent"></div>
+      <article id="detailScreen" class="screen detail-screen" hidden>
+        <div id="detailContent"></div>
       </article>
     </main>
 
     <nav class="bottom-nav" aria-label="주요 메뉴">
-      <a href="/" data-route="home" data-nav="home"><span>⌂</span><b data-i18n="navHome">홈</b></a>
-      <a href="/" data-route="checkin" data-nav="checkin"><span>↳</span><b data-i18n="navArrival">도착</b></a>
-      <a href="/" data-route="gallery" data-nav="gallery"><span>□</span><b data-i18n="navStay">공간</b></a>
-      <a href="/" data-route="appliances" data-nav="appliances"><span>◇</span><b data-i18n="navGuide">가이드</b></a>
-      <button type="button" id="moreButton"><span>•••</span><b data-i18n="navMore">더보기</b></button>
+      <button type="button" data-route="home" data-nav="home"><i>⌂</i><b data-ui="home">홈</b></button>
+      <button type="button" data-route="checkin" data-nav="checkin"><i>↳</i><b data-ui="arrival">도착</b></button>
+      <button type="button" data-route="gallery" data-nav="gallery"><i>▦</i><b data-ui="gallery">공간</b></button>
+      <button type="button" data-route="guidebook" data-nav="guidebook"><i>◇</i><b data-ui="guide">가이드</b></button>
+      <button type="button" class="menu-trigger"><i>•••</i><b data-ui="more">더보기</b></button>
     </nav>
   </div>
 
-  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
-  <aside class="menu-sheet" id="menuSheet" aria-hidden="true" aria-label="전체 메뉴">
-    <div class="sheet-handle"></div>
-    <div class="sheet-head">
-      <div><small>ANOTHER HOUSE</small><h2 data-i18n="allGuide">모든 안내</h2></div>
-      <button type="button" id="closeMenu" aria-label="메뉴 닫기">×</button>
-    </div>
-    <div class="sheet-links">
-      <button type="button" data-route="checkin"><span>01</span><b data-i18n="checkinTitle">체크인 안내</b><i>→</i></button>
-      <button type="button" data-route="checkout"><span>02</span><b data-i18n="checkoutTitle">체크아웃 안내</b><i>→</i></button>
-      <button type="button" data-route="wifi"><span>03</span><b>Wi-Fi</b><i>→</i></button>
-      <button type="button" data-route="appliances"><span>04</span><b data-i18n="devicesTitle">기기 사용법</b><i>→</i></button>
-      <button type="button" data-route="laundry"><span>05</span><b data-i18n="laundryTitle">세탁</b><i>→</i></button>
-      <button type="button" data-route="trash"><span>06</span><b data-i18n="trashTitle">쓰레기</b><i>→</i></button>
-      <button type="button" data-route="rules"><span>07</span><b data-i18n="rulesTitle">숙소 규칙</b><i>→</i></button>
-      <button type="button" data-route="location"><span>08</span><b data-i18n="directionsTitle">찾아오는 길</b><i>→</i></button>
-      <button type="button" data-route="nearby"><span>09</span><b data-i18n="nearFood">주변 맛집 가이드</b><i>→</i></button>
-    </div>
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="panel-head"><div><small>ANOTHER HOUSE</small><h2 data-ui="allGuide">모든 안내</h2></div><button type="button" id="closeMenu" data-ui-aria="close" aria-label="닫기">×</button></div>
+    <div class="menu-list" id="menuList"></div>
   </aside>
 
-  <div class="booking-modal" id="bookingModal" hidden>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
-      <button type="button" class="modal-close" data-close-booking aria-label="닫기">×</button>
-      <p>RESERVATION</p>
-      <h2 id="bookingTitle" data-i18n="bookingTitle">예약 페이지를 준비하고 있어요</h2>
-      <span data-i18n="bookingCopy">NEWT 예약 페이지 승인 후 이 버튼에 바로 연결됩니다. 현재는 이용하신 예약 플랫폼에서 어나더하우스를 검색해 주세요.</span>
-      <button type="button" class="pill-btn dark" data-close-booking data-i18n="confirm">확인</button>
-    </div>
-  </div>
+  <section class="chat-panel" id="chatPanel" aria-hidden="true">
+    <header><div><small data-ui="sourceNotice"></small><h2 data-ui="concierge">AI 컨시어지</h2></div><button type="button" id="closeChat" data-ui-aria="close" aria-label="닫기">×</button></header>
+    <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+    <form class="chat-form" id="chatForm"><input id="chatInput" autocomplete="off" data-ui-placeholder="askPlaceholder" placeholder="질문을 입력하세요"><button type="submit" data-ui="send">보내기</button></form>
+  </section>
+  <button class="chat-fab" id="chatFab" type="button" aria-label="AI 컨시어지 열기"><span>AI</span><i></i></button>
 
   <div class="lightbox" id="lightbox" hidden>
-    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="사진 닫기">×</button>
-    <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="이전 사진">‹</button>
-    <figure>
-      <img id="lightboxImage" alt="">
-      <figcaption><span id="lightboxCount"></span><b id="lightboxCaption"></b></figcaption>
-    </figure>
-    <button type="button" class="lightbox-next" id="lightboxNext" aria-label="다음 사진">›</button>
+    <button type="button" id="lightboxClose" aria-label="사진 닫기">×</button>
+    <button type="button" id="lightboxPrev" aria-label="이전 사진">‹</button>
+    <figure><img id="lightboxImage" alt=""><figcaption><span id="lightboxCount"></span><b id="lightboxCaption"></b></figcaption></figure>
+    <button type="button" id="lightboxNext" aria-label="다음 사진">›</button>
   </div>
-
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

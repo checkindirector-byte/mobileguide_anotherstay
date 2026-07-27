@@ -1,30 +1,14 @@
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-
-const root = resolve(import.meta.dirname, "..");
-const html = await readFile(resolve(root, "index.html"), "utf8");
-const js = await readFile(resolve(root, "assets/app.js"), "utf8");
-
-const required = [
-  "index.html",
-  "assets/styles.css",
-  "assets/app.js",
-  "assets/images/hero.webp",
-  "assets/images/logo.webp",
-  "assets/images/og.jpg",
-  "vercel.json"
-];
-await Promise.all(required.map(file => access(resolve(root, file))));
-
-const refs = [...html.matchAll(/(?:src|href)="(\/assets\/[^"]+)"/g)].map(match => match[1]);
-await Promise.all(refs.map(ref => access(resolve(root, ref.slice(1)))));
-
-const forbiddenSecrets = ["8282", "another1234"];
-for (const secret of forbiddenSecrets) {
-  if (html.includes(secret) || js.includes(secret)) {
-    throw new Error(`Public build contains forbidden secret: ${secret}`);
-  }
-}
-
-new Function(js);
-console.log(`Validated ${required.length} required files and ${refs.length} local asset references.`);
+const root=resolve(import.meta.dirname,"..");
+const required=["index.html","assets/styles.css","assets/site-data.js","assets/app.js","assets/fonts/oxanium-latin.woff2","assets/images/hero.webp","assets/images/another-house-og-20260727.jpg","docs/research-sources.md","vercel.json"];
+await Promise.all(required.map(file=>access(resolve(root,file))));
+const html=await readFile(resolve(root,"index.html"),"utf8");
+const js=await readFile(resolve(root,"assets/app.js"),"utf8");
+const data=await readFile(resolve(root,"assets/site-data.js"),"utf8");
+const refs=[...html.matchAll(/(?:src|href)="(\/assets\/[^"?]+)(?:\?[^"]*)?"/g)].map(match=>match[1]);
+await Promise.all(refs.map(ref=>access(resolve(root,ref.slice(1)))));
+for(const secret of ["8282","another1234"]) if((html+js+data).includes(secret)) throw new Error("Public build contains forbidden secret: "+secret);
+if(/FAQ|faq|guide-extay|extay-release/i.test(html+js+data)) throw new Error("Legacy EXTAY or FAQ content detected");
+new Function(js); new Function(data);
+console.log("Validated "+required.length+" required files and "+refs.length+" local asset references.");
