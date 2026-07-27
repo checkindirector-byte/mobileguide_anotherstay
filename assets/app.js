@@ -25,7 +25,7 @@
       placeMarket: "광장시장", placeMarketSub: "서울의 오래된 맛 · 로컬 푸드", closingTitle: "서울에서 만나는<br>또 하나의 작은 집",
       navHome: "홈", navArrival: "도착", navStay: "공간", navGuide: "가이드", navMore: "더보기",
       allGuide: "모든 안내", checkinTitle: "체크인 안내", checkoutTitle: "체크아웃 안내", devicesTitle: "기기 사용법",
-      laundryTitle: "세탁", trashTitle: "쓰레기", rulesTitle: "숙소 규칙", directionsTitle: "찾아오는 길",
+      laundryTitle: "세탁", trashTitle: "쓰레기", rulesTitle: "숙소 규칙", directionsTitle: "찾아오는 길", nearFood: "주변 맛집 가이드",
       bookingTitle: "예약 페이지를 준비하고 있어요", bookingCopy: "NEWT 예약 페이지 승인 후 이 버튼에 바로 연결됩니다. 현재는 이용하신 예약 플랫폼에서 어나더하우스를 검색해 주세요.",
       confirm: "확인", copied: "복사되었습니다", backHome: "홈으로", copy: "복사하기"
     },
@@ -48,7 +48,7 @@
       placeMarket: "Gwangjang Market", placeMarketSub: "Historic Seoul flavors · Local food", closingTitle: "Another small home<br>waiting in Seoul",
       navHome: "Home", navArrival: "Arrival", navStay: "Stay", navGuide: "Guide", navMore: "More",
       allGuide: "All guides", checkinTitle: "Check-in", checkoutTitle: "Check-out", devicesTitle: "Appliances",
-      laundryTitle: "Laundry", trashTitle: "Waste", rulesTitle: "House rules", directionsTitle: "Directions",
+      laundryTitle: "Laundry", trashTitle: "Waste", rulesTitle: "House rules", directionsTitle: "Directions", nearFood: "Nearby food guide",
       bookingTitle: "Our booking page is almost ready", bookingCopy: "This button will connect to NEWT once approval is complete. For now, search Another House on the platform you used.",
       confirm: "Got it", copied: "Copied", backHome: "Home", copy: "Copy"
     },
@@ -71,7 +71,7 @@
       placeMarket: "広蔵市場", placeMarketSub: "ソウルの老舗の味 · ローカルフード", closingTitle: "ソウルで出会う<br>もう一つの小さな家",
       navHome: "ホーム", navArrival: "到着", navStay: "空間", navGuide: "ガイド", navMore: "もっと",
       allGuide: "すべての案内", checkinTitle: "チェックイン", checkoutTitle: "チェックアウト", devicesTitle: "家電の使い方",
-      laundryTitle: "洗濯", trashTitle: "ゴミ", rulesTitle: "ハウスルール", directionsTitle: "アクセス",
+      laundryTitle: "洗濯", trashTitle: "ゴミ", rulesTitle: "ハウスルール", directionsTitle: "アクセス", nearFood: "周辺グルメガイド",
       bookingTitle: "予約ページを準備中です", bookingCopy: "NEWTの承認後、このボタンから直接予約できます。現在はご利用の予約サイトでAnother Houseを検索してください。",
       confirm: "確認", copied: "コピーしました", backHome: "ホーム", copy: "コピー"
     },
@@ -94,7 +94,7 @@
       placeMarket: "广藏市场", placeMarketSub: "老首尔风味 · 本地美食", closingTitle: "在首尔遇见的<br>另一间小屋",
       navHome: "首页", navArrival: "到达", navStay: "空间", navGuide: "指南", navMore: "更多",
       allGuide: "全部指南", checkinTitle: "入住指南", checkoutTitle: "退房指南", devicesTitle: "设备使用",
-      laundryTitle: "洗衣", trashTitle: "垃圾分类", rulesTitle: "住宿规则", directionsTitle: "交通指南",
+      laundryTitle: "洗衣", trashTitle: "垃圾分类", rulesTitle: "住宿规则", directionsTitle: "交通指南", nearFood: "周边美食指南",
       bookingTitle: "预订页面正在准备中", bookingCopy: "NEWT审核完成后，此按钮将直接连接预订。目前请在您使用的平台搜索Another House。",
       confirm: "知道了", copied: "已复制", backHome: "首页", copy: "复制"
     }
@@ -238,6 +238,28 @@
         ],
         note: I("택시는 ‘교촌치킨 동대문 1호점’ 또는 ‘하동 우렁 추어탕 동대문점’을 목적지로 설정하면 편합니다. 건물 내 주차는 불가합니다.", "For taxis, use Kyochon Chicken Dongdaemun 1 or Hadong Loach Soup Dongdaemun as the destination. No on-site parking.", "タクシーは「Kyochon Chicken東大門1号店」または「Hadong Loach Soup東大門店」を目的地にすると便利です。館内駐車場はありません。", "打车可将“校村炸鸡东大门1号店”或“河东泥鳅汤东大门店”设为目的地。大楼不可停车。")
       }]
+    },
+    nearby: {
+      hero: "/assets/images/kitchen.webp", kicker: "EAT LIKE A LOCAL",
+      title: I("주변 맛집", "Nearby food", "周辺グルメ", "周边美食"),
+      sub: I("숙소 가까이에서 만나는 동대문과 종로의 오래된 맛.", "Long-loved flavors around Dongdaemun and Jongno.", "東大門と鐘路で長く愛される味。", "东大门与钟路一带长久受欢迎的味道。"),
+      sections: [
+        {
+          title: I("초원순대국", "Chowon Sundaeguk", "チョウォン・スンデグク", "草原米肠汤"),
+          text: I("숙소와 같은 주소에 있는 로컬 순대국·감자탕집입니다. 멀리 이동하기 어려운 날 편하게 들르기 좋습니다.", "A local sundae soup and gamjatang spot at the same street address as the stay—easy for a nearby meal.", "宿と同じ住所にある、スンデグクとカムジャタンのローカル食堂です。", "与住宿同一地址的本地米肠汤、脊骨土豆汤餐厅，适合就近用餐。"),
+          links: [["Google Maps", "https://www.google.com/maps/search/?api=1&query=초원순대국+종로294"]]
+        },
+        {
+          title: I("진옥화할매원조닭한마리", "Jin Ok-hwa Original Dakhanmari", "陳玉華ハルメ元祖タッカンマリ", "陈玉华奶奶元祖一只鸡"),
+          text: I("동대문 닭한마리 골목을 대표하는 노포입니다. 닭 육수에 떡과 칼국수를 더해 먹는 서울식 한 끼를 경험해 보세요.", "A landmark in Dongdaemun’s dakhanmari alley. Enjoy chicken broth with rice cake and noodles.", "東大門タッカンマリ横丁を代表する老舗。鶏スープに餅や麺を加えて楽しみます。", "东大门一只鸡胡同的代表老店，可在鸡汤中加入年糕和刀切面。"),
+          links: [["Google Maps", "https://www.google.com/maps/search/?api=1&query=진옥화할매원조닭한마리"]]
+        },
+        {
+          title: I("광장시장 먹거리", "Gwangjang Market food", "広蔵市場グルメ", "广藏市场美食"),
+          text: I("빈대떡, 마약김밥, 육회 등 여러 서울 음식을 한곳에서 둘러볼 수 있습니다. 붐비는 시간에는 소지품을 잘 챙겨 주세요.", "Explore bindaetteok, mayak gimbap, yukhoe, and more in one historic market. Keep belongings close when crowded.", "ピンデトック、麻薬キンパ、ユッケなど多彩なソウルの味が集まります。混雑時は所持品にご注意ください。", "绿豆煎饼、迷你紫菜包饭、生拌牛肉等首尔美食汇聚一处。人多时请保管好随身物品。"),
+          links: [["Google Maps", "https://www.google.com/maps/search/?api=1&query=광장시장"]]
+        }
+      ]
     }
   };
 

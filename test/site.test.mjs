@@ -7,7 +7,7 @@ const root = resolve(import.meta.dirname, "..");
 
 test("site includes core guest-guide routes", async () => {
   const js = await readFile(resolve(root, "assets/app.js"), "utf8");
-  for (const route of ["checkin", "checkout", "wifi", "appliances", "laundry", "trash", "rules", "location", "gallery"]) {
+  for (const route of ["checkin", "checkout", "wifi", "appliances", "laundry", "trash", "rules", "location", "nearby", "gallery"]) {
     assert.match(js, new RegExp(`\\b${route}\\b`));
   }
 });
