@@ -929,12 +929,20 @@ body .numeric-font{font-family:var(--font-ko)!important;font-variant-numeric:tab
 /* Three-color identity: terracotta signature, walnut secondary, warm cream background. */
 :root{--signature:#B55D3D;--secondary:#754836;--background:#F7F1EA;--bg:var(--background);--bronze:var(--signature);--accent:var(--signature);--walnut:var(--secondary);--font-main:'Oxanium',var(--font-ko)}
 html,body,.app,[data-screen="home"]{background:var(--background)}
-.concierge-hub,.getting-card{background:var(--secondary);border-color:rgba(181,93,61,.38);box-shadow:0 18px 42px rgba(117,72,54,.2)}
-.concierge-kicker{color:#f0ded4}.concierge-ask{border-color:rgba(181,93,61,.38);background:var(--background)}.concierge-ask input{color:var(--secondary)}.concierge-ask button{background:var(--signature);color:#fff}.quick-tile{border-color:rgba(247,241,234,.24);background:rgba(247,241,234,.06)}.getting-actions a:first-child{background:var(--background);color:var(--secondary);border-color:var(--background)}
-.airport-access-card{background:linear-gradient(90deg,rgba(117,72,54,.88),rgba(117,72,54,.3)),url('assets/images/arrival.webp') center/cover no-repeat}
+.concierge-hub,.getting-card{background:var(--signature);border-color:rgba(117,72,54,.34);box-shadow:0 18px 42px rgba(181,93,61,.2)}
+.concierge-kicker{color:#f7e8df}.concierge-ask{border-color:rgba(117,72,54,.32);background:var(--background)}.concierge-ask input{color:var(--secondary)}.concierge-ask button{background:var(--secondary);color:#fff}.quick-tile{border-color:rgba(247,241,234,.28);background:rgba(247,241,234,.08)}.getting-actions a:first-child{background:var(--background);color:var(--secondary);border-color:var(--background)}
+.airport-access-card{background:linear-gradient(90deg,rgba(181,93,61,.9),rgba(181,93,61,.32)),url('assets/images/arrival.webp') center/cover no-repeat}
 .stay-contact-row{border-color:rgba(181,93,61,.35)}.stay-contact-row>.mi,.home-gallery-all,.home-gallery-count{color:var(--signature)}
-.hotel-footer{background:var(--secondary);color:var(--background)}
+.hotel-footer{background:var(--signature);color:var(--background)}
 .another-concierge-character{width:72px;height:72px;object-fit:contain;object-position:center bottom;justify-self:end;filter:drop-shadow(0 10px 20px rgba(25,15,11,.28))}
+
+/* The master uses the support color as the information-system color inside menu pages. */
+.checkin-locker-card,.checkin-locker-card .airport-summary,
+.wifi-network-card,.wifi-network-card.featured,
+.guide-detail-screen .device-card-stack .device-header{background:var(--secondary);border-color:var(--secondary)}
+.checkin-locker-card .airport-icon,
+.wifi-network-card>.mi,.wifi-network-card.featured>.mi,
+.guide-detail-screen .device-card-stack>.device .circle{color:var(--secondary)}
 
 /* Previous-version room preview: one tall feature image with two stacked rooms. */
 .previous-gallery-preview{padding:74px var(--home-gutter) 82px;background:var(--background)}
@@ -987,5 +995,5 @@ html[lang="ko"] p,html[lang="ko"] small,html[lang="ko"] li,html[lang="ko"] input
 <div class="menu-backdrop" id="menuBackdrop"></div><aside class="menu-panel" id="menuPanel"><div class="menu-panel-head"><strong>ANOTHER HOUSE</strong><button class="icon-btn" id="closeMenu"><span class="mi">close</span></button></div><button class="menu-link" data-go="home"><span>Home</span><small>처음 화면</small></button><button class="menu-link" data-go="gallery"><span>Room Gallery</span><small>객실과 공용공간</small></button><button class="menu-link" data-go="checkin"><span>체크인 · 체크아웃</span><small>입실과 퇴실 안내</small></button><button class="menu-link" data-go="transport"><span>Transportation</span><small>공항에서 숙소까지</small></button><button class="menu-link" data-go="wifi"><span>Wi-Fi</span><small>네트워크 정보</small></button><button class="menu-link" data-go="restaurants"><span>Neighborhood</span><small>동대문 로컬 추천</small></button><button class="menu-link" data-go="appliances"><span>Appliances</span><small>냉난방과 주방 기기</small></button><button class="menu-link" data-go="laundry"><span>Laundry</span><small>세탁 · 건조 안내</small></button><button class="menu-link" data-go="trash"><span>Waste</span><small>쓰레기 분리배출</small></button><button class="menu-link" data-go="guidebook"><span>Guidebook</span><small>모든 안내 한 번에 보기</small></button></aside>
 <div class="image-lightbox-backdrop" id="imageLightboxBackdrop"></div><section class="image-lightbox" id="imageLightbox"><button class="image-lightbox-close" id="closeImageLightbox"><span class="mi">close</span></button><img id="imageLightboxImg" src="" alt=""><p class="image-lightbox-caption" id="imageLightboxCaption"></p></section>
 <button class="chat-fab another-chat-fab" id="openChatFab"><span class="mi">smart_toy</span></button><div class="chat-backdrop" id="chatBackdrop"></div><section class="chat-panel" id="chatPanel"><header class="chat-head"><div><h2>ANOTHER HOUSE CONCIERGE</h2><p>공식 숙소 안내만 답변합니다.</p></div><button class="chat-close" id="closeChat"><span class="mi">close</span></button></header><div class="chat-log" id="chatLog"><div class="msg bot">안녕하세요. 체크인, 교통, Wi-Fi, 기기 사용법을 물어보세요.</div></div><div><div class="chat-suggestions"><button class="suggestion">체크인은 몇 시야?</button><button class="suggestion">와이파이 알려줘</button><button class="suggestion">동대문역에서 어떻게 가?</button></div><div class="chat-note">비밀번호와 출입 코드는 예약 플랫폼 메시지에서 확인해 주세요.</div><form class="chat-form" id="chatForm"><textarea id="chatInput" rows="1" placeholder="질문을 입력하세요"></textarea><button class="send-btn"><span class="mi">arrow_upward</span></button></form></div></section><div class="toast" id="toast">복사했습니다</div>
-<script src="assets/site-data.js?v=20260728-5"></script><script src="assets/master-app.js?v=20260728-5"></script></body>
+<script src="assets/site-data.js?v=20260728-6"></script><script src="assets/master-app.js?v=20260728-6"></script></body>
 </html>
