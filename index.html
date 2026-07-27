@@ -32,6 +32,23 @@
   <link rel="preload" href="assets/font/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hostel",
+    "name": "Another House",
+    "url": "https://anotherstay-guide.vercel.app/",
+    "image": "https://anotherstay-guide.vercel.app/assets/images/another-house-og-20260727.jpg",
+    "description": "동대문 여성 전용 프라이빗 스테이",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "종로 294 선일빌딩 5층",
+      "addressLocality": "종로구",
+      "addressRegion": "서울특별시",
+      "addressCountry": "KR"
+    }
+  }
+  </script>
   <style>
     @font-face{font-family:'Oxanium';font-style:normal;font-weight:300 800;font-display:block;src:url('assets/font/oxanium-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
     @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:300;font-display:block;src:url('assets/font/material-symbols-outlined.woff2') format('woff2')}
@@ -124,7 +141,7 @@ body.is-gallery .top .top-actions,body.is-checkin .top .top-actions,body.is-wifi
 body:not(.is-home):not(.is-gallery):not(.is-checkin):not(.is-wifi):not(.is-transport):not(.is-guidebook):not(.is-restaurants):not(.is-appliances):not(.is-laundry):not(.is-trash) .top{position:sticky;top:0;left:auto;transform:none;width:100%;background:rgba(247,242,236,.94);color:#2A211D;border-bottom:1px solid rgba(216,198,180,.72);backdrop-filter:blur(18px)}
 body:not(.is-home):not(.is-gallery):not(.is-checkin):not(.is-wifi):not(.is-transport):not(.is-guidebook):not(.is-restaurants):not(.is-appliances):not(.is-laundry):not(.is-trash) .top h1{text-align:center}
 .landing-hero{position:relative;min-height:96svh;overflow:hidden;background:#241d17;color:#fff;isolation:isolate}
-.landing-hero:before{content:"";position:absolute;inset:-1px;z-index:0;background:url('assets/images/hero.webp') center/cover no-repeat;transform:translate3d(0,0,0) scale(1.10);transform-origin:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;will-change:transform}
+.landing-hero:before{content:"";position:absolute;inset:-1px;z-index:0;background:url('assets/images/hero.webp') center/cover no-repeat;transform:translate3d(0,0,0) scale(1.20);transform-origin:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;will-change:transform}
 .landing-hero:after{content:"";position:absolute;inset:auto 0 0;height:8%;z-index:1;background:linear-gradient(180deg,rgba(247,242,236,0),#F7F1EA);pointer-events:none}
 .hero-panel{position:absolute;left:0;right:0;bottom:0;z-index:2;isolation:isolate;padding:0 var(--home-gutter) 50px;display:flex;flex-direction:column;align-items:flex-start}
 .hero-panel:before{content:"";position:absolute;inset:-80px 0 0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.12) 42%,rgba(0,0,0,.2) 100%);pointer-events:none}
@@ -776,7 +793,7 @@ body.motion-ready .hero-panel .scroll-cue{animation:heroTextIn .8s cubic-bezier(
 @media (hover:hover){.hotel-btn:hover,.btn:hover,.quick-tile:hover,.image-card:hover,.menu-link:hover,.gallery-thumb:hover,.restaurant-actions a:hover,.guidebook-open:hover,.guidebook-fullscreen-toggle:hover,.mini-btn:hover,.send-btn:hover{transform:scale(1.018)}}
 @keyframes screenCrossIn{from{opacity:0}to{opacity:1}}
 @keyframes screenCrossOut{from{opacity:1}to{opacity:0}}
-@keyframes heroZoomOut{from{transform:translate3d(0,0,0) scale(1.10)}to{transform:translate3d(0,0,0) scale(1)}}
+@keyframes heroZoomOut{from{transform:translate3d(0,0,0) scale(1.20)}to{transform:translate3d(0,0,0) scale(1)}}
 @keyframes heroTextIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){
   .landing-hero:before,.hero-panel .eyebrow,.hero-panel .hero-title,.hero-panel .hero-actions,.hero-panel .scroll-cue,.motion-item,.screen.active,.screen.is-exiting,#galleryMain,.gallery-thumb img{animation:none!important;transition:none!important;transform:none!important;opacity:1!important}
@@ -940,6 +957,7 @@ html,body,.app,[data-screen="home"]{background:var(--background)}
 .checkin-locker-card,.checkin-locker-card .airport-summary,
 .wifi-network-card,.wifi-network-card.featured,
 .guide-detail-screen .device-card-stack .device-header{background:var(--secondary);border-color:var(--secondary)}
+.guide-detail-screen .device-card-stack .device-header small{color:rgba(255,255,255,.84)}
 .checkin-locker-card .airport-icon,
 .wifi-network-card>.mi,.wifi-network-card.featured>.mi,
 .guide-detail-screen .device-card-stack>.device .circle{color:var(--secondary)}
@@ -961,8 +979,14 @@ html,body,.app,[data-screen="home"]{background:var(--background)}
 @media (hover:hover){.previous-gallery-mosaic button:hover img{transform:scale(1.035)}}
 @media (max-width:380px){.previous-gallery-preview{padding-left:16px;padding-right:16px}.previous-gallery-heading h2{font-size:39px}.previous-gallery-mosaic{grid-template-rows:190px 132px}}
 
+
+.official-manual-link{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:10px;align-items:center;margin:0 20px 18px;min-height:52px;padding:12px 14px;border:1px solid color-mix(in srgb,var(--secondary) 34%,transparent);background:color-mix(in srgb,var(--secondary) 10%,#fffaf4);color:var(--secondary);font-size:13px;font-weight:700;letter-spacing:0}
+.official-manual-link .mi{font-size:21px}
+.official-manual-link span:last-child{font-family:'Oxanium',sans-serif;font-size:17px;font-weight:500}
+.device-summary{margin:18px 20px 0;color:#665646;font-size:14px;line-height:1.62;word-break:keep-all}
+
 /* Master typography: Oxanium Light/Medium for Latin; gothic sans-serif for Korean glyphs. */
-body,button,input,textarea,select{font-family:'Oxanium',var(--font-ko)!important;font-weight:400}
+body,button,input,textarea,select{font-family:'Oxanium',var(--font-ko)!important;font-weight:300}
 .hero-title,.landing-hero .hero-title,.top h1,.brand-home,.section-kicker,.concierge-kicker,.previous-gallery-label,.previous-gallery-heading h2,.previous-gallery-heading button,.hotel-footer strong,.gallery-count{font-family:'Oxanium',var(--font-ko)!important;font-weight:500!important}
 .hero-title,.landing-hero .hero-title{font-weight:300!important}
 html[lang="ko"] p,html[lang="ko"] small,html[lang="ko"] li,html[lang="ko"] input,html[lang="ko"] textarea,html[lang="ko"] .page-sub,html[lang="ko"] .stay-contact-label{font-family:var(--font-ko)!important}
@@ -995,5 +1019,5 @@ html[lang="ko"] p,html[lang="ko"] small,html[lang="ko"] li,html[lang="ko"] input
 <div class="menu-backdrop" id="menuBackdrop"></div><aside class="menu-panel" id="menuPanel"><div class="menu-panel-head"><strong>ANOTHER HOUSE</strong><button class="icon-btn" id="closeMenu"><span class="mi">close</span></button></div><button class="menu-link" data-go="home"><span>Home</span><small>처음 화면</small></button><button class="menu-link" data-go="gallery"><span>Room Gallery</span><small>객실과 공용공간</small></button><button class="menu-link" data-go="checkin"><span>체크인 · 체크아웃</span><small>입실과 퇴실 안내</small></button><button class="menu-link" data-go="transport"><span>Transportation</span><small>공항에서 숙소까지</small></button><button class="menu-link" data-go="wifi"><span>Wi-Fi</span><small>네트워크 정보</small></button><button class="menu-link" data-go="restaurants"><span>Neighborhood</span><small>동대문 로컬 추천</small></button><button class="menu-link" data-go="appliances"><span>Appliances</span><small>냉난방과 주방 기기</small></button><button class="menu-link" data-go="laundry"><span>Laundry</span><small>세탁 · 건조 안내</small></button><button class="menu-link" data-go="trash"><span>Waste</span><small>쓰레기 분리배출</small></button><button class="menu-link" data-go="guidebook"><span>Guidebook</span><small>모든 안내 한 번에 보기</small></button></aside>
 <div class="image-lightbox-backdrop" id="imageLightboxBackdrop"></div><section class="image-lightbox" id="imageLightbox"><button class="image-lightbox-close" id="closeImageLightbox"><span class="mi">close</span></button><img id="imageLightboxImg" src="" alt=""><p class="image-lightbox-caption" id="imageLightboxCaption"></p></section>
 <button class="chat-fab another-chat-fab" id="openChatFab"><span class="mi">smart_toy</span></button><div class="chat-backdrop" id="chatBackdrop"></div><section class="chat-panel" id="chatPanel"><header class="chat-head"><div><h2>ANOTHER HOUSE CONCIERGE</h2><p>공식 숙소 안내만 답변합니다.</p></div><button class="chat-close" id="closeChat"><span class="mi">close</span></button></header><div class="chat-log" id="chatLog"><div class="msg bot">안녕하세요. 체크인, 교통, Wi-Fi, 기기 사용법을 물어보세요.</div></div><div><div class="chat-suggestions"><button class="suggestion">체크인은 몇 시야?</button><button class="suggestion">와이파이 알려줘</button><button class="suggestion">동대문역에서 어떻게 가?</button></div><div class="chat-note">비밀번호와 출입 코드는 예약 플랫폼 메시지에서 확인해 주세요.</div><form class="chat-form" id="chatForm"><textarea id="chatInput" rows="1" placeholder="질문을 입력하세요"></textarea><button class="send-btn"><span class="mi">arrow_upward</span></button></form></div></section><div class="toast" id="toast">복사했습니다</div>
-<script src="assets/site-data.js?v=20260728-7"></script><script src="assets/master-app.js?v=20260728-7"></script></body>
+<script src="assets/site-data.js?v=20260728-8"></script><script src="assets/master-app.js?v=20260728-8"></script></body>
 </html>

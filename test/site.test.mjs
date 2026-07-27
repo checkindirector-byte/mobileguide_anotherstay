@@ -26,7 +26,7 @@ test("public bundle excludes credentials and duplicate FAQ data",async()=>{
 
 test("hero motion matches the master timing contract",async()=>{
   const css = await read("assets/styles.css"); const app = await read("assets/app.js");
-  assert.match(css,/scale\(1\.10\)/); assert.match(css,/heroZoomOut 3\.2s cubic-bezier\(\.22,1,\.36,1\)/); assert.match(css,/prefers-reduced-motion/);
+  assert.match(css,/scale\(1\.20\)/); assert.match(css,/heroZoomOut 3\.2s cubic-bezier\(\.22,1,\.36,1\)/); assert.match(css,/prefers-reduced-motion/);
   assert.match(app,/visibilitychange/); assert.match(app,/pageshow/); assert.match(app,/image\.decode/);
 });
 
