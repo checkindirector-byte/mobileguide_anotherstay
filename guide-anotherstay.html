@@ -28,7 +28,7 @@
       <button class="header-btn menu-btn" id="menuButton" type="button" aria-label="메뉴 열기">
         <span></span><span></span>
       </button>
-      <a class="wordmark" href="#home" aria-label="Another House 홈">ANOTHER HOUSE</a>
+      <a class="wordmark" href="/" data-route="home" aria-label="Another House 홈">ANOTHER HOUSE</a>
       <button class="language-btn" id="languageButton" type="button" aria-haspopup="listbox" aria-expanded="false">
         <span id="languageLabel">KO</span>
         <span aria-hidden="true">⌄</span>
@@ -52,10 +52,10 @@
             <p class="hero-copy" data-i18n="heroCopy">서울의 하루를 조용히 마무리하는<br>여성 전용 프라이빗 스테이</p>
             <div class="hero-actions">
               <button class="pill-btn light" type="button" data-open-booking data-i18n="book">예약하기</button>
-              <a class="pill-btn glass" href="#checkin" data-i18n="guestGuide">게스트 가이드</a>
+              <a class="pill-btn glass" href="/" data-route="checkin" data-i18n="guestGuide">게스트 가이드</a>
             </div>
           </div>
-          <a class="scroll-mark" href="#story" aria-label="아래로 이동"><span></span></a>
+          <a class="scroll-mark" href="/" data-scroll="story" aria-label="아래로 이동"><span></span></a>
         </section>
 
         <section class="intro section-pad reveal" id="story">
@@ -198,10 +198,10 @@
     </main>
 
     <nav class="bottom-nav" aria-label="주요 메뉴">
-      <a href="#home" data-nav="home"><span>⌂</span><b data-i18n="navHome">홈</b></a>
-      <a href="#checkin" data-nav="checkin"><span>↳</span><b data-i18n="navArrival">도착</b></a>
-      <a href="#gallery" data-nav="gallery"><span>□</span><b data-i18n="navStay">공간</b></a>
-      <a href="#appliances" data-nav="appliances"><span>◇</span><b data-i18n="navGuide">가이드</b></a>
+      <a href="/" data-route="home" data-nav="home"><span>⌂</span><b data-i18n="navHome">홈</b></a>
+      <a href="/" data-route="checkin" data-nav="checkin"><span>↳</span><b data-i18n="navArrival">도착</b></a>
+      <a href="/" data-route="gallery" data-nav="gallery"><span>□</span><b data-i18n="navStay">공간</b></a>
+      <a href="/" data-route="appliances" data-nav="appliances"><span>◇</span><b data-i18n="navGuide">가이드</b></a>
       <button type="button" id="moreButton"><span>•••</span><b data-i18n="navMore">더보기</b></button>
     </nav>
   </div>

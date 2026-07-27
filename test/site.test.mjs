@@ -12,8 +12,17 @@ test("site includes core guest-guide routes", async () => {
   }
 });
 
+test("public navigation keeps the browser URL on the root domain", async () => {
+  const html = await readFile(resolve(root, "index.html"), "utf8");
+  const js = await readFile(resolve(root, "assets/app.js"), "utf8");
+  assert.doesNotMatch(html, /http-equiv="refresh"/i);
+  assert.doesNotMatch(html, /href="#/);
+  assert.doesNotMatch(js, /location\.hash\s*=/);
+  assert.match(js, /history\.replaceState/);
+});
+
 test("public files do not expose private access credentials", async () => {
-  const html = await readFile(resolve(root, "guide-anotherstay.html"), "utf8");
+  const html = await readFile(resolve(root, "index.html"), "utf8");
   const js = await readFile(resolve(root, "assets/app.js"), "utf8");
   assert.equal(html.includes("8282") || js.includes("8282"), false);
   assert.equal(html.includes("another1234") || js.includes("another1234"), false);

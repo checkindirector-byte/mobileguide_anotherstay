@@ -2,10 +2,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": ".",
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/",
-      "destination": "/guide-anotherstay"
+      "source": "/guide-anotherstay",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }

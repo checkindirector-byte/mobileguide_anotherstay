@@ -338,16 +338,21 @@
     updateSmartGuide();
   }
 
+  let currentRoute = location.hash.replace("#", "") || "home";
+  if (location.hash || location.pathname !== "/") {
+    history.replaceState(null, "", `/${location.search}`);
+  }
+
   function renderRoute(scroll = true) {
-    const route = location.hash.replace("#", "") || "home";
+    const route = currentRoute;
     const page = pages[route];
     const homeView = $("#homeView");
     const pageView = $("#pageView");
     document.body.classList.toggle("page-open", route !== "home");
 
     if (!page) {
-      location.hash = "home";
-      return;
+      currentRoute = "home";
+      return renderRoute(scroll);
     }
     if (route === "home") {
       homeView.hidden = false;
@@ -555,7 +560,17 @@
   }));
   document.addEventListener("click", event => {
     const routeButton = event.target.closest("[data-route]");
-    if (routeButton) location.hash = routeButton.dataset.route;
+    if (routeButton) {
+      event.preventDefault();
+      currentRoute = routeButton.dataset.route;
+      history.replaceState(null, "", `/${location.search}`);
+      renderRoute();
+    }
+    const scrollButton = event.target.closest("[data-scroll]");
+    if (scrollButton) {
+      event.preventDefault();
+      document.getElementById(scrollButton.dataset.scroll)?.scrollIntoView({ behavior: "smooth" });
+    }
     if (event.target.closest("[data-open-booking]")) openBooking();
     if (event.target.closest("[data-close-booking]")) closeBooking();
     const galleryButton = event.target.closest("[data-gallery-index]");
@@ -573,7 +588,6 @@
     if (!$("#lightbox").hidden && event.key === "ArrowLeft") openLightbox(lightboxIndex - 1);
     if (!$("#lightbox").hidden && event.key === "ArrowRight") openLightbox(lightboxIndex + 1);
   });
-  window.addEventListener("hashchange", () => renderRoute());
   window.addEventListener("scroll", () => $("#siteHeader").classList.toggle("scrolled", scrollY > 28), { passive: true });
 
   applyTranslations();

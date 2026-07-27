@@ -1,6 +1,6 @@
-const CACHE = "another-house-v1";
+const CACHE = "another-house-v2";
 const ASSETS = [
-  "/guide-anotherstay",
+  "/",
   "/assets/styles.css",
   "/assets/app.js",
   "/assets/images/hero.webp",
