@@ -1,0 +1,16 @@
+{
+  "name": "Another House Guest Guide",
+  "short_name": "Another House",
+  "start_url": "/guide-anotherstay",
+  "display": "standalone",
+  "background_color": "#f2ece4",
+  "theme_color": "#a6482f",
+  "icons": [
+    {
+      "src": "/assets/images/logo.webp",
+      "sizes": "900x900",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
