@@ -64,11 +64,15 @@ test("home typography and approved hero subtitle follow the contract",async()=>{
 
 test("home gallery copy, compact rhythm, and restaurant imagery are upgraded",async()=>{
   const html=await read("index.html");
+  const app=await read("assets/master-app.js");
   const expanded=await read("assets/restaurant-expanded.js");
   assert.doesNotMatch(html,/previous-gallery-label|>03<|>THE HOUSE</);
+  assert.match(html,/previous-gallery-kicker">ROOM PHOTOS/);
   assert.match(html,/previous-gallery-subtitle/);
   assert.ok(html.includes("객실 둘러보기"));
-  assert.match(html,/previous-gallery-preview\{padding:48px[^}]*54px/);
+  assert.match(html,/previous-gallery-preview\{padding:36px[^}]*12px/);
+  assert.match(html,/previous-gallery-subtitle\{[^}]*font-size:26px[^}]*font-weight:800/);
+  assert.match(app,/homePickIds=\['duck','coffee'\]/);
   for(const id of ["blt-steak","tavolo24","pizzeria-o","the-place","onion-anguk","london-bagel","mil-toast","layered-bukchon","eggdrop","cheongsudang","fritz-wonseo","nuldam","donut-jungsu","taegeukdang"]) {
     assert.ok(expanded.includes(`add('${id}', '${id}', {`));
     await access(resolve(root,`assets/images/restaurants/${id}.webp`));
