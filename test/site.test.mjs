@@ -100,3 +100,13 @@ test("guide page polish removes duplicates and matches the master media",async()
   assert.equal(coffee.sourceType,"Naver Place business upload");
   await access(resolve(root,"assets/images/restaurants-hero.jpg"));
 });
+test("mobile shell cannot create document-level horizontal scrolling",async()=>{
+  const html=await read("index.html");
+  const alias=await read("guide-anotherstay.html");
+  assert.match(html,/html,body\{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none\}/);
+  assert.match(html,/\.app\{width:100%;max-width:480px;overflow-x:clip\}/);
+  assert.match(html,/\.menu-panel\{right:max\(0px,calc\(\(100% - 480px\)\/2\)\);width:min\(360px,92%\)\}/);
+  assert.match(html,/\.device-guide-carousel\{[^}]*overflow-x:auto/);
+  assert.match(html,/\.gallery-thumbs\{[^}]*overflow-x:auto/);
+  assert.equal(html,alias);
+});

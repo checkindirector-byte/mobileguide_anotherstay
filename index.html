@@ -933,6 +933,11 @@ body .numeric-font{font-family:var(--font-ko)!important;font-variant-numeric:tab
 @media (min-width:760px){.chat-panel{height:92vh;height:min(760px,92vh);height:min(760px,92dvh)}}
 @media (max-width:520px){.chat-panel{height:92vh;height:92dvh}}
 
+/* Keep the document locked to the device width while preserving intentional in-card carousels. */
+html,body{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none}
+.app{width:100%;max-width:480px;overflow-x:clip}
+.menu-panel{right:max(0px,calc((100% - 480px)/2));width:min(360px,92%)}
+
 /* Safari/WKWebView: protect controls from the notch and support pre-Safari 18 backdrop blur. */
 .top{height:calc(72px + var(--safe-top));padding-top:var(--safe-top);-webkit-backdrop-filter:blur(18px)}
 .menu-panel{padding-top:calc(22px + var(--safe-top))}
