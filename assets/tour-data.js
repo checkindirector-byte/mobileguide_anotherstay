@@ -3,10 +3,10 @@
 
   const I = (ko, en, ja, zh) => ({ ko, en, ja, zh });
   const PHOTO_BY_ID = {
-    'ddp': { image: '/assets/images/tours/spots/01-ddp.webp', credit: 'Eugene Lim · CC BY 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_at_night,_Seoul,_Korea.jpg' },
-    'heunginjimun': { image: '/assets/images/tours/spots/02-heunginjimun.webp', credit: 'Mark Froelich · CC BY-SA 3.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Heunginjimun_Gate,_Seoul,_Korea.jpg' },
-    'naksan': { image: '/assets/images/tours/spots/03-naksan.webp', credit: 'Korea.net · CC BY-SA 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Naksan_Park,_Seoul_(36345834862).jpg' },
-    'ihwa': { image: '/assets/images/tours/spots/04-ihwa.webp', credit: 'mmmmngai · CC BY-SA 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Korea-Seoul-Ihwa_Mural_Village-P1210614.jpg' },
+    'ddp': { image: '/assets/images/tours/spots/01-ddp.webp', credit: 'Nestor Lacle · CC BY 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_%26_Park.jpg' },
+    'heunginjimun': { image: '/assets/images/tours/spots/02-heunginjimun.webp', credit: 'TealAlligator · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Dongdaemun_Gate_or_Heunginjimun_gate.jpg' },
+    'naksan': { image: '/assets/images/tours/spots/03-naksan.webp', credit: 'Rtflakfizer · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Seoul_Fortress_Wall,_Naksan.jpg' },
+    'ihwa': { image: '/assets/images/tours/spots/04-ihwa.webp', credit: 'mmmmngai · CC BY-SA 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Korea-Seoul-Ihwa_Mural_Village-P1210581.jpg' },
     'changsin-cliff': { image: '/assets/images/tours/spots/05-changsin.webp', credit: 'Wikihyo · CC0', creditUrl: 'https://commons.wikimedia.org/wiki/File:View_from_Naksan_Park,_Seoul.jpg' },
     'gwangjang': { image: '/assets/images/tours/spots/06-gwangjang.webp', credit: 'Bgag · CC0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Gwangjang_Market,_Seoul.jpg' },
     'cheonggyecheon': { image: '/assets/images/tours/spots/07-cheonggyecheon.webp', credit: 'Ken Eckert · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Stream_at_night.jpg' },
@@ -18,11 +18,11 @@
     'changdeokgung': { image: '/assets/images/tours/spots/13-changdeokgung.webp', credit: 'Basile Morin · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Injeongjeon,_Changdeokgung,_Seoul.jpg' },
     'changgyeonggung': { image: '/assets/images/tours/spots/14-changgyeonggung.webp', credit: 'Basile Morin · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Changgyeonggung_palace,_Seoul.jpg' },
     'gyeongbokgung': { image: '/assets/images/tours/spots/15-gyeongbokgung.webp', credit: 'Frank Schulenburg · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Gyeongbokgung_Palace,_Seoul,_Korea.jpg' },
-    'ikseon': { image: '/assets/images/tours/spots/16-ikseon.webp', credit: 'S h y numis · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Ikseon-dong_Hanok_Village.jpg' },
-    'insadong': { image: '/assets/images/tours/spots/17-insadong.webp', credit: 'travelmate2021 · CC BY 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Insadong,_Seoul.jpg' },
+    'ikseon': { image: '/assets/images/tours/spots/16-ikseon.webp', credit: 'S h y numis · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Ikseon-dong_%EC%9D%B5%EC%84%A0%EB%8F%99_October_1_2020_5.jpg' },
+    'insadong': { image: '/assets/images/tours/spots/17-insadong.webp', credit: 'HK Woo · CC BY 3.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%82%AC%EB%8F%99_%EC%9E%85%EA%B5%AC_-_panoramio.jpg' },
     'seosulla': { image: '/assets/images/tours/spots/18-seosulla.webp', credit: 'Ethan Doyle White · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Wall_of_Jongmyo_Shrine,_Seoul.jpg' },
-    'daehangno': { image: '/assets/images/tours/spots/19-daehangno.webp', credit: 'Seoul Institute · CC BY 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:%EB%A7%88%EB%A1%9C%EB%8B%88%EC%97%90%EA%B3%B5%EC%9B%90.jpg' },
-    'mmca': { image: '/assets/images/tours/spots/20-mmca.webp', credit: 'Bonnielou2013 · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:National_Museum_of_Modern_and_Contemporary_Art,_Seoul.jpg' },
+    'daehangno': { image: '/assets/images/tours/spots/19-daehangno.webp', credit: 'Gipe0001 · CC BY-SA 3.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Seoul_daehangno.JPG' },
+    'mmca': { image: '/assets/images/tours/spots/20-mmca.webp', credit: 'Seoul Institute · CC BY 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:MMCA_Seoul.jpg' },
   };
 
   const G = (query) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
@@ -34,7 +34,7 @@
   });
 
   window.ANOTHER_HOUSE_TOURS = {
-    hero: '/assets/images/tours/ddp-hero.webp',
+    hero: '/assets/images/tours/seoul-sunny-hero.webp',
     kicker: 'NEARBY TOURS',
     title: I('근교 추천 투어', 'Nearby Tours', '近郊おすすめツアー', '附近精选路线'),
     summary: I(
@@ -43,7 +43,7 @@
       '宿から歩き始め、城郭・市場・宮殿・デザインスポットを巡る20のローカルコースです。',
       '从住宿出发，探索首尔城墙、市场、宫殿与设计地标的20条本地路线。'
     ),
-    hostTitle: I('처음 서울을 만나는 가장 좋은 7곳', 'The best seven places to start', '最初に訪れたい7スポット', '初识首尔的7个精选地点'),
+    hostTitle: I('서울 여행의 첫 7곳', '7 best places to start', '最初の7スポット', '首尔精选7处'),
     hostCopy: I(
       '숙소와 가깝고 동대문다운 풍경을 선명하게 보여주는 장소부터 골랐어요.',
       'Start with places close to the house that show Dongdaemun at its most distinctive.',

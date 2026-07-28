@@ -88,7 +88,7 @@
       <div class="restaurants-filter" role="tablist" aria-label="Tour categories">${DATA.categories.map((item) => `<button class="restaurant-chip ${item.id === category ? 'active' : ''}" type="button" data-tour-category="${esc(item.id)}">${esc(t(item.label))}</button>`).join('')}</div>
       <label class="restaurant-search"><span class="mi">search</span><input id="tourSearch" type="search" value="${esc(query)}" placeholder="${esc(t(DATA.searchPlaceholder))}"></label>
     </div>
-    <section class="restaurant-host-pick"><div class="restaurant-host-pick-head"><span class="restaurant-host-pick-icon"><span class="mi">route</span></span><div><small>HOST’S PICK</small><strong>${esc(t(DATA.hostTitle))}</strong></div></div><p>${esc(t(DATA.hostCopy))}</p></section>
+    <section class="restaurant-host-pick"><div class="restaurant-host-pick-head"><span class="restaurant-host-pick-icon"><span class="mi">hotel_class</span></span><div><small>HOST’S PICK</small><strong>${esc(t(DATA.hostTitle))}</strong></div></div></section>
     <div class="restaurant-summary"><b><span id="tourCount">0</span> ${esc(l.places)}</b><span id="tourCategoryLabel"></span></div>
     <div class="restaurants-list" id="tourCards"></div>
     <div class="restaurants-empty" id="toursEmpty">${esc(l.empty)}</div>`;
