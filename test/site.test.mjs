@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
@@ -50,13 +50,27 @@ test("multi-page appliance diagrams use the peek carousel contract",async()=>{
   assert.doesNotMatch(data,/official-haatz-hec1050-use-p13-ko/);
 });
 
-test("home typography and shared-drive subtitle follow the approved contract",async()=>{
+test("home typography and approved hero subtitle follow the contract",async()=>{
   const html = await read("index.html");
   const app = await read("assets/master-app.js");
   const data = await read("assets/site-data.js");
   assert.match(html,/body \.top h1,body \.brand-home\{[^}]*font-size:18px!important[^}]*font-weight:400!important[^}]*letter-spacing:-\.015em!important/);
   assert.match(html,/\.hero-title,\.landing-hero \.hero-title\{[^}]*font-weight:300!important[^}]*letter-spacing:-\.02em!important/);
   assert.match(html,/\.landing-hero \.eyebrow\{[^}]*font-family:'Oxanium'/);
-  assert.ok(data.includes("heroSubtitle: I('\ud504\ub77c\uc774\ube57\ud55c \uc5ec\uc131 \uc804\uc6a9 \ud638\uc2a4\ud154'"));
+  assert.ok(data.includes("heroSubtitle: 'STAY ANOTHER LIFE'"));
   assert.match(app,/heroEyebrow\.textContent=t\(D\.heroSubtitle\)/);
+});
+
+
+test("home gallery copy, compact rhythm, and restaurant imagery are upgraded",async()=>{
+  const html=await read("index.html");
+  const expanded=await read("assets/restaurant-expanded.js");
+  assert.doesNotMatch(html,/previous-gallery-label|>03<|>THE HOUSE</);
+  assert.match(html,/previous-gallery-subtitle/);
+  assert.ok(html.includes("객실 둘러보기"));
+  assert.match(html,/previous-gallery-preview\{padding:48px[^}]*54px/);
+  for(const id of ["blt-steak","tavolo24","pizzeria-o","the-place","onion-anguk","london-bagel","mil-toast","layered-bukchon","eggdrop","cheongsudang","fritz-wonseo","nuldam","donut-jungsu","taegeukdang"]) {
+    assert.ok(expanded.includes(`add('${id}', '${id}', {`));
+    await access(resolve(root,`assets/images/restaurants/${id}.webp`));
+  }
 });
