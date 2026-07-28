@@ -103,9 +103,14 @@ test("guide page polish removes duplicates and matches the master media",async()
 test("mobile shell cannot create document-level horizontal scrolling",async()=>{
   const html=await read("index.html");
   const alias=await read("guide-anotherstay.html");
-  assert.match(html,/html,body\{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none\}/);
-  assert.match(html,/\.app\{width:100%;max-width:480px;overflow-x:clip\}/);
-  assert.match(html,/\.menu-panel\{right:max\(0px,calc\(\(100% - 480px\)\/2\)\);width:min\(360px,92%\)\}/);
+  const app=await read("assets/master-app.js");
+  assert.match(html,/html\{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none\}/);
+  assert.match(html,/body\{position:relative;width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none\}/);
+  assert.match(html,/\.app\{width:100%;max-width:480px;overflow-x:clip;contain:inline-size\}/);
+  assert.match(html,/@media \(max-width:480px\)\{\.menu-panel\{right:0;width:88vw\}\}/);
+  assert.match(app,/horizontalGestureSelector='\.gallery-thumbs,\.restaurants-filter,\.device-guide-carousel,\.chat-suggestions,\.chat-autocomplete'/);
+  assert.match(app,/touchmove[^\n]*preventDefault\(\)[^\n]*passive:false/);
+  assert.doesNotMatch(app,/dx>6/);
   assert.match(html,/\.device-guide-carousel\{[^}]*overflow-x:auto/);
   assert.match(html,/\.gallery-thumbs\{[^}]*overflow-x:auto/);
   assert.equal(html,alias);
