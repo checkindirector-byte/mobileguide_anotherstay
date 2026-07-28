@@ -69,7 +69,7 @@
     const empty = $('#toursEmpty');
     if (!cards) return;
     const hostPick = $('#tourHostPick');
-    if (hostPick) hostPick.hidden = category !== 'host';
+    if (hostPick) { const showHostPick = category === 'host'; hostPick.hidden = !showHostPick; hostPick.style.display = showHostPick ? '' : 'none'; }
     count.textContent = String(list.length);
     const selected = DATA.categories.find((item) => item.id === category);
     label.textContent = selected ? t(selected.label) : '';

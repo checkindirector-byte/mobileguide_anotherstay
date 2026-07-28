@@ -22,13 +22,13 @@
       print: I('가이드북 인쇄·저장', 'Print or save guidebook', 'ガイドブックを印刷・保存', '打印或保存指南')
     },
     gallery: [
-      ['/assets/images/hero.webp', I('어나더하우스 입구와 복도', 'Entrance and corridor', 'エントランスと廊下', '入口与走廊')],
-      ['/assets/images/powder-room.webp', I('파우더룸', 'Powder room', 'パウダールーム', '梳妆区')],
-      ['/assets/images/shower.webp', I('깨끗한 공용 샤워실', 'Clean shared shower room', '清潔な共用シャワールーム', '洁净公共淋浴间')],
+      ['/assets/images/hero.webp', I('어나더하우스 메인 공간', 'Another House main space', 'アナザーハウスのメイン空間', 'Another House主空间')],
+      ['/assets/images/brand.webp', I('객실 복도', 'Guest room corridor', '客室廊下', '客房走廊')],
+      ['/assets/images/entrance-brand.webp', I('브랜드 월과 복도', 'Brand wall and corridor', 'ブランドウォールと廊下', '品牌墙与走廊')],
       ['/assets/images/kitchen.webp', I('공용 키친', 'Shared kitchen', '共用キッチン', '公共厨房')],
-      ['/assets/images/kitchen-bar.webp', I('키친 바', 'Kitchen bar', 'キッチンバー', '厨房吧台')],
-      ['/assets/images/entrance-brand.webp', I('브랜드 월', 'Brand wall', 'ブランドウォール', '品牌墙')],
-      ['/assets/images/arrival.webp', I('선일빌딩 입구', 'Sunil Building entrance', 'ソニルビル入口', 'Sunil大厦入口')],
+      ['/assets/images/kitchen-bar.webp', I('공용 키친 바', 'Shared kitchen bar', '共用キッチンバー', '公共厨房吧台')],
+      ['/assets/images/powder-room.webp', I('공용 파우더룸', 'Shared powder room', '共用パウダールーム', '公共梳妆区')],
+      ['/assets/images/shower.webp', I('깨끗한 공용 샤워실', 'Clean shared shower room', '清潔な共用シャワールーム', '洁净公共淋浴间')],
       ['/assets/images/single-window.webp', I('창가 싱글룸', 'Window single room', '窓側シングルルーム', '窗边单人房')],
       ['/assets/images/single-room.webp', I('코지 싱글룸', 'Cozy single room', 'コージーシングルルーム', '舒适单人房')],
       ['/assets/images/double-bed.webp', I('벙커 더블룸', 'Bunk double room', 'バンクダブルルーム', '双人上下铺房')],
@@ -58,7 +58,7 @@
         },
         sections: [
           {
-            title: I('인천공항 → 어나더하우스', 'Incheon Airport → Another House', '仁川空港 → アナザーハウス', '仁川机场 → Another House'),
+            title: I('인천공항에서 오시는 길', 'From Incheon Airport', '仁川空港からのアクセス', '从仁川机场前往'),
             summary: I('공항철도·리무진·택시 경로 보기', 'See AREX, limousine, and taxi routes', '空港鉄道・リムジン・タクシー', '查看机场铁路、巴士和出租车路线'),
             sourceUrl: 'https://www.airport.kr/ap_en/1512/subview.do',
             sourceLabel: I('인천공항 공식 교통정보 확인', 'Check Incheon Airport official transport info', '仁川空港の公式交通情報', '查看仁川机场官方交通信息'),
@@ -85,7 +85,7 @@
                 note: I('탑승 전 전광판에서 당일 정류장과 운행시간을 확인하세요.', 'Confirm the operating stop and time on the airport display before boarding.', '乗車前に当日の停留所と運行時刻をご確認ください。', '上车前请在机场屏幕确认当天停靠站和班次。'),
                 color: '#7D5D49', soft: '#E9DED4',
                 steps: [
-                  { icon:'confirmation_number', label:I('TICKET','TICKET','TICKET','TICKET'), title:I('6002번 승차권 확인', 'Check Bus 6002 ticket', '6002番の乗車券を確認', '确认6002路车票'), body:I('공항 버스 매표소·무인발권기에서 안내를 확인합니다.', 'Check the airport bus counter or ticket machine.', '空港バス案内所または券売機で確認します。', '在机场巴士售票处或售票机确认。') },
+                  { icon:'local_activity', label:I('TICKET','TICKET','TICKET','TICKET'), title:I('6002번 승차권 확인', 'Check Bus 6002 ticket', '6002番の乗車券を確認', '确认6002路车票'), body:I('공항 버스 매표소·무인발권기에서 안내를 확인합니다.', 'Check the airport bus counter or ticket machine.', '空港バス案内所または券売機で確認します。', '在机场巴士售票处或售票机确认。') },
                   { icon:'airport_shuttle', label:I('BUS 6002','BUS 6002','BUS 6002','BUS 6002'), title:I('청량리·동대문·종로 방면', 'Toward Cheongnyangni, Dongdaemun, Jongno', '清凉里・東大門・鍾路方面', '清凉里·东大门·钟路方向'), body:I('공식 노선의 동대문 권역 정류장으로 이동합니다.', 'Ride to the official Dongdaemun-area stop.', '公式ルートの東大門エリア停留所まで乗車します。', '前往官方路线的东大门区域站点。') },
                   { icon:'directions_walk', label:I('LAST MILE','LAST MILE','LAST MILE','LAST MILE'), title:I('동대문역 6번 출구 방향', 'Head toward Dongdaemun Exit 6', '東大門駅6番出口方面へ', '前往东大门站6号出口'), body:I('실시간 하차 정류장을 확인한 뒤 선일빌딩 5층으로 이동합니다.', 'Check your live stop, then continue to Sunil Building 5F.', '当日の降車停留所を確認し、ソニルビル5階へ移動します。', '确认实时下车站后前往Sunil大厦5层。') }
                 ]
@@ -105,7 +105,7 @@
             ]
           },
           {
-            title: I('김포공항 → 어나더하우스', 'Gimpo Airport → Another House', '金浦空港 → アナザーハウス', '金浦机场 → Another House'),
+            title: I('김포공항에서 오시는 길', 'From Gimpo Airport', '金浦空港からのアクセス', '从金浦机场前往'),
             summary: I('공항철도·지하철·택시 경로 보기', 'See AREX, subway, and taxi routes', '空港鉄道・地下鉄・タクシー', '查看机场铁路、地铁和出租车路线'),
             sourceUrl: 'https://www.airport.co.kr/gimpo/cms/frCon/index.do?CONTENTS_NO=5&MENU_ID=1290',
             sourceLabel: I('김포공항 공식 교통정보 확인', 'Check Gimpo Airport official transport info', '金浦空港の公式交通情報', '查看金浦机场官方交通信息'),
