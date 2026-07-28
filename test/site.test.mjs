@@ -78,3 +78,25 @@ test("home gallery copy, compact rhythm, and restaurant imagery are upgraded",as
     await access(resolve(root,`assets/images/restaurants/${id}.webp`));
   }
 });
+
+test("guide page polish removes duplicates and matches the master media",async()=>{
+  const html=await read("index.html");
+  const app=await read("assets/master-app.js");
+  const data=await read("assets/site-data.js");
+  const restaurantData=await read("assets/restaurant-data.js");
+  const restaurantExpanded=await read("assets/restaurant-expanded.js");
+  const sources=JSON.parse(await read("assets/images/restaurants/photo-sources.json"));
+  assert.doesNotMatch(html,/tour-hero-credit/);
+  assert.match(html,/checkin-locker-card \.airport-card-body>\.figure\{[^}]*border-radius:8px[^}]*background:transparent/);
+  assert.match(html,/trash-guide-card \.device-body>p\{[^}]*padding:22px 24px/);
+  assert.match(html,/trash-guide-card \.device-body>\.steps\{padding:0 24px/);
+  assert.match(app,/icons=\['climate','microwave','cooktop','purifier','fridge','guestbox'\]/);
+  assert.match(app,/appliancesContent'\)\.innerHTML=p\.devices\.map/);
+  assert.doesNotMatch(app,/\[\.\.\.p\.devices,washer\]/);
+  assert.match(data,/nearby: \{[^\n]*hero: '\/assets\/images\/restaurants-hero\.jpg'/);
+  assert.match(restaurantData,/hero: '\/assets\/images\/restaurants-hero\.jpg'/);
+  assert.match(restaurantExpanded,/page\.hero = '\/assets\/images\/restaurants-hero\.jpg'/);
+  const coffee=sources.images.find((item)=>item.file==="coffee.webp");
+  assert.equal(coffee.sourceType,"Naver Place business upload");
+  await access(resolve(root,"assets/images/restaurants-hero.jpg"));
+});

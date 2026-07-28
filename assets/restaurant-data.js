@@ -18,7 +18,7 @@
   D.pages.nearby = {
     title: I('주변 맛집', 'Nearby restaurants', '周辺グルメ', '附近美食'),
     kicker: 'NEARBY RESTAURANTS',
-    hero: '/assets/images/restaurants/duck.webp',
+    hero: '/assets/images/restaurants-hero.jpg',
     summary: I(
       '동대문 노포부터 광장시장, 창신동과 을지로까지. 리뷰와 평점, 현지성을 함께 살펴 고른 로컬 다이닝 가이드입니다.',
       'A local dining guide selected for reviews, ratings, and neighborhood character—from Dongdaemun institutions to Gwangjang Market, Changsin-dong, and Euljiro.',

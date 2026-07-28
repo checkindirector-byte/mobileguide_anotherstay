@@ -17,7 +17,7 @@
     ...data,
   });
 
-  page.hero = '/assets/images/restaurants/western.webp';
+  page.hero = '/assets/images/restaurants-hero.jpg';
   page.summary = I(
     '동대문 노포부터 양식, 브런치, 카페, 광장시장과 을지로까지. 가까운 곳과 일부러 찾아갈 곳을 함께 고른 로컬 다이닝 가이드입니다.',
     'A wider local dining guide—from Dongdaemun institutions to Western dining, brunch, cafes, Gwangjang Market, and Euljiro.',

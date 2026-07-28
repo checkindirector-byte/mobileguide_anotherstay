@@ -29,8 +29,9 @@
     {
       "file": "coffee.webp",
       "place": "coffee",
-      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%BB%A4%ED%94%BC%ED%95%9C%EC%95%BD%EB%B0%A9%20%EC%99%B8%EA%B4%80",
-      "sourceImage": "http://blogfiles.naver.net/MjAyMzA0MjVfMjE0/MDAxNjgyNDI2MTU3ODQy.reTUyiCi73il7ci2OL_gJlzmaGJoC2FbsSBwfrd8TLIg.hFWEf9j-SLQg2AqIi_nFe2z3b22E2VaFtf4wh56kQ1gg.JPEG.hiejjj79/IMG_6292.jpg"
+      "sourceSearch": "https://map.naver.com/p/entry/place/1614417324?placePath=/photo",
+      "sourceImage": "https://naverbooking-phinf.pstatic.net/20241130_167/1732934965602Yy4PL_JPEG/20211113_0002.jpg",
+      "sourceType": "Naver Place business upload"
     },
     {
       "file": "jokbal.webp",
@@ -158,5 +159,6 @@
       "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EA%B5%90%EC%B4%8C%EC%B9%98%ED%82%A8%20%EB%8F%99%EB%8C%80%EB%AC%B81%ED%98%B8%EC%A0%90%20%EC%99%B8%EA%B4%80",
       "sourceImage": "http://blogfiles.naver.net/MjAyMzA4MTNfNTMg/MDAxNjkxOTA1MDQwMTU0.vq9yJRfM-npNLEVWEP4IsMEU6w9sfdPcKK5vPdzPTj4g.FzknEbwn0oc3xItwZFYJsASxXYnBJp9oKe3wDDQ-8bUg.JPEG.gracejji/20230811%A3%DF173349.jpg"
     }
-  ]
+  ],
+  "selectionPolicy": "For each venue, prefer representative images uploaded by the business on Naver Place; use review imagery only when no suitable business image exists."
 }
