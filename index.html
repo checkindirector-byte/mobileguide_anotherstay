@@ -366,7 +366,7 @@ body.image-lightbox-open{overflow:hidden;touch-action:none}
 .transport-card h3{margin:0 0 14px;font-size:21px;line-height:1.25;color:#2A211D}
 .transport-card p{margin:0;color:#665646;font-size:14px;line-height:1.62;word-break:keep-all}
 .airport-card{padding:0;overflow:hidden}
-.airport-summary{list-style:none;display:grid;grid-template-columns:54px 1fr 30px;gap:13px;align-items:center;padding:18px;cursor:pointer}
+.airport-summary{list-style:none;display:grid;grid-template-columns:54px 1fr 30px;gap:13px;align-items:center;padding:18px;cursor:pointer}.transport-station-summary{grid-template-columns:54px minmax(0,1fr);cursor:default;border-bottom:1px solid rgba(216,198,180,.62)}
 .airport-summary::-webkit-details-marker{display:none}
 .airport-card[open] .airport-summary{border-bottom:1px solid rgba(216,198,180,.62)}
 .airport-icon{width:54px;height:54px;border-radius:18px;background:#2A211D;color:#fff;display:grid;place-items:center}
@@ -379,7 +379,7 @@ body.image-lightbox-open{overflow:hidden;touch-action:none}
 .airport-card-body{display:grid;gap:12px;padding:18px}
 .airport-card:not([open]) .airport-card-body{display:none}
 .airport-card-body .route-card{margin-top:0}
-.transport-source-link{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;margin-top:2px;border-radius:12px;background:#2A211D;color:#fff;padding:14px 16px;text-decoration:none;font-size:12px;font-weight:800;line-height:1.35}.transport-source-link .mi{font-size:20px;color:#E4A48B}
+.transport-source-link{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;margin:18px 0;border-radius:12px;background:#2A211D;color:#fff;padding:14px 16px;text-decoration:none;font-size:12px;font-weight:800;line-height:1.35}.transport-source-link .mi{font-size:20px;color:#E4A48B}
 .transport-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
 .transport-actions .hotel-btn{color:#2A211D;border-color:rgba(123,99,79,.28);background:#fff}
 .transport-actions .hotel-btn.primary{background:#2A211D;color:#fff;border-color:#2A211D}
@@ -398,7 +398,7 @@ body.image-lightbox-open{overflow:hidden;touch-action:none}
 .destination-chip .mi{font-size:23px;color:#754836}
 .destination-chip small{display:block;color:#8a7663;font-size:10px;font-weight:900;text-transform:uppercase}
 .destination-chip b{display:block;margin-top:4px;color:#2A211D;font-size:13px;line-height:1.35;word-break:keep-all}
-.transport-destination-card .destination-graphic{gap:0;border:0;border-radius:0;background:transparent;padding:0;overflow:visible}
+.transport-destination-card .destination-graphic{gap:0;border:0;border-radius:0;background:transparent;padding:0;overflow:visible}.airport-card.transport-station-card .airport-card-body{display:grid;padding:18px}.transport-station-card .destination-grid{margin-top:0}
 .transport-destination-card .destination-graphic:before{display:none}
 .transport-destination-card .destination-pin{border-radius:8px;background:#754836}
 .transport-destination-card .destination-grid{gap:0;margin-top:10px;border-top:1px solid rgba(216,198,180,.72)}
@@ -433,7 +433,7 @@ body.image-lightbox-open{overflow:hidden;touch-action:none}
 .route-quick-tip p{margin:0;font-size:12px;line-height:1.46;color:#665646}
 .route-infographic.compact .route-infographic-head{padding:15px 16px 12px}
 .route-infographic.compact .route-infographic-head strong{font-size:18px}
-.route-infographic.compact .route-line-map{padding:14px 16px 4px}
+.route-infographic.compact .route-line-map{padding:14px 16px 14px}
 .route-infographic.compact .route-line-step{min-height:66px;grid-template-columns:38px 1fr;gap:11px}
 .route-infographic.compact .route-line-step:not(:last-child):after{left:18px;top:38px;width:3px}
 .route-infographic.compact .route-node{width:38px;height:38px}
@@ -904,7 +904,7 @@ html[lang="zh"] .screen.active :is(p,b,strong,small,h1,h2,h3,h4,li,label,figcapt
 html[lang="ja"] .screen.active :is(p,b,strong,small,h1,h2,h3,h4,li,label,figcaption,span:not(.mi)){word-break:break-word}
 .transport-screen :is(.transport-card,.airport-card,.airport-summary,.airport-card-body,.route-card,.route-infographic,.route-infographic-head,.route-line-map,.route-line-step,.route-line-copy,.destination-graphic,.destination-pin,.destination-grid,.destination-chip,.airport-copy){min-width:0;max-width:100%}
 .transport-screen :is(.transport-card,.airport-card,.route-card,.route-infographic,.destination-graphic){width:100%}
-.transport-screen .airport-summary{grid-template-columns:54px minmax(0,1fr) 30px}
+.transport-screen .airport-summary{grid-template-columns:54px minmax(0,1fr) 30px}.transport-screen .transport-station-summary{grid-template-columns:54px minmax(0,1fr)}
 .transport-screen .destination-pin{grid-template-columns:52px minmax(0,1fr)}
 .transport-screen .destination-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .transport-screen .route-line-step{grid-template-columns:42px minmax(0,1fr)}
@@ -987,8 +987,6 @@ html,body,.app,[data-screen="home"]{background:var(--background)}
 .device-guide-visual{margin:0 20px 16px;border:1px solid color-mix(in srgb,var(--secondary) 22%,#d9c5b8);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(42,33,29,.08)}
 .device-guide-visual .image-zoom{position:relative;display:block;width:100%;padding:0;border:0;background:#f7f1ea;cursor:zoom-in}
 .device-guide-visual img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#f7f1ea}
-.device-guide-badge{position:absolute;z-index:2;top:10px;left:10px;display:flex;align-items:center;gap:6px;max-width:calc(100% - 20px);padding:7px 10px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(42,33,29,.88);box-shadow:0 5px 18px rgba(16,12,8,.16);color:#fff;font-size:10px;font-weight:800;letter-spacing:.04em;text-align:left;backdrop-filter:blur(8px)}
-.device-guide-badge .mi{font-size:15px;color:#f5bda4}
 .device-guide-visual figcaption{padding:11px 13px;background:#fffaf4;color:#665646;font-size:12px;font-weight:650;line-height:1.55}
 .device-summary{margin:18px 20px 0;color:#665646;font-size:14px;line-height:1.62;word-break:keep-all}
 
@@ -1080,6 +1078,6 @@ html[lang="ko"] p,html[lang="ko"] small,html[lang="ko"] li,html[lang="ko"] input
 <nav class="bottom"><button class="tab active" data-go="home"><span class="mi">home</span><span>홈</span></button><button class="tab" data-go="wifi"><span class="mi">wifi</span><span>와이파이</span></button><button class="tab" data-go="appliances"><span class="mi">robot_2</span><span>사용법</span></button><button class="tab" data-go="laundry"><span class="mi">local_laundry_service</span><span>세탁</span></button><button class="tab" data-go="trash"><span class="mi">delete</span><span>쓰레기</span></button></nav></div>
 <div class="menu-backdrop" id="menuBackdrop"></div><aside class="menu-panel" id="menuPanel"><div class="menu-panel-head"><strong>ANOTHER HOUSE</strong><button class="icon-btn" id="closeMenu"><span class="mi">close</span></button></div><button class="menu-link" data-go="home"><span>홈</span><small>처음 화면</small></button><button class="menu-link" data-go="gallery"><span>객실 둘러보기</span><small>객실 둘러보기</small></button><button class="menu-link" data-go="checkin"><span>체크인 · 체크아웃 안내</span><small>입실·퇴실 방법과 도어락 안내</small></button><button class="menu-link" data-go="transport"><span>교통 안내</span><small>공항에서 숙소까지</small></button><button class="menu-link" data-go="wifi"><span>Wi-Fi</span><small>네트워크 정보</small></button><button class="menu-link" data-go="restaurants"><span>주변 맛집</span><small>도보 10분 맛집 리스트</small></button><button class="menu-link" data-go="tours"><span>근교 추천 투어</span><small>근교 추천 20곳</small></button><button class="menu-link" data-go="appliances"><span>냉난방 · 주방 기기 안내</span><small>냉난방 · 주방 기기 사용법</small></button><button class="menu-link" data-go="laundry"><span>세탁 안내</span><small>세탁기 · 건조기 사용법</small></button><button class="menu-link" data-go="trash"><span>쓰레기 배출</span><small>분리수거와 배출 안내</small></button><button class="menu-link" data-go="guidebook"><span>가이드북</span><small>모든 안내 한 번에 보기</small></button></aside>
 <div class="image-lightbox-backdrop" id="imageLightboxBackdrop"></div><section class="image-lightbox" id="imageLightbox"><button class="image-lightbox-close" id="closeImageLightbox"><span class="mi">close</span></button><img id="imageLightboxImg" src="" alt=""><p class="image-lightbox-caption" id="imageLightboxCaption"></p></section>
-<button class="chat-fab another-chat-fab" id="openChatFab"><span class="mi">smart_toy</span></button><div class="chat-backdrop" id="chatBackdrop"></div><section class="chat-panel" id="chatPanel"><header class="chat-head"><div><h2>ANOTHER HOUSE CONCIERGE</h2><p>공식 숙소 안내만 답변합니다.</p></div><button class="chat-close" id="closeChat"><span class="mi">close</span></button></header><div class="chat-log" id="chatLog"><div class="msg bot">안녕하세요. 체크인, 교통, Wi-Fi, 기기 사용법을 물어보세요.</div></div><div><div class="chat-suggestions"><button class="suggestion">체크인은 몇 시야?</button><button class="suggestion">와이파이 알려줘</button><button class="suggestion">동대문역에서 어떻게 가?</button></div><div class="chat-note">비밀번호와 출입 코드는 예약 플랫폼 메시지에서 확인해 주세요.</div><form class="chat-form" id="chatForm"><textarea id="chatInput" rows="1" placeholder="질문을 입력하세요"></textarea><button class="send-btn"><span class="mi">arrow_upward</span></button></form></div></section><div class="toast" id="toast">복사했습니다</div>
-<script src="assets/site-data.js?v=20260728-14"></script><script src="assets/restaurant-data.js?v=20260728-14"></script><script src="assets/restaurant-expanded.js?v=20260728-14"></script><script src="assets/tour-data.js?v=20260728-14"></script><script src="assets/master-app.js?v=20260728-14"></script><script src="assets/tour-app.js?v=20260728-14"></script></body>
+<button class="chat-fab another-chat-fab" id="openChatFab"><span class="mi">smart_toy</span></button><div class="chat-backdrop" id="chatBackdrop"></div><section class="chat-panel" id="chatPanel"><header class="chat-head"><div><h2>ANOTHER HOUSE CONCIERGE</h2><p>숙소 이용 안내만 답변합니다.</p></div><button class="chat-close" id="closeChat"><span class="mi">close</span></button></header><div class="chat-log" id="chatLog"><div class="msg bot">안녕하세요. 체크인, 교통, Wi-Fi, 기기 사용법을 물어보세요.</div></div><div><div class="chat-suggestions"><button class="suggestion">체크인은 몇 시야?</button><button class="suggestion">와이파이 알려줘</button><button class="suggestion">동대문역에서 어떻게 가?</button></div><div class="chat-note">비밀번호와 출입 코드는 예약 플랫폼 메시지에서 확인해 주세요.</div><form class="chat-form" id="chatForm"><textarea id="chatInput" rows="1" placeholder="질문을 입력하세요"></textarea><button class="send-btn"><span class="mi">arrow_upward</span></button></form></div></section><div class="toast" id="toast">복사했습니다</div>
+<script src="assets/site-data.js?v=20260728-15"></script><script src="assets/restaurant-data.js?v=20260728-15"></script><script src="assets/restaurant-expanded.js?v=20260728-15"></script><script src="assets/tour-data.js?v=20260728-15"></script><script src="assets/master-app.js?v=20260728-15"></script><script src="assets/tour-app.js?v=20260728-15"></script></body>
 </html>

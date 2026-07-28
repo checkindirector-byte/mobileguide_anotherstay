@@ -14,10 +14,10 @@
     ? (value[lang()] || value.ko || value.en || '')
     : value;
   const labels = () => ({
-    ko: { places: '곳', from: '숙소에서', map: '지도', official: '공식 정보', empty: '조건에 맞는 장소가 없습니다.' },
-    en: { places: 'places', from: 'FROM THE HOUSE', map: 'MAPS', official: 'OFFICIAL', empty: 'No places match your search.' },
-    ja: { places: 'スポット', from: '宿から', map: '地図', official: '公式情報', empty: '条件に合うスポットがありません。' },
-    zh: { places: '处', from: '距住宿', map: '地图', official: '官方信息', empty: '没有符合条件的地点。' },
+    ko: { places: '곳', from: '숙소에서', map: '지도', official: '상세 정보', empty: '조건에 맞는 장소가 없습니다.' },
+    en: { places: 'places', from: 'FROM THE HOUSE', map: 'MAPS', official: 'DETAILS', empty: 'No places match your search.' },
+    ja: { places: 'スポット', from: '宿から', map: '地図', official: '詳細情報', empty: '条件に合うスポットがありません。' },
+    zh: { places: '处', from: '距住宿', map: '地图', official: '详细信息', empty: '没有符合条件的地点。' },
   }[lang()] || {});
 
   let category = 'host';
@@ -68,6 +68,8 @@
     const cards = $('#tourCards');
     const empty = $('#toursEmpty');
     if (!cards) return;
+    const hostPick = $('#tourHostPick');
+    if (hostPick) hostPick.hidden = category !== 'host';
     count.textContent = String(list.length);
     const selected = DATA.categories.find((item) => item.id === category);
     label.textContent = selected ? t(selected.label) : '';
@@ -88,7 +90,7 @@
       <div class="restaurants-filter" role="tablist" aria-label="Tour categories">${DATA.categories.map((item) => `<button class="restaurant-chip ${item.id === category ? 'active' : ''}" type="button" data-tour-category="${esc(item.id)}">${esc(t(item.label))}</button>`).join('')}</div>
       <label class="restaurant-search"><span class="mi">search</span><input id="tourSearch" type="search" value="${esc(query)}" placeholder="${esc(t(DATA.searchPlaceholder))}"></label>
     </div>
-    <section class="restaurant-host-pick"><div class="restaurant-host-pick-head"><span class="restaurant-host-pick-icon"><span class="mi">hotel_class</span></span><div><small>HOST’S PICK</small><strong>${esc(t(DATA.hostTitle))}</strong></div></div></section>
+    <section class="restaurant-host-pick" id="tourHostPick"><div class="restaurant-host-pick-head"><span class="restaurant-host-pick-icon"><span class="mi">hotel_class</span></span><div><small>HOST’S PICK</small><strong>${esc(t(DATA.hostTitle))}</strong></div></div></section>
     <div class="restaurant-summary"><b><span id="tourCount">0</span> ${esc(l.places)}</b><span id="tourCategoryLabel"></span></div>
     <div class="restaurants-list" id="tourCards"></div>
     <div class="restaurants-empty" id="toursEmpty">${esc(l.empty)}</div>`;

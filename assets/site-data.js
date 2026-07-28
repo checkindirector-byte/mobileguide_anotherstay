@@ -17,22 +17,22 @@
       openMap: I('지도 열기', 'Open map', '地図を開く', '打开地图'),
       allGuide: I('모든 안내', 'All guides', 'すべての案内', '全部指南'),
       noAnswer: I('홈페이지에서 확인되지 않는 내용입니다. 예약 플랫폼 메시지로 호스트에게 확인해 주세요.', 'That information is not available on this site. Please ask the host through your booking platform.', 'このサイトでは確認できません。予約プラットフォームのメッセージでホストへご確認ください。', '本网站没有该信息。请通过预订平台消息向房东确认。'),
-      sourceNotice: I('이 답변은 어나더하우스 공식 안내 내용만 사용합니다.', 'Answers use only the official Another House guide.', 'アナザーハウスの公式案内のみを使用します。', '回答仅使用 Another House 官方指南。'),
+      sourceNotice: I('이 답변은 어나더하우스 안내 내용만 사용합니다.', 'Answers use only the Another House guide.', 'アナザーハウスの案内のみを使用します。', '回答仅使用 Another House 指南。'),
       backHome: I('홈으로', 'Back home', 'ホームへ', '返回首页'),
       print: I('가이드북 인쇄·저장', 'Print or save guidebook', 'ガイドブックを印刷・保存', '打印或保存指南')
     },
     gallery: [
       ['/assets/images/hero.webp', I('어나더하우스 입구와 복도', 'Entrance and corridor', 'エントランスと廊下', '入口与走廊')],
+      ['/assets/images/powder-room.webp', I('파우더룸', 'Powder room', 'パウダールーム', '梳妆区')],
+      ['/assets/images/shower.webp', I('깨끗한 공용 샤워실', 'Clean shared shower room', '清潔な共用シャワールーム', '洁净公共淋浴间')],
+      ['/assets/images/kitchen.webp', I('공용 키친', 'Shared kitchen', '共用キッチン', '公共厨房')],
+      ['/assets/images/kitchen-bar.webp', I('키친 바', 'Kitchen bar', 'キッチンバー', '厨房吧台')],
+      ['/assets/images/entrance-brand.webp', I('브랜드 월', 'Brand wall', 'ブランドウォール', '品牌墙')],
+      ['/assets/images/arrival.webp', I('선일빌딩 입구', 'Sunil Building entrance', 'ソニルビル入口', 'Sunil大厦入口')],
       ['/assets/images/single-window.webp', I('창가 싱글룸', 'Window single room', '窓側シングルルーム', '窗边单人房')],
       ['/assets/images/single-room.webp', I('코지 싱글룸', 'Cozy single room', 'コージーシングルルーム', '舒适单人房')],
       ['/assets/images/double-bed.webp', I('벙커 더블룸', 'Bunk double room', 'バンクダブルルーム', '双人上下铺房')],
-      ['/assets/images/double-window.webp', I('창이 있는 더블룸', 'Window double room', '窓のあるダブルルーム', '带窗双人房')],
-      ['/assets/images/kitchen.webp', I('공용 키친', 'Shared kitchen', '共用キッチン', '公共厨房')],
-      ['/assets/images/kitchen-bar.webp', I('키친 바', 'Kitchen bar', 'キッチンバー', '厨房吧台')],
-      ['/assets/images/powder-room.webp', I('파우더룸', 'Powder room', 'パウダールーム', '梳妆区')],
-      ['/assets/images/shower.webp', I('샤워실', 'Shower room', 'シャワールーム', '淋浴间')],
-      ['/assets/images/entrance-brand.webp', I('브랜드 월', 'Brand wall', 'ブランドウォール', '品牌墙')],
-      ['/assets/images/arrival.webp', I('선일빌딩 입구', 'Sunil Building entrance', 'ソニルビル入口', 'Sunil大厦入口')]
+      ['/assets/images/double-window.webp', I('창이 있는 더블룸', 'Window double room', '窓のあるダブルルーム', '带窗双人房')]
     ],
     essentials: [
       { label: I('체크인', 'Check-in', 'チェックイン', '入住'), value: '15:00', route: 'checkin' },
