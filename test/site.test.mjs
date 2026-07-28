@@ -36,3 +36,16 @@ test("SEO and OG assets are complete",async()=>{
   await access(resolve(root,"assets/images/another-house-og-20260727.jpg"));
   await access(resolve(root,"assets/fonts/oxanium-latin.woff2"));
 });
+
+
+test("multi-page appliance diagrams use the peek carousel contract",async()=>{
+  const html = await read("index.html");
+  const alias = await read("guide-anotherstay.html");
+  const app = await read("assets/master-app.js");
+  const data = await read("assets/site-data.js");
+  assert.match(app,/device-guide-carousel/);
+  assert.match(app,/device-guide-page/);
+  assert.match(html,/flex:0 0 calc\(100% - 52px\)/);
+  assert.equal(html,alias);
+  assert.doesNotMatch(data,/official-haatz-hec1050-use-p13-ko/);
+});
