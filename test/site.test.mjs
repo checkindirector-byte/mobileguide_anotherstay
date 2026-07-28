@@ -54,7 +54,7 @@ test("home typography and shared-drive subtitle follow the approved contract",as
   const html = await read("index.html");
   const app = await read("assets/master-app.js");
   const data = await read("assets/site-data.js");
-  assert.match(html,/\.top h1,\.brand-home\{[^}]*font-size:18px!important[^}]*font-weight:400!important/);
+  assert.match(html,/body \.top h1,body \.brand-home\{[^}]*font-size:18px!important[^}]*font-weight:400!important[^}]*letter-spacing:-\.015em!important/);
   assert.match(html,/\.hero-title,\.landing-hero \.hero-title\{[^}]*font-weight:300!important[^}]*letter-spacing:-\.02em!important/);
   assert.match(html,/\.landing-hero \.eyebrow\{[^}]*font-family:'Oxanium'/);
   assert.ok(data.includes("heroSubtitle: I('\ud504\ub77c\uc774\ube57\ud55c \uc5ec\uc131 \uc804\uc6a9 \ud638\uc2a4\ud154'"));
