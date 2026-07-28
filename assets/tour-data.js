@@ -2,10 +2,33 @@
   'use strict';
 
   const I = (ko, en, ja, zh) => ({ ko, en, ja, zh });
+  const PHOTO_BY_ID = {
+    'ddp': { image: '/assets/images/tours/spots/01-ddp.webp', credit: 'Eugene Lim · CC BY 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_at_night,_Seoul,_Korea.jpg' },
+    'heunginjimun': { image: '/assets/images/tours/spots/02-heunginjimun.webp', credit: 'Mark Froelich · CC BY-SA 3.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Heunginjimun_Gate,_Seoul,_Korea.jpg' },
+    'naksan': { image: '/assets/images/tours/spots/03-naksan.webp', credit: 'Korea.net · CC BY-SA 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Naksan_Park,_Seoul_(36345834862).jpg' },
+    'ihwa': { image: '/assets/images/tours/spots/04-ihwa.webp', credit: 'mmmmngai · CC BY-SA 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Korea-Seoul-Ihwa_Mural_Village-P1210614.jpg' },
+    'changsin-cliff': { image: '/assets/images/tours/spots/05-changsin.webp', credit: 'Wikihyo · CC0', creditUrl: 'https://commons.wikimedia.org/wiki/File:View_from_Naksan_Park,_Seoul.jpg' },
+    'gwangjang': { image: '/assets/images/tours/spots/06-gwangjang.webp', credit: 'Bgag · CC0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Gwangjang_Market,_Seoul.jpg' },
+    'cheonggyecheon': { image: '/assets/images/tours/spots/07-cheonggyecheon.webp', credit: 'Ken Eckert · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Stream_at_night.jpg' },
+    'wall-museum': { image: '/assets/images/tours/spots/08-wall-museum.webp', credit: '오모군 · CC BY 3.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Seoul_City_Wall_Museum.jpg' },
+    'shopping-complex': { image: '/assets/images/tours/spots/09-shopping-complex.webp', credit: 'Choi Kwang-mo · CC0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Dongdaemun_Shopping_Complex.jpg' },
+    'dongmyo': { image: '/assets/images/tours/spots/10-dongmyo.webp', credit: 'Seefooddiet · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Dongmyo_Flea_Market_2023.jpg' },
+    'toy-market': { image: '/assets/images/tours/spots/11-toy-market.webp', credit: 'BI ravencrow · Pexels', creditUrl: 'https://www.pexels.com/photo/vibrant-toy-and-stationery-store-interior-34917713/' },
+    'jongmyo': { image: '/assets/images/tours/spots/12-jongmyo.webp', credit: 'Cultural Heritage Administration · KOGL 1', creditUrl: 'https://commons.wikimedia.org/wiki/File:Jongmyo_Shrine,_Seoul.jpg' },
+    'changdeokgung': { image: '/assets/images/tours/spots/13-changdeokgung.webp', credit: 'Basile Morin · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Injeongjeon,_Changdeokgung,_Seoul.jpg' },
+    'changgyeonggung': { image: '/assets/images/tours/spots/14-changgyeonggung.webp', credit: 'Basile Morin · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Changgyeonggung_palace,_Seoul.jpg' },
+    'gyeongbokgung': { image: '/assets/images/tours/spots/15-gyeongbokgung.webp', credit: 'Frank Schulenburg · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Gyeongbokgung_Palace,_Seoul,_Korea.jpg' },
+    'ikseon': { image: '/assets/images/tours/spots/16-ikseon.webp', credit: 'S h y numis · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Ikseon-dong_Hanok_Village.jpg' },
+    'insadong': { image: '/assets/images/tours/spots/17-insadong.webp', credit: 'travelmate2021 · CC BY 2.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Insadong,_Seoul.jpg' },
+    'seosulla': { image: '/assets/images/tours/spots/18-seosulla.webp', credit: 'Ethan Doyle White · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:Wall_of_Jongmyo_Shrine,_Seoul.jpg' },
+    'daehangno': { image: '/assets/images/tours/spots/19-daehangno.webp', credit: 'Seoul Institute · CC BY 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:%EB%A7%88%EB%A1%9C%EB%8B%88%EC%97%90%EA%B3%B5%EC%9B%90.jpg' },
+    'mmca': { image: '/assets/images/tours/spots/20-mmca.webp', credit: 'Bonnielou2013 · CC BY-SA 4.0', creditUrl: 'https://commons.wikimedia.org/wiki/File:National_Museum_of_Modern_and_Contemporary_Art,_Seoul.jpg' },
+  };
+
   const G = (query) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   const N = (query) => `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
   const place = (id, number, icon, tone, host, categories, query, name, travel, text, tags, official = '') => ({
-    id, number, icon, tone, host, categories, query, name, travel, text, tags, official,
+    id, number, icon, tone, host, categories, query, name, travel, text, tags, official, ...PHOTO_BY_ID[id],
     google: G(query),
     naver: N(query),
   });

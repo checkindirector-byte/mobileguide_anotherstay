@@ -34,12 +34,14 @@
   });
 
   const cover = (place, compact = false) => `
-    <div class="${compact ? 'tour-mini' : 'restaurant-photo tour-card-cover'} tour-tone-${esc(place.tone)}">
+    <figure class="${compact ? 'tour-mini' : 'restaurant-photo tour-card-cover'} tour-photo-cover">
+      <img src="${esc(place.image)}" alt="${esc(t(place.name))}" loading="${compact ? 'eager' : 'lazy'}">
+      <span class="tour-photo-shade" aria-hidden="true"></span>
       <span class="tour-cover-number">${esc(place.number)}</span>
-      <span class="mi">${esc(place.icon)}</span>
       <span class="tour-cover-kicker">${place.host ? 'HOST’S PICK' : 'LOCAL ROUTE'}</span>
       <strong class="tour-cover-name">${esc(t(place.name))}</strong>
-    </div>`;
+      ${!compact && place.credit ? `<a class="tour-photo-credit" href="${esc(place.creditUrl)}" target="_blank" rel="noopener">PHOTO · ${esc(place.credit)}</a>` : ''}
+    </figure>`;
 
   function card(place) {
     const l = labels();
