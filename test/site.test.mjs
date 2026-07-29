@@ -126,6 +126,18 @@ test("check-in summary explicitly separates times and uses the approved lodging 
 test("home location and room-gallery signature styling use approved copy",async()=>{
   const html=await read("index.html");
   const data=await read("assets/site-data.js");
-  assert.ok(data.includes("station: I('동대문역 6번 출구에서 도보 30초'"));
+  assert.ok(data.includes("station: I('동대문역 6번 출구 · 도보 30초'"));
+  assert.ok(data.includes("value: I('동대문역 6번 출구에서 도보 30초'"));
   assert.match(html,/\.previous-gallery-heading h2\{margin:0;color:var\(--signature\)/);
+});
+test("room gallery supports master-style swipe and staggered entrance motion",async()=>{
+  const app=await read("assets/master-app.js");
+  assert.match(app,/gallerySwipeStartX=0,gallerySwipePointerId=null/);
+  assert.match(app,/addEventListener\('pointerdown'/);
+  assert.match(app,/addEventListener\('pointerup'/);
+  assert.match(app,/Math\.abs\(delta\)<45/);
+  assert.match(app,/current\+\(delta<0\?1:-1\)/);
+  assert.match(app,/function prepareGalleryMotion\(\)/);
+  assert.match(app,/\.gallery-head,\.gallery-thumb,\.gallery-viewer/);
+  assert.match(app,/Math\.min\(i,8\)\*45\+'ms'/);
 });
