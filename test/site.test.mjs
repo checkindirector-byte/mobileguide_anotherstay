@@ -1,4 +1,4 @@
-﻿import test from "node:test";
+import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
@@ -104,9 +104,9 @@ test("mobile shell cannot create document-level horizontal scrolling",async()=>{
   const html=await read("index.html");
   const alias=await read("guide-anotherstay.html");
   const app=await read("assets/master-app.js");
-  assert.match(html,/html\{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none\}/);
-  assert.match(html,/body\{position:relative;width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none\}/);
-  assert.match(html,/\.app\{width:100%;max-width:480px;overflow-x:clip;contain:inline-size\}/);
+  assert.match(html,/html,body\{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none\}/);
+  assert.match(html,/\.app\{width:100%;max-width:480px;margin-left:auto;margin-right:auto;overflow-x:clip\}/);
+  assert.doesNotMatch(html,/contain:inline-size|body\{position:relative;width:100%/);
   assert.match(html,/@media \(max-width:480px\)\{\.menu-panel\{right:0;width:88vw\}\}/);
   assert.match(app,/horizontalGestureSelector='\.gallery-thumbs,\.restaurants-filter,\.device-guide-carousel,\.chat-suggestions,\.chat-autocomplete'/);
   assert.match(app,/touchmove[^\n]*preventDefault\(\)[^\n]*passive:false/);
@@ -114,4 +114,16 @@ test("mobile shell cannot create document-level horizontal scrolling",async()=>{
   assert.match(html,/\.device-guide-carousel\{[^}]*overflow-x:auto/);
   assert.match(html,/\.gallery-thumbs\{[^}]*overflow-x:auto/);
   assert.equal(html,alias);
+});
+
+test("check-in summary explicitly separates times and uses the approved lodging copy",async()=>{
+  const html=await read("index.html");
+  const app=await read("assets/master-app.js");
+  const data=await read("assets/site-data.js");
+  assert.match(app,/\['찾아오는 길','공항에서 숙소까지'\]/);
+  assert.match(app,/ko:'여성 전용•12객실'/);
+  assert.match(app,/<small>CHECK-IN<\/small>.*?<strong>15:00<\/strong>/);
+  assert.match(app,/<small>CHECK-OUT<\/small>.*?<strong>11:00<\/strong>/);
+  assert.ok(data.includes('엘리베이터 5층에서 내린 뒤 반층 내려오셔서 유리문 안쪽의 ANOTHER HOUSE 리셉션으로 들어오세요.'));
+  assert.match(html,/>찾아오는 길<\/span><small>공항에서 숙소까지/);
 });
