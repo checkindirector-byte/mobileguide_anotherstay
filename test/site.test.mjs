@@ -141,3 +141,13 @@ test("room gallery supports master-style swipe and staggered entrance motion",as
   assert.match(app,/\.gallery-head,\.gallery-thumb,\.gallery-viewer/);
   assert.match(app,/Math\.min\(i,8\)\*45\+'ms'/);
 });
+test("hamburger menu places local recommendations below waste",async()=>{
+  const html=await read("index.html");
+  const app=await read("assets/master-app.js");
+  const order=[...html.matchAll(/<button class="menu-link" data-go="([^"]+)"/g)].map(match=>match[1]);
+  assert.deepEqual(order,["home","gallery","checkin","transport","wifi","appliances","laundry","trash","restaurants","tours","guidebook"]);
+  for(const names of [["Trash","Restaurants","Nearby Tours"],["ごみ出し","周辺グルメ","近郊おすすめツアー"],["垃圾处理","周边美食","近郊推荐行程"]]){
+    const positions=names.map(name=>app.indexOf("['"+name+"'"));
+    assert.ok(positions[0]<positions[1]&&positions[1]<positions[2]);
+  }
+});
