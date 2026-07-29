@@ -130,16 +130,36 @@ test("home location and room-gallery signature styling use approved copy",async(
   assert.ok(data.includes("value: I('동대문역 6번 출구에서 도보 30초'"));
   assert.match(html,/\.previous-gallery-heading h2\{margin:0;color:var\(--signature\)/);
 });
-test("room gallery supports master-style swipe and staggered entrance motion",async()=>{
+test("master motion system covers every page and adds visible media and carousel reveals",async()=>{
+  const app=await read("assets/master-app.js");
+  const html=await read("index.html");
+  for(const token of ["checkin-hero","transport-hero","restaurants-hero","tours","wifi-hero","guidebook-hero","gallery-head","guide-detail-hero","device","trash"]){
+    assert.ok(app.includes(token),"missing motion coverage: "+token);
+  }
+  assert.match(app,/new IntersectionObserver/);
+  assert.match(app,/new MutationObserver/);
+  assert.match(app,/function observeMotionTargets\(/);
+  assert.match(app,/function queueMotionReady\(/);
+  assert.match(app,/heroImage\.src='assets\/images\/hero\.webp'/);
+  assert.match(app,/const carouselSelector='\.gallery-thumbs,\.device-guide-carousel'/);
+  assert.match(app,/motion-carousel-card/);
+  assert.match(app,/function animateGalleryImage\(direction\)/);
+  assert.match(app,/gallery-image-next/);
+  assert.match(html,/<body class="is-home">/);
+  assert.doesNotMatch(html,/<body class="is-home motion-ready">/);
+  assert.match(html,/\.motion-media\{[^}]*clip-path:inset\(12%/);
+  assert.match(html,/\.motion-carousel\{[^}]*translate3d\(42px/);
+  assert.match(html,/@keyframes galleryImageNext/);
+  assert.match(html,/@keyframes mediaSheen/);
+  assert.match(html,/@media \(prefers-reduced-motion:reduce\).*?\.motion-carousel/s);
+});
+test("room gallery keeps touch swipe navigation",async()=>{
   const app=await read("assets/master-app.js");
   assert.match(app,/gallerySwipeStartX=0,gallerySwipePointerId=null/);
   assert.match(app,/addEventListener\('pointerdown'/);
   assert.match(app,/addEventListener\('pointerup'/);
   assert.match(app,/Math\.abs\(delta\)<45/);
   assert.match(app,/current\+\(delta<0\?1:-1\)/);
-  assert.match(app,/function prepareGalleryMotion\(\)/);
-  assert.match(app,/\.gallery-head,\.gallery-thumb,\.gallery-viewer/);
-  assert.match(app,/Math\.min\(i,8\)\*45\+'ms'/);
 });
 test("hamburger menu places local recommendations below waste",async()=>{
   const html=await read("index.html");
