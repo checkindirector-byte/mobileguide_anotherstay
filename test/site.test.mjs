@@ -100,22 +100,18 @@ test("guide page polish removes duplicates and matches the master media",async()
   assert.equal(coffee.sourceType,"Naver Place business upload");
   await access(resolve(root,"assets/images/restaurants-hero.jpg"));
 });
-test("mobile shell cannot create document-level horizontal scrolling",async()=>{
+test("mobile shell follows the master width contract",async()=>{
   const html=await read("index.html");
   const alias=await read("guide-anotherstay.html");
   const app=await read("assets/master-app.js");
-  assert.match(html,/html,body\{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none\}/);
-  assert.match(html,/\.app\{width:100%;max-width:480px;margin-left:auto;margin-right:auto;overflow-x:clip\}/);
-  assert.doesNotMatch(html,/contain:inline-size|body\{position:relative;width:100%/);
-  assert.match(html,/@media \(max-width:480px\)\{\.menu-panel\{right:0;width:88vw\}\}/);
-  assert.match(app,/horizontalGestureSelector='\.gallery-thumbs,\.restaurants-filter,\.device-guide-carousel,\.chat-suggestions,\.chat-autocomplete'/);
-  assert.match(app,/touchmove[^\n]*preventDefault\(\)[^\n]*passive:false/);
-  assert.doesNotMatch(app,/dx>6/);
-  assert.match(html,/\.device-guide-carousel\{[^}]*overflow-x:auto/);
-  assert.match(html,/\.gallery-thumbs\{[^}]*overflow-x:auto/);
+  assert.match(html,/\.app\{max-width:480px;margin:0 auto;min-height:100dvh/);
+  assert.match(html,/\.app\{max-width:480px;padding-bottom:0;background:#F7F1EA;overflow:hidden\}/);
+  assert.doesNotMatch(html,/Keep the document locked|html,body\{width:100%|\.app\{width:100%;max-width:480px/);
+  assert.doesNotMatch(app,/horizontalGestureSelector|touchmove[^\n]*preventDefault/);
+  assert.match(html,/\.device-guide-carousel\{[^}]*overflow-x:auto[^}]*overscroll-behavior-inline:contain/);
+  assert.match(html,/\.gallery-thumbs\{[^}]*overflow-x:auto[^}]*overscroll-behavior-x:contain/);
   assert.equal(html,alias);
 });
-
 test("check-in summary explicitly separates times and uses the approved lodging copy",async()=>{
   const html=await read("index.html");
   const app=await read("assets/master-app.js");
@@ -126,4 +122,10 @@ test("check-in summary explicitly separates times and uses the approved lodging 
   assert.match(app,/<small>CHECK-OUT<\/small>.*?<strong>11:00<\/strong>/);
   assert.ok(data.includes('엘리베이터 5층에서 내린 뒤 반층 내려오셔서 유리문 안쪽의 ANOTHER HOUSE 리셉션으로 들어오세요.'));
   assert.match(html,/>찾아오는 길<\/span><small>공항에서 숙소까지/);
+});
+test("home location and room-gallery signature styling use approved copy",async()=>{
+  const html=await read("index.html");
+  const data=await read("assets/site-data.js");
+  assert.ok(data.includes("station: I('동대문역 6번 출구에서 도보 30초'"));
+  assert.match(html,/\.previous-gallery-heading h2\{margin:0;color:var\(--signature\)/);
 });

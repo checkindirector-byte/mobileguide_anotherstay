@@ -5,7 +5,7 @@
     tagline: 'STAY ANOTHER LIFE',
     heroSubtitle: 'STAY ANOTHER LIFE',
     address: I('서울시 종로구 종로 294 선일빌딩 5층', '5F, Sunil Building, 294 Jong-ro, Jongno-gu, Seoul', 'ソウル特別市鍾路区鍾路294 ソニルビル5階', '首尔特别市钟路区钟路294，Sunil大厦5层'),
-    station: I('동대문역 6번 출구 · 도보 30초', 'Dongdaemun Station Exit 6 · 30 sec walk', '東大門駅6番出口 · 徒歩30秒', '东大门站6号出口 · 步行30秒'),
+    station: I('동대문역 6번 출구에서 도보 30초', '30-second walk from Dongdaemun Station Exit 6', '東大門駅6番出口から徒歩30秒', '从东大门站6号出口步行30秒'),
     contact: I('호스트에게 연락이 필요하시면 에어비앤비 메시지로 보내주세요.', 'If you need to contact the host, please send a message through Airbnb.', 'ホストへの連絡が必要な場合は、Airbnbメッセージをお送りください。', '如需联系房东，请通过 Airbnb 发送消息。'),
     ui: {
       menu: I('메뉴', 'Menu', 'メニュー', '菜单'), close: I('닫기', 'Close', '閉じる', '关闭'),
