@@ -1,0 +1,7 @@
+tmp/
+.git/
+.vercel/
+.env*
+node_modules/
+test/
+*.log
