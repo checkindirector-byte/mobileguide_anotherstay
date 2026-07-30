@@ -91,7 +91,7 @@ test("guide page polish removes duplicates and matches the master media",async()
   assert.match(html,/trash-guide-card \.device-body>p\{[^}]*padding:22px 24px/);
   assert.match(html,/trash-guide-card \.device-body>\.steps\{padding:0 24px/);
   assert.match(app,/icons=\['climate','microwave','cooktop','purifier','fridge','guestbox'\]/);
-  assert.match(app,/appliancesContent'\)\.innerHTML=p\.devices\.map/);
+  assert.match(app,/appliancesContent'\)\.innerHTML=applianceNoticeMarkup\(\)\+p\.devices\.map/);
   assert.doesNotMatch(app,/\[\.\.\.p\.devices,washer\]/);
   assert.match(data,/nearby: \{[^\n]*hero: '\/assets\/images\/restaurants-hero\.jpg'/);
   assert.match(restaurantData,/hero: '\/assets\/images\/restaurants-hero\.jpg'/);
@@ -198,4 +198,22 @@ test("booking platform contact copy and logos replace Airbnb",async()=>{
     assert.ok(html.includes(asset));
     assert.ok(sw.includes(`/${asset}`));
   }
+});
+
+test("source document additions include parking, editorial story, OTA links, and the designated washer photo",async()=>{
+  const html=await read("index.html");
+  const app=await read("assets/master-app.js");
+  const content=await read("assets/content-updates.js");
+  assert.match(html,/class="hotel-section stay-story"/);
+  assert.match(html,/id="homeBookingHint"/);
+  assert.match(html,/content-updates\.js\?v=20260730-47/);
+  assert.match(app,/parkingGuideMarkup/);
+  assert.match(app,/renderBookingLinks/);
+  assert.match(content,/동대문호텔 민영 주차장/);
+  assert.match(content,/A QUIET HOUSE,/);
+  assert.match(content,/laundry\.photo = '\/assets\/images\/laundry-machine-2\.jpg'/);
+  assert.match(content,/www\.booking\.com\/hotel\/kr\/eonadeo-hauseu\.ko\.html/);
+  assert.match(content,/www\.agoda\.com/);
+  assert.match(content,/kr\.trip\.com/);
+  await access(resolve(root,"assets/images/laundry-machine-2.jpg"));
 });
