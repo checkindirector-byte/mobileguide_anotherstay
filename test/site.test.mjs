@@ -148,7 +148,8 @@ test("master motion system covers every page and adds visible media and carousel
   assert.match(app,/new MutationObserver/);
   assert.match(app,/function observeMotionTargets\(/);
   assert.match(app,/function queueMotionReady\(/);
-  assert.match(app,/heroImage\.src='assets\/images\/hero\.webp'/);
+  assert.match(app,/preloadHeroImage\('assets\/images\/main-01\.webp'\)/);
+  assert.match(app,/preloadHeroImage\('assets\/images\/main-02\.webp'\)/);
   assert.match(app,/const carouselSelector='\.gallery-thumbs,\.device-guide-carousel'/);
   assert.match(app,/motion-carousel-card/);
   assert.match(app,/function animateGalleryImage\(direction\)/);
