@@ -198,11 +198,15 @@ test("guest access, Wi-Fi, taxi landmark, appliance menu, and TV icon use the ap
   assert.match(data,/공유기 위치[\s\S]*복도 천장 및 라운지 테이블 위쪽/);
   assert.match(data,/landmark: I\('교촌치킨 동대문 1호점'/);
   assert.equal((data.match(/택시 하차 위치는 “교촌치킨 동대문 1호점”/g)||[]).length,2);
-  assert.match(app,/\['기기 사용법','냉난방 · 주방 기기 사용법'\]/);
-  assert.match(html,/data-go="appliances"><span>기기 사용법<\/span>/);
+  assert.match(data,/appliances: \{ title: I\('냉난방 • 주방기기 사용법'/);
+  assert.match(app,/\['냉난방 • 주방기기 사용법','냉난방 · 주방 기기 사용법'\]/);
+  assert.match(html,/data-go="appliances"><span>냉난방 • 주방기기 사용법<\/span>/);
   assert.match(app,/applianceNoticeMarkup[\s\S]*<span class="mi">tv<\/span>/);
   assert.doesNotMatch(app,/tv_off/);
+  assert.match(app,/data-copy="\x27\+esc\(t\(p\.sections\[1\]\.body\)\)\+\x27"/);
   assert.match(app,/p\.sections\[2\]\.title[\s\S]*p\.sections\[2\]\.body/);
+  assert.doesNotMatch(app,/SECURE CONNECTION|wifi-help-section/);
+  assert.match(html,/wifi-network-tips \.wifi-visual-card:only-child/);
 });
 
 test("booking platform contact copy and logos replace Airbnb",async()=>{
@@ -230,8 +234,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260730-53/);
-  assert.match(html,/gallery-overrides\.js\?v=20260730-53/);
+  assert.match(html,/content-updates\.js\?v=20260730-54/);
+  assert.match(html,/gallery-overrides\.js\?v=20260730-54/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
