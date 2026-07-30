@@ -179,3 +179,19 @@ test("hamburger menu places local recommendations below waste",async()=>{
     assert.ok(positions[0]<positions[1]&&positions[1]<positions[2]);
   }
 });
+
+test("booking platform contact copy and logos replace Airbnb",async()=>{
+  const html=await read("index.html");
+  const data=await read("assets/site-data.js");
+  const sw=await read("sw.js");
+  const copy="예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.";
+  assert.equal(data.split(copy).length-1,2);
+  assert.match(html,/platform-contact-logos/);
+  assert.doesNotMatch(html,/airbnb-mark|ff385c/i);
+  for(const file of ["booking-com.svg","agoda.svg","trip-com.svg"]){
+    const asset=`assets/images/platforms/${file}`;
+    await access(resolve(root,asset));
+    assert.ok(html.includes(asset));
+    assert.ok(sw.includes(`/${asset}`));
+  }
+});

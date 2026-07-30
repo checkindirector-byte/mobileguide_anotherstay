@@ -6,7 +6,7 @@
     heroSubtitle: 'STAY ANOTHER LIFE',
     address: I('서울시 종로구 종로 294 선일빌딩 5층', '5F, Sunil Building, 294 Jong-ro, Jongno-gu, Seoul', 'ソウル特別市鍾路区鍾路294 ソニルビル5階', '首尔特别市钟路区钟路294，Sunil大厦5层'),
     station: I('동대문역 6번 출구 · 도보 30초', 'Dongdaemun Station Exit 6 · 30 sec walk', '東大門駅6番出口 · 徒歩30秒', '东大门站6号出口 · 步行30秒'),
-    contact: I('호스트에게 연락이 필요하시면 에어비앤비 메시지로 보내주세요.', 'If you need to contact the host, please send a message through Airbnb.', 'ホストへの連絡が必要な場合は、Airbnbメッセージをお送りください。', '如需联系房东，请通过 Airbnb 发送消息。'),
+    contact: I('예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.', 'Please contact the host via your booking platform (Booking.com, Agoda, or Trip.com).', '予約プラットフォーム（Booking.com、Agoda、Trip.com）のメッセージでホストへご連絡ください。', '请通过预订平台（Booking.com、Agoda、Trip.com）的消息联系房东。'),
     ui: {
       menu: I('메뉴', 'Menu', 'メニュー', '菜单'), close: I('닫기', 'Close', '閉じる', '关闭'),
       home: I('홈', 'Home', 'ホーム', '首页'), arrival: I('도착', 'Arrival', '到着', '到达'), gallery: I('공간', 'Gallery', '空間', '空间'), guide: I('가이드', 'Guide', 'ガイド', '指南'), more: I('더보기', 'More', 'その他', '更多'),
@@ -44,7 +44,7 @@
     pages: {
       checkin: { title: I('체크인', 'Check-in', 'チェックイン', '入住'), kicker: 'ARRIVAL', hero: '/assets/images/arrival.webp', summary: I('체크인은 오후 3시부터입니다. 선일빌딩 5층으로 올라와 현장 안내에 따라 셀프 체크인을 진행해 주세요.', 'Check-in begins at 15:00. Go to the 5th floor of Sunil Building and follow the on-site self check-in instructions.', 'チェックインは15時からです。ソニルビル5階へ上がり、現地案内に従ってセルフチェックインしてください。', '15:00起可入住。请前往Sunil大厦5层，按照现场说明自助办理入住。'), sections: [
         { title: I('셀프 체크인', 'Self check-in', 'セルフチェックイン', '自助入住'), steps: I(['15:00 이후 5층으로 올라옵니다.','예약자 정보로 현장 체크인 절차를 진행합니다.','객실 번호와 이용 안내를 확인합니다.','출입 정보는 다른 사람에게 공유하지 마세요.'],['Come to the 5th floor after 15:00.','Complete the on-site process using the booking name.','Confirm your room number and stay instructions.','Never share access information with others.'],['15時以降に5階へお越しください。','予約者情報で現地チェックインを進めます。','客室番号と利用案内を確認します。','入館情報を他人に共有しないでください。'],['15:00后前往5层。','使用预订人信息完成现场入住。','确认房号和住宿说明。','请勿向他人分享门禁信息。']) },
-        { title: I('도움이 필요할 때', 'If you need help', 'サポートが必要な場合', '需要帮助时'), body: I('예약 플랫폼 메시지로 호스트에게 연락해 주세요. 비밀번호나 출입 코드는 이 웹사이트에 표시하지 않습니다.', 'Message the host through your booking platform. Passwords and access codes are never displayed on this website.', '予約プラットフォームからホストへご連絡ください。パスワードや入館コードはサイトに表示しません。', '请通过预订平台消息联系房东。本网站不会显示密码或门禁码。') }
+        { title: I('도움이 필요할 때', 'If you need help', 'サポートが必要な場合', '需要帮助时'), body: I('예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.', 'Please contact the host via your booking platform (Booking.com, Agoda, or Trip.com).', '予約プラットフォーム（Booking.com、Agoda、Trip.com）のメッセージでホストへご連絡ください。', '请通过预订平台（Booking.com、Agoda、Trip.com）的消息联系房东。') }
       ]},
       checkout: { title: I('체크아웃 안내', 'Check-out guide', 'チェックアウト案内', '退房指南'), kicker: 'DEPARTURE', hero: '/assets/images/double-window.webp', summary: I('체크아웃은 오전 11시까지입니다.', 'Check-out is by 11:00.', 'チェックアウトは11時までです。', '请于11:00前退房。'), sections: [
         { title: I('나가기 전', 'Before leaving', '出発前', '离开前'), steps: I(['개인 물품과 충전기를 확인해 주세요.','사용한 공간을 가볍게 정돈해 주세요.','분리배출 안내에 따라 쓰레기를 정리해 주세요.','객실 문이 닫혔는지 확인해 주세요.'],['Check personal items and chargers.','Leave used spaces tidy.','Sort waste according to the guide.','Make sure your room door is closed.'],['忘れ物と充電器をご確認ください。','利用した空間を軽く整えてください。','案内に従ってごみを分別してください。','客室のドアが閉まったことをご確認ください。'],['检查随身物品和充电器。','简单整理使用过的空间。','按照指南分类垃圾。','确认房门已关闭。']) }
