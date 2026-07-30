@@ -38,7 +38,7 @@
         id: 'agoda',
         name: 'Agoda',
         url: 'https://www.agoda.com/ko-kr/ko-kr/h91252591/hotel/seoul-kr.html?ds=nu6enISOegngXE2o',
-        logo: '/assets/images/platforms/agoda.svg'
+        logo: '/assets/images/platforms/agoda-official.png'
       },
       {
         id: 'trip',

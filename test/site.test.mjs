@@ -169,7 +169,11 @@ test("master motion system covers every page and adds visible media reveals",asy
   assert.doesNotMatch(html,/id="galleryThumbs"|id="galleryMainZoom"|zoom_in/);
   for(const category of ["exterior","lounge","bath","luggage","single","double"]) assert.ok(overrides.includes(`id:'${category}'`));
   assert.match(overrides,/removedCommon=new Set\(\[3,5,7,9,14,16,21,23,25,34\]\)/);
-  assert.match(overrides,/removedDouble=new Set\(\[2,3,6,7,10,11\]\)/);
+  assert.deepEqual([...overrides.matchAll(/\{id:'(exterior|lounge|bath|single|double|luggage)'/g)].map(match=>match[1]),["exterior","lounge","bath","single","double","luggage"]);
+  assert.match(overrides,/doubleRooms=byNumber\(originalDouble,\[4,9,1,8\]\)/);
+  assert.match(overrides,/D\.homeGallery=byNumber\(originalCommon,\[22,20\]\)\.concat\(byNumber\(originalDouble,\[9\]\)\)/);
+  assert.match(app,/data-gallery-lightbox-index/);
+  assert.match(app,/pointerdown[\s\S]*pointerup[\s\S]*moveLightbox/);
 });test("hamburger menu places local recommendations below waste",async()=>{
   const html=await read("index.html");
   const app=await read("assets/master-app.js");
@@ -192,7 +196,7 @@ test("booking platform contact copy and logos replace Airbnb",async()=>{
   assert.match(html,/justify-items:center/);
   assert.match(html,/platform-contact-logos/);
   assert.doesNotMatch(html,/airbnb-mark|ff385c/i);
-  for(const file of ["booking-com.svg","agoda.svg","trip-com.svg"]){
+  for(const file of ["booking-com.svg","agoda-official.png","trip-com.svg"]){
     const asset=`assets/images/platforms/${file}`;
     await access(resolve(root,asset));
     assert.ok(html.includes(asset));
@@ -206,8 +210,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260730-49/);
-  assert.match(html,/gallery-overrides\.js\?v=20260730-49/);
+  assert.match(html,/content-updates\.js\?v=20260730-50/);
+  assert.match(html,/gallery-overrides\.js\?v=20260730-50/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
@@ -227,8 +231,11 @@ test("refined intro, magazine gallery, luggage media, room lock, and home-native
   const overrides=await read("assets/gallery-overrides.js");
   assert.equal(html,alias);
   assert.match(html,/\.brand-intro img\{[^}]*width:min\(88vw,374px\)/);
-  assert.match(html,/heroPrimarySequence 6\.82s/);
-  assert.match(html,/28\.152%[\s\S]*54\.545%[\s\S]*73\.607%/);
+  assert.match(html,/brandMarkSequence 3\.69s/);
+  assert.match(html,/34\.15%[\s\S]*85\.64%/);
+  assert.match(html,/heroPrimarySequence 6\.46s/);
+  assert.match(app,/,3690\);\}\);\}/);
+  assert.match(html,/29\.721%[\s\S]*57\.585%[\s\S]*77\.709%/);
   assert.doesNotMatch(html,/heroPanelSettle/);
   const homeSegment=html.slice(html.indexOf('<section class="screen active" data-screen="home">'),html.indexOf('<section class="screen" data-screen="checkin">'));
   const gallerySegment=html.slice(html.indexOf('<section class="screen gallery-screen"'),html.indexOf('<section class="screen wifi-screen"'));

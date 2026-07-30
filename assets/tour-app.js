@@ -112,11 +112,11 @@
     const root = $('#homeTours');
     if (!root) return;
     const homeLabels = {
-      ko: ['근교 추천 투어', '근교 투어 20곳 보기'],
+      ko: ['추천 근교 투어', '추천 근교 투어 20곳 보기'],
       en: ['Nearby Tours', 'View 20 nearby tours'],
       ja: ['近郊おすすめツアー', '近郊スポット20選を見る'],
       zh: ['附近精选路线', '查看20个附近景点'],
-    }[lang()] || ['근교 추천 투어', '근교 투어 20곳 보기'];
+    }[lang()] || ['추천 근교 투어', '추천 근교 투어 20곳 보기'];
     const homeTitle = $('#homeToursTitle');
     const browseLabel = $('#tourBrowseLabel');
     if (homeTitle) homeTitle.textContent = homeLabels[0];

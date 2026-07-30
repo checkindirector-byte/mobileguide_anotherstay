@@ -36,7 +36,7 @@
   window.ANOTHER_HOUSE_TOURS = {
     hero: '/assets/images/tours/seoul-sunny-hero.webp',
     kicker: 'NEARBY TOURS',
-    title: I('근교 추천 투어', 'Nearby Tours', '近郊おすすめツアー', '附近精选路线'),
+    title: I('추천 근교 투어', 'Recommended Nearby Tours', 'おすすめ近郊ツアー', '推荐近郊路线'),
     summary: I(
       '숙소에서 시작해 서울의 성곽, 시장, 궁궐과 디자인 명소를 만나는 20개의 로컬 코스입니다.',
       'Twenty local places connecting Seoul’s city wall, markets, palaces and design landmarks.',
