@@ -25,7 +25,7 @@
   ];
 
   D.gallery=exterior;
-  D.homeGallery=byNumber(originalCommon,[22,20]).concat(byNumber(originalDouble,[9]));
+  D.homeGallery=byNumber(originalCommon,[22,15]).concat(byNumber(originalDouble,[9]));
 
   D.pages.checkin.roomDoorlockImage='/assets/images/checkin-room-doorlock.jpg';
   D.pages.checkin.roomDoorlockLabel={ko:'객실 도어락',en:'Room door lock',ja:'客室ドアロック',zh:'客房门锁'};

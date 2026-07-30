@@ -22,10 +22,10 @@
 
   D.ota = {
     hint: I(
-      '예약 플랫폼을 클릭하면 예약 페이지로 이동합니다.',
-      'Click a booking platform to open its reservation page.',
-      '予約プラットフォームをクリックすると予約ページに移動します。',
-      '点击预订平台即可前往预订页面。'
+      '플랫폼을 클릭하면 예약 페이지로 이동합니다.',
+      'Click a platform to open its reservation page.',
+      'プラットフォームをクリックすると予約ページに移動します。',
+      '点击平台即可前往预订页面。'
     ),
     links: [
       {
@@ -132,10 +132,10 @@
     {
       title: I('도움이 필요할 때', 'If you need help', 'サポートが必要な場合', '需要帮助时'),
       body: I(
-        '예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.',
-        'Please contact the host through Booking.com, Agoda, or Trip.com messages.',
-        'Booking.com、Agoda、Trip.comのメッセージでホストへご連絡ください。',
-        '请通过Booking.com、Agoda或Trip.com消息联系房东。'
+        '예약하신 플랫폼(부킹닷컴, 아고다, 트립닷컴)을 통해 메시지로 호스트에게 연락해 주세요.',
+        'Please contact the host by message through the platform you booked with (Booking.com, Agoda, or Trip.com).',
+        '予約したプラットフォーム（Booking.com、Agoda、Trip.com）のメッセージを通じてホストへご連絡ください。',
+        '请通过您预订的平台（Booking.com、Agoda或Trip.com）向房东发送消息。'
       )
     }
   ];
