@@ -68,6 +68,17 @@
     ]
   };
 
+  D.luggage = {
+    label: I('짐 보관', 'Luggage storage', '荷物保管', '行李寄存'),
+    value: I('503호 앞 짐 보관실', 'Luggage room in front of Room 503', '503号室前の荷物保管室', '503号房前的行李寄存室'),
+    note: I(
+      '체크인 전 이용에 필요한 출입 정보는 예약 플랫폼 메시지에서 확인해 주세요.',
+      'Check your booking-platform message for the access information needed before check-in.',
+      'チェックイン前の利用に必要な入館情報は予約プラットフォームのメッセージでご確認ください。',
+      '入住前使用寄存室所需的门禁信息，请在预订平台消息中确认。'
+    )
+  };
+
   D.applianceNotice = {
     title: I('TV · OTT 안내', 'TV · OTT notice', 'TV・OTT案内', '电视与OTT说明'),
     body: I(
