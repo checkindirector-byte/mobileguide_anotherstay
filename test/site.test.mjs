@@ -120,7 +120,14 @@ test("check-in summary explicitly separates times and uses the approved lodging 
   assert.match(app,/ko:'여성 전용•12객실'/);
   assert.match(app,/<small>CHECK-IN<\/small>.*?<strong>15:00<\/strong>/);
   assert.match(app,/<small>CHECK-OUT<\/small>.*?<strong>11:00<\/strong>/);
-  assert.ok(data.includes('엘리베이터 5층에서 내린 뒤 반층 내려오셔서 유리문 안쪽의 ANOTHER HOUSE 리셉션으로 들어오세요.'));
+  assert.doesNotMatch(data,/건물 찾기/);
+  assert.match(data,/checkout: \{ title: I\('셀프 체크아웃'/);
+  assert.match(data,/rules: \{ title: I\('숙소 이용 안내'/);
+  assert.match(app,/card\(overviewTitle,'event_available','ARRIVAL GUIDE',overview,true\)/);
+  assert.match(app,/card\(t\(help\.title\),'support_agent'.*card\(t\(self\.title\),'login'.*card\(t\(o\.title\),'logout'.*card\(t\(r\.title\),'checklist'/);
+  assert.match(html,/\.checkin-guide-card\.signature-card \.checkin-card-header\{background:var\(--signature\)\}/);
+  assert.match(html,/\.checkin-card-header\{[^}]*min-height:60px[^}]*padding:10px 14px/);
+  assert.match(html,/\.guide-detail-screen \.device-card-stack \.device-header\{grid-template-columns:38px[^}]*padding:10px 14px\}/);
   assert.match(html,/>찾아오는 길<\/span><small>공항에서 숙소까지/);
 });
 test("home location and room-gallery signature styling use approved copy",async()=>{
