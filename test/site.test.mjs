@@ -112,22 +112,22 @@ test("mobile shell follows the master width contract",async()=>{
   assert.match(html,/\.gallery-thumbs\{[^}]*overflow-x:auto[^}]*overscroll-behavior-x:contain/);
   assert.equal(html,alias);
 });
-test("check-in summary explicitly separates times and uses the approved lodging copy",async()=>{
+test("check-in page matches the master overview and header rhythm",async()=>{
   const html=await read("index.html");
   const app=await read("assets/master-app.js");
   const data=await read("assets/site-data.js");
-  assert.match(app,/\['찾아오는 길','공항에서 숙소까지'\]/);
-  assert.match(app,/ko:'여성 전용•12객실'/);
-  assert.match(app,/<small>CHECK-IN<\/small>.*?<strong>15:00<\/strong>/);
-  assert.match(app,/<small>CHECK-OUT<\/small>.*?<strong>11:00<\/strong>/);
+  assert.match(app,/hero:'체크인 • 체크아웃 안내'/);
+  assert.match(app,/title:'입퇴실 안내'/);
+  assert.match(app,/time:'체크인 15:00 · 체크아웃 11:00'/);
+  assert.match(app,/row\('schedule'.*row\('location_on'.*row\('key'.*row\('hotel_class'.*row\('near_me'/);
+  assert.match(app,/<section class="checkin-text-section checkin-overview"><h3>/);
   assert.doesNotMatch(data,/건물 찾기/);
-  assert.match(data,/checkout: \{ title: I\('셀프 체크아웃'/);
+  assert.match(data,/checkout: \{ title: I\('체크아웃 안내'/);
   assert.match(data,/rules: \{ title: I\('숙소 이용 안내'/);
-  assert.match(app,/card\(overviewTitle,'event_available','ARRIVAL GUIDE',overview,true\)/);
   assert.match(app,/card\(t\(help\.title\),'support_agent'.*card\(t\(self\.title\),'login'.*card\(t\(o\.title\),'logout'.*card\(t\(r\.title\),'checklist'/);
-  assert.match(html,/\.checkin-guide-card\.signature-card \.checkin-card-header\{background:var\(--signature\)\}/);
-  assert.match(html,/\.checkin-card-header\{[^}]*min-height:60px[^}]*padding:10px 14px/);
-  assert.match(html,/\.guide-detail-screen \.device-card-stack \.device-header\{grid-template-columns:38px[^}]*padding:10px 14px\}/);
+  assert.match(html,/\.checkin-card-header\{[^}]*grid-template-columns:44px[^}]*padding:12px 14px/);
+  assert.match(html,/\.guide-detail-screen \.device-card-stack \.device-header\{[^}]*grid-template-columns:42px[^}]*padding:17px 18px/);
+  assert.match(html,/<h2>체크인 • 체크아웃 안내<\/h2>/);
   assert.match(html,/>찾아오는 길<\/span><small>공항에서 숙소까지/);
 });
 test("home location and room-gallery signature styling use approved copy",async()=>{
