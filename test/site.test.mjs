@@ -138,10 +138,10 @@ test("home location and room-gallery signature styling use approved copy",async(
   assert.ok(data.includes("value: I('동대문역 6번 출구에서 도보 30초'"));
   assert.match(html,/\.previous-gallery-heading h2\{margin:0;color:var\(--signature\)/);
 });
-test("master motion system covers every page and adds visible media and carousel reveals",async()=>{
+test("master motion system covers every page and adds visible media reveals",async()=>{
   const app=await read("assets/master-app.js");
   const html=await read("index.html");
-  for(const token of ["checkin-hero","transport-hero","restaurants-hero","tours","wifi-hero","guidebook-hero","gallery-head","guide-detail-hero","device","trash"]){
+  for(const token of ["checkin-hero","transport-hero","restaurants-hero","tours","wifi-hero","guidebook-hero","gallery-head","gallery-magazine-card","guide-detail-hero","device","trash"]){
     assert.ok(app.includes(token),"missing motion coverage: "+token);
   }
   assert.match(app,/new IntersectionObserver/);
@@ -150,27 +150,27 @@ test("master motion system covers every page and adds visible media and carousel
   assert.match(app,/function queueMotionReady\(/);
   assert.match(app,/preloadHeroImage\('assets\/images\/main-01\.webp'\)/);
   assert.match(app,/preloadHeroImage\('assets\/images\/main-02\.webp'\)/);
-  assert.match(app,/const carouselSelector='\.gallery-thumbs,\.device-guide-carousel'/);
-  assert.match(app,/motion-carousel-card/);
-  assert.match(app,/function animateGalleryImage\(direction\)/);
-  assert.match(app,/gallery-image-next/);
+  assert.match(app,/const carouselSelector='\.device-guide-carousel'/);
+  assert.match(app,/gallery-magazine-card/);
   assert.match(html,/<body class="is-home">/);
   assert.doesNotMatch(html,/<body class="is-home motion-ready">/);
   assert.match(html,/\.motion-media\{[^}]*clip-path:inset\(12%/);
-  assert.match(html,/\.motion-carousel\{[^}]*translate3d\(42px/);
-  assert.match(html,/@keyframes galleryImageNext/);
   assert.match(html,/@keyframes mediaSheen/);
   assert.match(html,/@media \(prefers-reduced-motion:reduce\).*?\.motion-carousel/s);
-});
-test("room gallery keeps touch swipe navigation",async()=>{
+});test("room gallery uses selected magazine categories and fullscreen cards",async()=>{
   const app=await read("assets/master-app.js");
-  assert.match(app,/gallerySwipeStartX=0,gallerySwipePointerId=null/);
-  assert.match(app,/addEventListener\('pointerdown'/);
-  assert.match(app,/addEventListener\('pointerup'/);
-  assert.match(app,/Math\.abs\(delta\)<45/);
-  assert.match(app,/current\+\(delta<0\?1:-1\)/);
-});
-test("hamburger menu places local recommendations below waste",async()=>{
+  const html=await read("index.html");
+  const overrides=await read("assets/gallery-overrides.js");
+  assert.match(app,/galleryCategory='exterior'/);
+  assert.match(app,/galleryMagazine/);
+  assert.match(app,/gallery-magazine-card/);
+  assert.doesNotMatch(app,/gallerySwipeStartX|gallerySwipePointerId|selectGallery\(/);
+  assert.match(html,/id="galleryMagazine"/);
+  assert.doesNotMatch(html,/id="galleryThumbs"|id="galleryMainZoom"|zoom_in/);
+  for(const category of ["exterior","lounge","bath","luggage","single","double"]) assert.ok(overrides.includes(`id:'${category}'`));
+  assert.match(overrides,/removedCommon=new Set\(\[3,5,7,9,14,16,21,23,25,34\]\)/);
+  assert.match(overrides,/removedDouble=new Set\(\[2,3,6,7,10,11\]\)/);
+});test("hamburger menu places local recommendations below waste",async()=>{
   const html=await read("index.html");
   const app=await read("assets/master-app.js");
   const order=[...html.matchAll(/<button class="menu-link" data-go="([^"]+)"/g)].map(match=>match[1]);
@@ -206,7 +206,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260730-48/);
+  assert.match(html,/content-updates\.js\?v=20260730-49/);
+  assert.match(html,/gallery-overrides\.js\?v=20260730-49/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
@@ -219,25 +220,25 @@ test("source document additions include parking, editorial story, OTA links, and
 });
 
 
-test("refined intro, gallery story flow, luggage overview, and centered OTA help cards",async()=>{
+test("refined intro, magazine gallery, luggage media, room lock, and home-native OTA panel",async()=>{
   const html=await read("index.html");
   const alias=await read("guide-anotherstay.html");
   const app=await read("assets/master-app.js");
-  const content=await read("assets/content-updates.js");
+  const overrides=await read("assets/gallery-overrides.js");
   assert.equal(html,alias);
-  assert.match(html,/transition:opacity \.192s/);
-  assert.match(html,/28%,88\.24%\{opacity:1/);
-  assert.match(html,/heroPrimarySequence 8\.1s/);
-  assert.match(html,/39\.506%[\s\S]*61\.728%[\s\S]*77\.778%/);
+  assert.match(html,/\.brand-intro img\{[^}]*width:min\(88vw,374px\)/);
+  assert.match(html,/heroPrimarySequence 6\.82s/);
+  assert.match(html,/28\.152%[\s\S]*54\.545%[\s\S]*73\.607%/);
   assert.doesNotMatch(html,/heroPanelSettle/);
   const homeSegment=html.slice(html.indexOf('<section class="screen active" data-screen="home">'),html.indexOf('<section class="screen" data-screen="checkin">'));
   const gallerySegment=html.slice(html.indexOf('<section class="screen gallery-screen"'),html.indexOf('<section class="screen wifi-screen"'));
   assert.doesNotMatch(homeSegment,/id="stayStory"/);
-  assert.match(gallerySegment,/id="stayStory"[\s\S]*id="galleryCategoryTabs"[\s\S]*id="galleryThumbs"[\s\S]*id="galleryMainZoom"/);
-  assert.match(html,/class="checkin-guide-card home-help-card"/);
+  assert.match(gallerySegment,/id="stayStory"[\s\S]*id="galleryCategoryTabs"[\s\S]*id="galleryMagazine"/);
+  assert.match(html,/class="home-support-card"/);
   assert.match(html,/ota-link-list platform-contact-logos/);
-  assert.match(app,/luggage-overview-row/);
-  assert.match(app,/\},192\);\},4500\);/);
-  assert.match(app,/galleryZoom\.dataset\.fullscreenImage=g\[0\]/);
-  assert.match(content,/503호 앞 짐 보관실/);
+  assert.match(app,/luggage-overview-photo/);
+  assert.match(app,/roomDoorlockImage/);
+  assert.match(overrides,/503호 앞 러기지 룸/);
+  assert.match(overrides,/checkin-room-doorlock\.jpg/);
+  await access(resolve(root,"assets/images/checkin-room-doorlock.jpg"));
 });
