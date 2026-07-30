@@ -125,8 +125,9 @@ test("check-in page matches the master overview and header rhythm",async()=>{
   assert.match(data,/checkout: \{ title: I\('체크아웃 안내'/);
   assert.match(data,/rules: \{ title: I\('숙소 이용 안내'/);
   assert.match(app,/card\(t\(help\.title\),'support_agent'.*card\(t\(self\.title\),'login'.*card\(t\(o\.title\),'logout'.*card\(t\(r\.title\),'checklist'/);
-  assert.match(html,/\.checkin-card-header\{[^}]*grid-template-columns:44px[^}]*padding:12px 14px/);
-  assert.match(html,/\.guide-detail-screen \.device-card-stack \.device-header\{[^}]*grid-template-columns:42px[^}]*padding:17px 18px/);
+  assert.match(html,/\.checkin-card-header\{[^}]*grid-template-columns:42px[^}]*height:76px[^}]*min-height:76px[^}]*padding:17px 18px/);
+  assert.match(html,/\.guide-detail-screen \.device-card-stack \.device-header\{[^}]*grid-template-columns:42px[^}]*height:76px[^}]*padding:17px 18px/);
+  assert.match(html,/\.restaurant-host-pick\{[^}]*height:76px[^}]*min-height:76px[^}]*padding:17px 18px/);
   assert.match(html,/<h2>체크인 • 체크아웃 안내<\/h2>/);
   assert.match(html,/>찾아오는 길<\/span><small>공항에서 숙소까지/);
 });
