@@ -19,9 +19,10 @@ test("navigation stays on the root URL and uses no hash routes",async()=>{
   assert.match(app,/history\.replaceState/);
 });
 
-test("public bundle excludes credentials and duplicate FAQ data",async()=>{
-  const bundle = (await Promise.all(["index.html","assets/app.js","assets/site-data.js"].map(read))).join("\n");
-  for(const forbidden of ["8282","another1234","faqData","faq-data"]) assert.equal(bundle.includes(forbidden),false);
+test("public bundle contains approved guest details and excludes duplicate FAQ data",async()=>{
+  const bundle = (await Promise.all(["index.html","assets/app.js","assets/site-data.js","assets/content-updates.js"].map(read))).join("\n");
+  for(const approved of ["8282","another1234"]) assert.equal(bundle.includes(approved),true);
+  for(const forbidden of ["faqData","faq-data"]) assert.equal(bundle.includes(forbidden),false);
 });
 
 test("hero motion matches the master timing contract",async()=>{
@@ -185,6 +186,25 @@ test("master motion system covers every page and adds visible media reveals",asy
   }
 });
 
+test("guest access, Wi-Fi, taxi landmark, appliance menu, and TV icon use the approved details",async()=>{
+  const html=await read("index.html");
+  const data=await read("assets/site-data.js");
+  const content=await read("assets/content-updates.js");
+  const app=await read("assets/master-app.js");
+  assert.match(content,/예약자 이름 또는 예약 번호 뒤 4자리/);
+  assert.doesNotMatch(content,/OTA 예약번호/);
+  assert.match(content,/비밀번호 8282 → ENT 누르기/);
+  assert.match(data,/Wi-Fi 비밀번호[\s\S]*another1234/);
+  assert.match(data,/공유기 위치[\s\S]*복도 천장 및 라운지 테이블 위쪽/);
+  assert.match(data,/landmark: I\('교촌치킨 동대문 1호점'/);
+  assert.equal((data.match(/택시 하차 위치는 “교촌치킨 동대문 1호점”/g)||[]).length,2);
+  assert.match(app,/\['기기 사용법','냉난방 · 주방 기기 사용법'\]/);
+  assert.match(html,/data-go="appliances"><span>기기 사용법<\/span>/);
+  assert.match(app,/applianceNoticeMarkup[\s\S]*<span class="mi">tv<\/span>/);
+  assert.doesNotMatch(app,/tv_off/);
+  assert.match(app,/p\.sections\[2\]\.title[\s\S]*p\.sections\[2\]\.body/);
+});
+
 test("booking platform contact copy and logos replace Airbnb",async()=>{
   const html=await read("index.html");
   const data=await read("assets/site-data.js");
@@ -210,8 +230,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260730-52/);
-  assert.match(html,/gallery-overrides\.js\?v=20260730-52/);
+  assert.match(html,/content-updates\.js\?v=20260730-53/);
+  assert.match(html,/gallery-overrides\.js\?v=20260730-53/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);

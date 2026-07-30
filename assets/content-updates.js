@@ -101,31 +101,31 @@
       steps: I(
         [
           '체크인 하루 전부터 당일 오전 9시 사이에 예약 플랫폼 메시지로 발송된 체크인 안내를 확인합니다.',
-          '15:00 이후 5층 키오스크에서 예약 바우처에 적힌 예약자 이름 또는 OTA 예약번호 뒤 4자리로 예약을 조회합니다.',
+          '15:00 이후 5층 키오스크에서 예약 바우처에 적힌 예약자 이름 또는 예약 번호 뒤 4자리로 예약을 조회합니다.',
           '화면 안내에 따라 셀프 체크인을 완료하고 객실 번호와 카드키를 확인합니다.',
           '체크인 후에는 카드키를 출입구 옆 기기에 태그하여 문을 엽니다. 체크인 전 짐 보관을 위한 출입정보는 예약 메시지에서 확인해 주세요.',
-          '짐은 503호 앞 러기지룸에 보관할 수 있습니다. 얼리 체크인은 원칙적으로 불가하며, 청소 상황에 따라 가능한 경우에만 호스트 확인 후 이용해 주세요.'
+          '짐은 503호 앞 러기지룸에 보관할 수 있습니다. (체크인 전 짐 보관 시: 비밀번호 8282 → ENT 누르기)'
         ],
         [
           'Check the arrival instructions sent through your booking platform between the day before check-in and 09:00 on arrival day.',
-          'After 15:00, use the kiosk on the 5th floor and search with the name shown on the booking voucher or the last four digits of the OTA reservation number.',
+          'After 15:00, use the kiosk on the 5th floor and search with the name shown on the booking voucher or the last four digits of the reservation number.',
           'Complete self check-in on screen and confirm your room number and key card.',
           'After check-in, tap the key card on the reader beside the entrance. For luggage access before check-in, use the access information in your booking message.',
-          'Luggage can be stored in the luggage room in front of Room 503. Early check-in is generally unavailable and requires host confirmation when cleaning permits.'
+          'Luggage can be stored in the luggage room in front of Room 503. (Before check-in: enter 8282, then press ENT.)'
         ],
         [
           'チェックイン前日から当日9:00までに予約プラットフォームのメッセージで届く案内をご確認ください。',
-          '15:00以降、5階のキオスクで予約バウチャー記載の予約者名、またはOTA予約番号の下4桁で予約を検索します。',
+          '15:00以降、5階のキオスクで予約バウチャー記載の予約者名、または予約番号の下4桁で予約を検索します。',
           '画面案内に従ってセルフチェックインを完了し、客室番号とカードキーをご確認ください。',
           'チェックイン後は入口横の端末にカードキーをかざして入館します。チェックイン前の荷物預かり用入館情報は予約メッセージでご確認ください。',
-          '荷物は503号室前のラゲッジルームに保管できます。アーリーチェックインは原則不可で、清掃状況により可能な場合のみホスト確認後にご利用ください。'
+          '荷物は503号室前のラゲッジルームに保管できます。（チェックイン前：8282を入力し、ENTを押してください。）'
         ],
         [
           '请查看入住前一天至入住当日上午9:00之间通过预订平台消息发送的入住说明。',
-          '15:00后，在5层自助机上使用预订凭证中的姓名，或OTA订单号后四位查询订单。',
+          '15:00后，在5层自助机上使用预订凭证中的姓名，或订单号后四位查询订单。',
           '按照屏幕提示完成自助入住，并确认房号和房卡。',
           '入住后请将房卡贴近入口旁的读卡器开门。入住前寄存行李所需的门禁信息请查看预订消息。',
-          '行李可寄存在503号房前的行李室。原则上不提供提前入住；仅在清洁情况允许并经房东确认后方可使用。'
+          '行李可寄存在503号房前的行李室。（入住前：输入8282后按ENT。）'
         ]
       )
     },
