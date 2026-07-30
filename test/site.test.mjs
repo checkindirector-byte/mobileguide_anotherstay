@@ -184,8 +184,11 @@ test("booking platform contact copy and logos replace Airbnb",async()=>{
   const html=await read("index.html");
   const data=await read("assets/site-data.js");
   const sw=await read("sw.js");
-  const copy="예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.";
-  assert.equal(data.split(copy).length-1,2);
+  const homeCopy="도움이 필요하신 경우, 예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.";
+  const checkinCopy="예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.";
+  assert.ok(data.includes(homeCopy));
+  assert.ok(data.includes(checkinCopy));
+  assert.match(html,/justify-items:center/);
   assert.match(html,/platform-contact-logos/);
   assert.doesNotMatch(html,/airbnb-mark|ff385c/i);
   for(const file of ["booking-com.svg","agoda.svg","trip-com.svg"]){

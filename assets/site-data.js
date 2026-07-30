@@ -6,7 +6,7 @@
     heroSubtitle: 'STAY ANOTHER LIFE',
     address: I('서울시 종로구 종로 294 선일빌딩 5층', '5F, Sunil Building, 294 Jong-ro, Jongno-gu, Seoul', 'ソウル特別市鍾路区鍾路294 ソニルビル5階', '首尔特别市钟路区钟路294，Sunil大厦5层'),
     station: I('동대문역 6번 출구 · 도보 30초', 'Dongdaemun Station Exit 6 · 30 sec walk', '東大門駅6番出口 · 徒歩30秒', '东大门站6号出口 · 步行30秒'),
-    contact: I('예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.', 'Please contact the host via your booking platform (Booking.com, Agoda, or Trip.com).', '予約プラットフォーム（Booking.com、Agoda、Trip.com）のメッセージでホストへご連絡ください。', '请通过预订平台（Booking.com、Agoda、Trip.com）的消息联系房东。'),
+    contact: I('도움이 필요하신 경우, 예약 플랫폼(부킹닷컴, 아고다, 트립닷컴) 메시지로 호스트에게 연락해 주세요.', 'If you need help, please contact the host via your booking platform (Booking.com, Agoda, or Trip.com).', 'サポートが必要な場合は、予約プラットフォーム（Booking.com、Agoda、Trip.com）のメッセージでホストへご連絡ください。', '如需帮助，请通过预订平台（Booking.com、Agoda、Trip.com）的消息联系房东。'),
     ui: {
       menu: I('메뉴', 'Menu', 'メニュー', '菜单'), close: I('닫기', 'Close', '閉じる', '关闭'),
       home: I('홈', 'Home', 'ホーム', '首页'), arrival: I('도착', 'Arrival', '到着', '到达'), gallery: I('공간', 'Gallery', '空間', '空间'), guide: I('가이드', 'Guide', 'ガイド', '指南'), more: I('더보기', 'More', 'その他', '更多'),
