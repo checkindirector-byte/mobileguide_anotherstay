@@ -9,7 +9,7 @@ const data=await readFile(resolve(root,"assets/site-data.js"),"utf8");
 const updates=await readFile(resolve(root,"assets/content-updates.js"),"utf8");
 const refs=[...html.matchAll(/(?:src|href)="(\/assets\/[^"?]+)(?:\?[^"]*)?"/g)].map(match=>match[1]);
 await Promise.all(refs.map(ref=>access(resolve(root,ref.slice(1)))));
-for(const approvedGuestDetail of ["8282","another1234"]) if(!(data+updates).includes(approvedGuestDetail)) throw new Error("Approved guest detail is missing: "+approvedGuestDetail);
+for(const approvedGuestDetail of ["another1234"]) if(!(data+updates).includes(approvedGuestDetail)) throw new Error("Approved guest detail is missing: "+approvedGuestDetail);
 if(/FAQ|faq|guide-extay|extay-release/i.test(html+js+data+updates)) throw new Error("Legacy EXTAY or FAQ content detected");
 new Function(js); new Function(data);
 console.log("Validated "+required.length+" required files and "+refs.length+" local asset references.");

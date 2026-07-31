@@ -21,7 +21,7 @@ test("navigation stays on the root URL and uses no hash routes",async()=>{
 
 test("public bundle contains approved guest details and excludes duplicate FAQ data",async()=>{
   const bundle = (await Promise.all(["index.html","assets/app.js","assets/site-data.js","assets/content-updates.js"].map(read))).join("\n");
-  for(const approved of ["8282","another1234"]) assert.equal(bundle.includes(approved),true);
+  for(const approved of ["another1234"]) assert.equal(bundle.includes(approved),true);
   for(const forbidden of ["faqData","faq-data"]) assert.equal(bundle.includes(forbidden),false);
 });
 
@@ -193,7 +193,8 @@ test("guest access, Wi-Fi, taxi landmark, appliance menu, and TV icon use the ap
   const app=await read("assets/master-app.js");
   assert.match(content,/예약자 이름 또는 예약 번호 뒤 4자리/);
   assert.doesNotMatch(content,/OTA 예약번호/);
-  assert.match(content,/비밀번호 8282 → ENT 누르기/);
+  assert.match(content,/짐은 503호 앞 러기지룸에 보관할 수 있습니다\. 체크인 전 짐 보관을 위한 출입정보는 예약 메시지에서 확인해 주세요\./);
+  assert.doesNotMatch(content,/비밀번호 8282 → ENT 누르기/);
   assert.match(data,/Wi-Fi 비밀번호[\s\S]*another1234/);
   assert.match(data,/공유기 위치[\s\S]*복도 천장 및 라운지 테이블 위쪽/);
   assert.match(data,/landmark: I\('교촌치킨 동대문 1호점'/);
@@ -234,8 +235,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260731-57/);
-  assert.match(html,/gallery-overrides\.js\?v=20260731-57/);
+  assert.match(html,/content-updates\.js\?v=20260731-58/);
+  assert.match(html,/gallery-overrides\.js\?v=20260731-58/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
