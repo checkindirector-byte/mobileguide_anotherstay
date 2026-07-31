@@ -234,8 +234,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260731-56/);
-  assert.match(html,/gallery-overrides\.js\?v=20260731-56/);
+  assert.match(html,/content-updates\.js\?v=20260731-57/);
+  assert.match(html,/gallery-overrides\.js\?v=20260731-57/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
@@ -255,10 +255,10 @@ test("refined intro, magazine gallery, luggage media, room lock, and home-native
   const overrides=await read("assets/gallery-overrides.js");
   assert.equal(html,alias);
   assert.match(html,/\.brand-intro img\{[^}]*width:min\(88vw,374px\)/);
-  assert.match(html,/brandMarkSequence 3\.61s/);
-  assert.match(html,/52\.29%[\s\S]*78\.01%/);
+  assert.match(html,/brandMarkSequence 3\.24s/);
+  assert.match(html,/58\.26%[\s\S]*75\.46%/);
   assert.match(html,/heroPrimarySequence 5\.52s/);
-  assert.match(app,/,3610\);\}\);\}/);
+  assert.match(app,/,3240\);\}\);\}/);
   assert.match(html,/34\.783%[\s\S]*52\.899%[\s\S]*76\.449%/);
   assert.doesNotMatch(html,/heroPanelSettle/);
   const homeSegment=html.slice(html.indexOf('<section class="screen active" data-screen="home">'),html.indexOf('<section class="screen" data-screen="checkin">'));
