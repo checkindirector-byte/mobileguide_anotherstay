@@ -1,171 +1,173 @@
 {
-    "updated":  "2026-07-31",
-    "note":  "Restaurant imagery selected from Naver search/place results; verify usage rights before resale or reuse.",
-    "images":  [
-                   {
-                       "file":  "duck.webp",
-                       "place":  "duck",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EB%B3%84%EB%82%9C%EC%98%A4%EB%A6%AC%20%EB%8F%99%EB%8C%80%EB%AC%B8%20%EA%B0%84%ED%8C%90%20%EC%9E%85%EA%B5%AC",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyMjA2MTZfMTA5/MDAxNjU1MzM5MTY0MTc1.Vr5LpdYVFCNs5nma9Lasw1T6wvqFaoDU2MfVklbtYBEg.1oypZ-sLEftNy_jfveZun8z61q4svfC8UL4ZJLUWgPog.JPEG.kings_cross/CA9C2280-91C1-40A4-A6F9-20597CA1FE6D.jpg"
-                   },
-                   {
-                       "file":  "jinokhwa.webp",
-                       "place":  "jinokhwa",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%A7%84%EC%98%A5%ED%99%94%ED%95%A0%EB%A7%A4%EC%9B%90%EC%A1%B0%EB%8B%AD%ED%95%9C%EB%A7%88%EB%A6%AC%20%EB%A9%94%EB%89%B4",
-                       "sourceImage":  "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMTBfMjgw%2FMDAxNjY4MDcxODA0MDc1.AYAYuCoiQh_9FW7POmQg-dYAcaSKrnisiLOkjcBb8SMg.FbxPCZVtLt2x9b3JAwvqoBjeIVgXzrj6JjIvfa2ODHwg.JPEG.syayaaa%2F1668071261043.jpg\u0026type=a340",
-                       "sourceType":  "Naver image result"
-                   },
-                   {
-                       "file":  "buchon.webp",
-                       "place":  "buchon",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EB%B6%80%EC%B4%8C%EC%9C%A1%ED%9A%8C%20%EB%B3%B8%EC%A0%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyMjA2MDlfOTYg/MDAxNjU0Nzc3MTc5NjI0.LqIIz8isQE-4JgBSqRrquwausFxXiHpmq0kw3Ce060Eg.If3_PRS67BcUHpke4e0qK1HMcx3LXc9ZOF0qWJ0o1i8g.JPEG.sunghyun90/KakaoTalk_20220606_213112245_20.jpg"
-                   },
-                   {
-                       "file":  "everest.webp",
-                       "place":  "everest",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%97%90%EB%B2%A0%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EB%A0%88%EC%8A%A4%ED%86%A0%EB%9E%91%20%EB%A9%94%EB%89%B4",
-                       "sourceImage":  "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMDlfNTMg%2FMDAxNjQ0Mzk3MDM3MDI4.LwqALBodk_0jnKyVkjYK79JPIqoVQQa78vw5M4YrFvcg.ecIFLcBewkAXcsN_5lR0A1SeRSPyohlHBjHTo4wwUmwg.JPEG.ja0643%2FKakaoTalk_20220209_162844429_17.jpg\u0026type=a340",
-                       "sourceType":  "Naver image result"
-                   },
-                   {
-                       "file":  "coffee.webp",
-                       "place":  "coffee",
-                       "sourceSearch":  "https://map.naver.com/p/entry/place/1614417324?placePath=/photo",
-                       "sourceImage":  "https://naverbooking-phinf.pstatic.net/20241130_167/1732934965602Yy4PL_JPEG/20211113_0002.jpg",
-                       "sourceType":  "Naver Place business upload"
-                   },
-                   {
-                       "file":  "jokbal.webp",
-                       "place":  "jokbal",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%B0%BD%EC%8B%A0%EB%8F%99%EB%A7%A4%EC%9A%B4%EC%A1%B1%EB%B0%9C%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAxOTA1MTZfMTc4/MDAxNTU4MDEzOTQwNzY0.jacf-2_UmEVQKygC8n3CxkxAZxV8kJG-2lRP0f196KUg.VbnulfOw-PTSw5Grsd-yfWhsgbhIGtv8CyVcQjpTpwcg.JPEG.skor45/20190514_191647.jpg"
-                   },
-                   {
-                       "file":  "jeonju.webp",
-                       "place":  "jeonju",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%A0%84%EC%A3%BC%EC%A7%91%20%EB%8F%99%EB%8C%80%EB%AC%B8%20%EC%83%9D%EC%84%A0%EA%B5%AC%EC%9D%B4%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyMTExMTRfMjkw/MDAxNjM2ODgzMjM2ODE3.sg_-EG5GSqjkIv738t5TVPN8STFdWkhbGDl4w3A0GlEg.h_i8xy3AOdxos35kYvj1JfidczmD_q3nXmn7iw_Y9Ckg.JPEG.susu_01/1636883034331.jpg"
-                   },
-                   {
-                       "file":  "seoulzip.webp",
-                       "place":  "seoulzip",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%84%9C%EC%9A%B8%EC%A7%91%20%EB%8F%99%EB%8C%80%EB%AC%B8%20%EB%A9%94%EB%89%B4",
-                       "sourceImage":  "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMDRfMTc5%2FMDAxNzA3MDQ2Nzc3Mjkx.OPOtKldHItr4ULq_01TBb01kWVdnXB_pI6F5tD-E8Gkg.5-uXoVxh9FWWI2IxP3Pzzo_GUTtOXMmBYr6lmEGPxbgg.JPEG.veo70feb%2F001.jpg\u0026type=a340",
-                       "sourceType":  "Naver image result"
-                   },
-                   {
-                       "file":  "pho.webp",
-                       "place":  "pho",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%ED%8D%BC%ED%95%AD%20%EC%A2%85%EB%A1%9C%20%EB%A9%94%EB%89%B4",
-                       "sourceImage":  "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2\u0026fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbfkJDS%2FbtsJDuDMTOn%2FAAAAAAAAAAAAAAAAAAAAAGtUnCm8gdLRoD69krrSBMOURDzP-6qxdSWR7WojHUuT%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1785509999%26allow_ip%3D%26allow_referer%3D%26signature%3DFbYPyQuEGzzs%252Bl7F7jDvhqtoQSg%253D",
-                       "sourceType":  "Tistory venue photo"
-                   },
-                   {
-                       "file":  "soonhee.webp",
-                       "place":  "soonhee",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%9B%90%EC%A1%B0%EC%88%9C%ED%9D%AC%EB%84%A4%EB%B9%88%EB%8C%80%EB%96%A1%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyNTA5MTVfMjQy/MDAxNzU3OTMyMTM0MzEz._B58k-pZ5TIDwLBGvZ1FhJ5nEoEptAn9l8W3_pgM2GEg.1pBaEymjumnOYVnsvmisEbhYoKbAd4klfESunPaJ-YEg.JPEG/900%A3%DF20250913%A3%DF114045.jpg"
-                   },
-                   {
-                       "file":  "haejang.webp",
-                       "place":  "haejang",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EB%8C%80%ED%99%94%EC%A0%95%20%EC%A7%84%EC%A7%9C%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EA%B0%84%ED%8C%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyMjEwMjVfMjA2/MDAxNjY2NjkzMTAwMTg2.p-w2dWWOlFLMHYuh6WoBCM7QKLiV6ep4bLUHTaBJoTYg.Yjy8mUG5S6_oMWs58R_GYTMhhRHMgoRTNx-FZ4SUwwMg.JPEG.itsddp/20220119_183026.jpg"
-                   },
-                   {
-                       "file":  "blt-steak.webp",
-                       "place":  "blt-steak",
-                       "sourceSearch":  "https://search.naver.com/search.naver?query=BLT%20%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%20JW%20%EB%A9%94%EB%A6%AC%EC%96%B4%ED%8A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8",
-                       "sourceImage":  "https://search.pstatic.net/common/?autoRotate=true\u0026quality=100\u0026type=f640_380\u0026src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230106_226%2F1672972433312ux2aH_JPEG%2FSLEDP_BLT_STEAK.jpg"
-                   },
-                   {
-                       "file":  "tavolo24.webp",
-                       "place":  "tavolo24",
-                       "sourceSearch":  "https://search.naver.com/search.naver?query=%ED%83%80%EB%B3%BC%EB%A1%9C24%20JW%20%EB%A9%94%EB%A6%AC%EC%96%B4%ED%8A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8",
-                       "sourceImage":  "https://search.pstatic.net/common/?autoRotate=true\u0026quality=100\u0026type=f640_380\u0026src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190208_55%2F1549586679089KhBDx_JPEG%2FJW_MDSS_Tavolo24_1.jpg"
-                   },
-                   {
-                       "file":  "pizzeria-o.webp",
-                       "place":  "pizzeria-o",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%EC%98%A4%20%EB%8C%80%ED%95%99%EB%A1%9C%EB%B3%B8%EC%A0%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyNTAzMTZfNjAg/MDAxNzQyMTI5NDU0MTM0.PPonkyCEtjFkHUkw_0MMaFKBoSYfdEfkSrw4anl0xJgg.4wo1hTbWKMeeFPKhLYPxjdt-5RHxYg6Xk8aV7oo45g8g.JPEG/KakaoTalk_20250307_110737459.jpg"
-                   },
-                   {
-                       "file":  "the-place.webp",
-                       "place":  "the-place",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EB%8D%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EA%B4%91%ED%99%94%EB%AC%B8SFC%EC%A0%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyNDAyMTZfMTQx/MDAxNzA4MDUwMDIzNzE0.Q9hAFU47UPyRoE91XI03u9OpS9GwfQvzq0y5PcWTftcg.BatRHIplcK-t1_Pp4SrgOCXNzfMVlHqL07GMyzxfM8Ag.JPEG.96kyj96/KakaoTalk_20240215_083801929_01.jpg"
-                   },
-                   {
-                       "file":  "onion-anguk.webp",
-                       "place":  "onion-anguk",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%95%88%EA%B5%AD%EC%A0%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAxOTAzMThfMTk3/MDAxNTUyOTA4NTc1MTc0.fbNOilSFok3U5ieEavkB-1aCAi30BaI3DFUSLA7zzD8g._VNBvGSsFTGOSNFEkKDp5a3X8x6LjQfuobtpLTf8jKUg.JPEG.cindysbb/_1180376.JPG"
-                   },
-                   {
-                       "file":  "london-bagel.webp",
-                       "place":  "london-bagel",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%95%88%EA%B5%AD%EC%A0%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/87/f1/84/caption.jpg"
-                   },
-                   {
-                       "file":  "mil-toast.webp",
-                       "place":  "mil-toast",
-                       "sourceSearch":  "https://search.naver.com/search.naver?query=%EB%B0%80%ED%86%A0%EC%8A%A4%ED%8A%B8%20%EC%9D%B5%EC%84%A0%EC%A0%90",
-                       "sourceImage":  "https://search.pstatic.net/common/?autoRotate=true\u0026quality=100\u0026type=f640_380\u0026src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250527_300%2F1748324378234wbYFC_JPEG%2FKakaoTalk_20250527_114812797_05.jpg"
-                   },
-                   {
-                       "file":  "layered-bukchon.webp",
-                       "place":  "layered-bukchon",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%B9%B4%ED%8E%98%20%EB%A0%88%EC%9D%B4%EC%96%B4%EB%93%9C%20%EB%B6%81%EC%B4%8C%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAxNzA4MTNfMjM2/MDAxNTAyNjMyMDQ0NjYx.Kru0lpBcwHdaZYg_Uk71QWA8NIVtA22uyqDh_bsDmcog.-EWm2DxQ-WxL2JK_SKpQgh2NBR6XTOEZr4hIg7KuiKog.JPEG.kh750/%B7%B9%C0%CC%BE%EE%B5%E5_%281%29.JPG"
-                   },
-                   {
-                       "file":  "eggdrop.webp",
-                       "place":  "eggdrop",
-                       "sourceSearch":  "https://search.naver.com/search.naver?query=%EC%97%90%EA%B7%B8%EB%93%9C%EB%9E%8D%20%EB%8F%99%EB%8C%80%EB%AC%B8%EC%A0%90",
-                       "sourceImage":  "https://search.pstatic.net/common/?autoRotate=true\u0026quality=100\u0026type=f640_380\u0026src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200608_257%2F1591581704269GFHET_JPEG%2FSElQ9c36O0LDsMlDtlZSv1R2.jpeg.jpg"
-                   },
-                   {
-                       "file":  "cheongsudang.webp",
-                       "place":  "cheongsudang",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EC%B2%AD%EC%88%98%EB%8B%B9%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EC%9D%B5%EC%84%A0%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyNDA4MDVfMTkw/MDAxNzIyODY0NjA3Njkw.8Ma7nzavQVRJE89l1I5FQBee6CkAdXAxZkYENa_SeRwg.EVM7h9zja8UYvpsjSmXJg3nPAUmohRC9-SDewk8h3Lcg.JPEG/20240802%A3%DF122219.jpg"
-                   },
-                   {
-                       "file":  "fritz-wonseo.webp",
-                       "place":  "fritz-wonseo",
-                       "sourceSearch":  "https://search.naver.com/search.naver?query=%ED%94%84%EB%A6%B3%EC%B8%A0%20%EC%9B%90%EC%84%9C",
-                       "sourceImage":  "https://search.pstatic.net/common/?autoRotate=true\u0026quality=100\u0026type=f640_380\u0026src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240402_172%2F1712037942572gsrLk_JPEG%2F1.jpg"
-                   },
-                   {
-                       "file":  "nuldam.webp",
-                       "place":  "nuldam",
-                       "sourceSearch":  "https://search.naver.com/search.naver?where=image\u0026query=%EB%84%90%EB%8B%B4%EC%9D%80%EA%B3%B5%EA%B0%84%20%EA%B2%BD%EB%B3%B5%EA%B6%81%EC%A0%90%20%EC%99%B8%EA%B4%80",
-                       "sourceImage":  "http://blogfiles.naver.net/MjAyNDAyMjBfNjcg/MDAxNzA4NDAwMTk0NjQ3.Zd7j8jzkK1gJaYkgWIeAWfx54OAz-XtCS0f7hXg1UVEg.GKV_3M5VD13dg8he3nhN6IiuyeTd-v8EvQEqrUv8BcQg.GIF/733802890.gif"
-                   },
-                   {
-                       "file":  "donut-jungsu.webp",
-                       "place":  "donut-jungsu",
-                       "sourceSearch":  "https://www.diningcode.com/list.dc?query=%EB%8F%84%EB%84%9B%EC%A0%95%EC%88%98%20%EC%B0%BD%EC%8B%A0",
-                       "sourceImage":  "https://d12zq4w4guyljn.cloudfront.net/20260208053920161_photo_ca4aabcd8824.webp",
-                       "sourceType":  "DiningCode venue photo"
-                   },
-                   {
-                       "file":  "taegeukdang.webp",
-                       "place":  "taegeukdang",
-                       "sourceSearch":  "https://thingoolmarket.com/goods/goods_view.php?goodsNo=1000010393",
-                       "sourceImage":  "https://thingool123.godohosting.com/data/goods/20/08/33/1000010393/1000010393_detail_031.jpg",
-                       "sourceType":  "Retail product image"
-                   },
-                   {
-                       "file":  "kyochon.webp",
-                       "place":  "kyochon",
-                       "sourceSearch":  "https://www.kyochon.com/menu/chicken.asp",
-                       "sourceImage":  "https://www.kyochon.com/uploadFiles/TB_ITEM/%EA%B5%90%EC%B4%8C-%ED%97%88%EB%8B%88-%EC%BD%A4%EB%B3%B4(0).jpg",
-                       "sourceType":  "Official Kyochon product image"
-                   }
-               ],
-    "selectionPolicy":  "For each venue, prefer representative images uploaded by the business on Naver Place; use review imagery only when no suitable business image exists."
+  "updated": "2026-07-31",
+  "note": "Restaurant imagery selected from Naver search/place results; verify usage rights before resale or reuse.",
+  "images": [
+    {
+      "file": "duck.webp",
+      "place": "duck",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EB%B3%84%EB%82%9C%EC%98%A4%EB%A6%AC%20%EB%8F%99%EB%8C%80%EB%AC%B8%20%EA%B0%84%ED%8C%90%20%EC%9E%85%EA%B5%AC",
+      "sourceImage": "http://blogfiles.naver.net/MjAyMjA2MTZfMTA5/MDAxNjU1MzM5MTY0MTc1.Vr5LpdYVFCNs5nma9Lasw1T6wvqFaoDU2MfVklbtYBEg.1oypZ-sLEftNy_jfveZun8z61q4svfC8UL4ZJLUWgPog.JPEG.kings_cross/CA9C2280-91C1-40A4-A6F9-20597CA1FE6D.jpg"
+    },
+    {
+      "file": "jinokhwa.webp",
+      "place": "jinokhwa",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%A7%84%EC%98%A5%ED%99%94%ED%95%A0%EB%A7%A4%EC%9B%90%EC%A1%B0%EB%8B%AD%ED%95%9C%EB%A7%88%EB%A6%AC%20%EB%A9%94%EB%89%B4",
+      "sourceImage": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMTBfMjgw%2FMDAxNjY4MDcxODA0MDc1.AYAYuCoiQh_9FW7POmQg-dYAcaSKrnisiLOkjcBb8SMg.FbxPCZVtLt2x9b3JAwvqoBjeIVgXzrj6JjIvfa2ODHwg.JPEG.syayaaa%2F1668071261043.jpg&type=a340",
+      "sourceType": "Naver image result"
+    },
+    {
+      "file": "buchon.webp",
+      "place": "buchon",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EB%B6%80%EC%B4%8C%EC%9C%A1%ED%9A%8C%20%EB%B3%B8%EC%A0%90%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyMjA2MDlfOTYg/MDAxNjU0Nzc3MTc5NjI0.LqIIz8isQE-4JgBSqRrquwausFxXiHpmq0kw3Ce060Eg.If3_PRS67BcUHpke4e0qK1HMcx3LXc9ZOF0qWJ0o1i8g.JPEG.sunghyun90/KakaoTalk_20220606_213112245_20.jpg"
+    },
+    {
+      "file": "everest.webp",
+      "place": "everest",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%97%90%EB%B2%A0%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EB%A0%88%EC%8A%A4%ED%86%A0%EB%9E%91%20%EB%A9%94%EB%89%B4",
+      "sourceImage": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMDlfNTMg%2FMDAxNjQ0Mzk3MDM3MDI4.LwqALBodk_0jnKyVkjYK79JPIqoVQQa78vw5M4YrFvcg.ecIFLcBewkAXcsN_5lR0A1SeRSPyohlHBjHTo4wwUmwg.JPEG.ja0643%2FKakaoTalk_20220209_162844429_17.jpg&type=a340",
+      "sourceType": "Naver image result"
+    },
+    {
+      "file": "coffee.webp",
+      "place": "coffee",
+      "sourceSearch": "https://map.naver.com/p/entry/place/1614417324?placePath=/photo",
+      "sourceImage": "https://naverbooking-phinf.pstatic.net/20241130_167/1732934965602Yy4PL_JPEG/20211113_0002.jpg",
+      "sourceType": "Naver Place business upload"
+    },
+    {
+      "file": "jokbal.webp",
+      "place": "jokbal",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%B0%BD%EC%8B%A0%EB%8F%99%EB%A7%A4%EC%9A%B4%EC%A1%B1%EB%B0%9C%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAxOTA1MTZfMTc4/MDAxNTU4MDEzOTQwNzY0.jacf-2_UmEVQKygC8n3CxkxAZxV8kJG-2lRP0f196KUg.VbnulfOw-PTSw5Grsd-yfWhsgbhIGtv8CyVcQjpTpwcg.JPEG.skor45/20190514_191647.jpg"
+    },
+    {
+      "file": "jeonju.webp",
+      "place": "jeonju",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%A0%84%EC%A3%BC%EC%A7%91%20%EB%8F%99%EB%8C%80%EB%AC%B8%20%EC%83%9D%EC%84%A0%EA%B5%AC%EC%9D%B4%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyMTExMTRfMjkw/MDAxNjM2ODgzMjM2ODE3.sg_-EG5GSqjkIv738t5TVPN8STFdWkhbGDl4w3A0GlEg.h_i8xy3AOdxos35kYvj1JfidczmD_q3nXmn7iw_Y9Ckg.JPEG.susu_01/1636883034331.jpg"
+    },
+    {
+      "file": "seoulzip.webp",
+      "place": "seoulzip",
+      "sourceSearch": "https://www.diningcode.com/profile.php?rid=Fe9VCMbPSlBZ",
+      "sourceImage": "https://d12zq4w4guyljn.cloudfront.net/20260118121823_photo1_dbd34f76e37f.webp",
+      "sourceType": "DiningCode venue menu photo"
+    },
+    {
+      "file": "pho.webp",
+      "place": "pho",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%ED%8D%BC%ED%95%AD%20%EC%A2%85%EB%A1%9C%20%EB%A9%94%EB%89%B4",
+      "sourceImage": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbfkJDS%2FbtsJDuDMTOn%2FAAAAAAAAAAAAAAAAAAAAAGtUnCm8gdLRoD69krrSBMOURDzP-6qxdSWR7WojHUuT%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1785509999%26allow_ip%3D%26allow_referer%3D%26signature%3DFbYPyQuEGzzs%252Bl7F7jDvhqtoQSg%253D",
+      "sourceType": "Tistory venue photo"
+    },
+    {
+      "file": "soonhee.webp",
+      "place": "soonhee",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%9B%90%EC%A1%B0%EC%88%9C%ED%9D%AC%EB%84%A4%EB%B9%88%EB%8C%80%EB%96%A1%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyNTA5MTVfMjQy/MDAxNzU3OTMyMTM0MzEz._B58k-pZ5TIDwLBGvZ1FhJ5nEoEptAn9l8W3_pgM2GEg.1pBaEymjumnOYVnsvmisEbhYoKbAd4klfESunPaJ-YEg.JPEG/900%A3%DF20250913%A3%DF114045.jpg"
+    },
+    {
+      "file": "haejang.webp",
+      "place": "haejang",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EB%8C%80%ED%99%94%EC%A0%95%20%EC%A7%84%EC%A7%9C%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EA%B0%84%ED%8C%90%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyMjEwMjVfMjA2/MDAxNjY2NjkzMTAwMTg2.p-w2dWWOlFLMHYuh6WoBCM7QKLiV6ep4bLUHTaBJoTYg.Yjy8mUG5S6_oMWs58R_GYTMhhRHMgoRTNx-FZ4SUwwMg.JPEG.itsddp/20220119_183026.jpg"
+    },
+    {
+      "file": "blt-steak.webp",
+      "place": "blt-steak",
+      "sourceSearch": "https://search.naver.com/search.naver?query=BLT%20%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%20JW%20%EB%A9%94%EB%A6%AC%EC%96%B4%ED%8A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8",
+      "sourceImage": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230106_226%2F1672972433312ux2aH_JPEG%2FSLEDP_BLT_STEAK.jpg"
+    },
+    {
+      "file": "tavolo24.webp",
+      "place": "tavolo24",
+      "sourceSearch": "https://search.naver.com/search.naver?query=%ED%83%80%EB%B3%BC%EB%A1%9C24%20JW%20%EB%A9%94%EB%A6%AC%EC%96%B4%ED%8A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8",
+      "sourceImage": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190208_55%2F1549586679089KhBDx_JPEG%2FJW_MDSS_Tavolo24_1.jpg"
+    },
+    {
+      "file": "pizzeria-o.webp",
+      "place": "pizzeria-o",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%EC%98%A4%20%EB%8C%80%ED%95%99%EB%A1%9C%EB%B3%B8%EC%A0%90%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyNTAzMTZfNjAg/MDAxNzQyMTI5NDU0MTM0.PPonkyCEtjFkHUkw_0MMaFKBoSYfdEfkSrw4anl0xJgg.4wo1hTbWKMeeFPKhLYPxjdt-5RHxYg6Xk8aV7oo45g8g.JPEG/KakaoTalk_20250307_110737459.jpg"
+    },
+    {
+      "file": "the-place.webp",
+      "place": "the-place",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EB%8D%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EA%B4%91%ED%99%94%EB%AC%B8SFC%EC%A0%90%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyNDAyMTZfMTQx/MDAxNzA4MDUwMDIzNzE0.Q9hAFU47UPyRoE91XI03u9OpS9GwfQvzq0y5PcWTftcg.BatRHIplcK-t1_Pp4SrgOCXNzfMVlHqL07GMyzxfM8Ag.JPEG.96kyj96/KakaoTalk_20240215_083801929_01.jpg"
+    },
+    {
+      "file": "onion-anguk.webp",
+      "place": "onion-anguk",
+      "sourceSearch": "https://www.ladyironchef.com/2022/02/cafe-onion-anguk/",
+      "sourceImage": "https://www.ladyironchef.com/wp-content/uploads/2022/02/Cafe-Onion-Bread.jpg",
+      "sourceType": "Venue bakery display editorial photo"
+    },
+    {
+      "file": "london-bagel.webp",
+      "place": "london-bagel",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%95%88%EA%B5%AD%EC%A0%90%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/87/f1/84/caption.jpg"
+    },
+    {
+      "file": "mil-toast.webp",
+      "place": "mil-toast",
+      "sourceSearch": "https://search.naver.com/search.naver?query=%EB%B0%80%ED%86%A0%EC%8A%A4%ED%8A%B8%20%EC%9D%B5%EC%84%A0%EC%A0%90",
+      "sourceImage": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250527_300%2F1748324378234wbYFC_JPEG%2FKakaoTalk_20250527_114812797_05.jpg"
+    },
+    {
+      "file": "layered-bukchon.webp",
+      "place": "layered-bukchon",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%B9%B4%ED%8E%98%20%EB%A0%88%EC%9D%B4%EC%96%B4%EB%93%9C%20%EB%B6%81%EC%B4%8C%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAxNzA4MTNfMjM2/MDAxNTAyNjMyMDQ0NjYx.Kru0lpBcwHdaZYg_Uk71QWA8NIVtA22uyqDh_bsDmcog.-EWm2DxQ-WxL2JK_SKpQgh2NBR6XTOEZr4hIg7KuiKog.JPEG.kh750/%B7%B9%C0%CC%BE%EE%B5%E5_%281%29.JPG"
+    },
+    {
+      "file": "eggdrop.webp",
+      "place": "eggdrop",
+      "sourceSearch": "https://search.naver.com/search.naver?query=%EC%97%90%EA%B7%B8%EB%93%9C%EB%9E%8D%20%EB%8F%99%EB%8C%80%EB%AC%B8%EC%A0%90",
+      "sourceImage": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200608_257%2F1591581704269GFHET_JPEG%2FSElQ9c36O0LDsMlDtlZSv1R2.jpeg.jpg"
+    },
+    {
+      "file": "cheongsudang.webp",
+      "place": "cheongsudang",
+      "sourceSearch": "https://search.naver.com/search.naver?where=image&query=%EC%B2%AD%EC%88%98%EB%8B%B9%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EC%9D%B5%EC%84%A0%20%EC%99%B8%EA%B4%80",
+      "sourceImage": "http://blogfiles.naver.net/MjAyNDA4MDVfMTkw/MDAxNzIyODY0NjA3Njkw.8Ma7nzavQVRJE89l1I5FQBee6CkAdXAxZkYENa_SeRwg.EVM7h9zja8UYvpsjSmXJg3nPAUmohRC9-SDewk8h3Lcg.JPEG/20240802%A3%DF122219.jpg"
+    },
+    {
+      "file": "fritz-wonseo.webp",
+      "place": "fritz-wonseo",
+      "sourceSearch": "https://search.naver.com/search.naver?query=%ED%94%84%EB%A6%B3%EC%B8%A0%20%EC%9B%90%EC%84%9C",
+      "sourceImage": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240402_172%2F1712037942572gsrLk_JPEG%2F1.jpg"
+    },
+    {
+      "file": "nuldam.webp",
+      "place": "nuldam",
+      "sourceSearch": "https://xn--2s2b33eb3kgvpta.com/store/S108435_1655175660154",
+      "sourceImage": "https://d2m29rwiahucy3.cloudfront.net/images/store/S108435_1655175660154/004.jpg",
+      "sourceType": "Business-registered interior photo"
+    },
+    {
+      "file": "donut-jungsu.webp",
+      "place": "donut-jungsu",
+      "sourceSearch": "https://www.diningcode.com/profile.php?rid=llqJAGlAfCvx",
+      "sourceImage": "https://d12zq4w4guyljn.cloudfront.net/20250627214636_photo1_21549ecc19be.webp",
+      "sourceType": "DiningCode venue menu photo"
+    },
+    {
+      "file": "taegeukdang.webp",
+      "place": "taegeukdang",
+      "sourceSearch": "https://thingoolmarket.com/goods/goods_view.php?goodsNo=1000010393",
+      "sourceImage": "https://thingool123.godohosting.com/data/goods/20/08/33/1000010393/1000010393_detail_031.jpg",
+      "sourceType": "Retail product image"
+    },
+    {
+      "file": "kyochon.webp",
+      "place": "kyochon",
+      "sourceSearch": "https://www.kyochon.com/menu/chicken.asp",
+      "sourceImage": "https://www.kyochon.com/uploadFiles/TB_ITEM/%EA%B5%90%EC%B4%8C-%ED%97%88%EB%8B%88-%EC%BD%A4%EB%B3%B4(0).jpg",
+      "sourceType": "Official Kyochon product image"
+    }
+  ],
+  "selectionPolicy": "Prefer an attractive, immediately recognizable menu or interior image for each venue; prioritize business uploads and exact-venue sources."
 }

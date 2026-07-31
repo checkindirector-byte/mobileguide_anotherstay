@@ -234,8 +234,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260730-55/);
-  assert.match(html,/gallery-overrides\.js\?v=20260730-55/);
+  assert.match(html,/content-updates\.js\?v=20260731-56/);
+  assert.match(html,/gallery-overrides\.js\?v=20260731-56/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
@@ -318,4 +318,19 @@ test("device diagrams swipe in fullscreen, gallery captions stay hidden, and air
   assert.match(data,/label:I\('공항철도 AREX'/);
   assert.match(data,/동대문종합시장·종로6가\(01771\) 하차/);
   assert.doesNotMatch(data,/동대문 권역 정류장/);
+});
+
+
+test("tour totals stay data-driven and the legacy floating AI button is gone",async()=>{
+  const html=await read("index.html");
+  const data=await read("assets/tour-data.js");
+  const tourApp=await read("assets/tour-app.js");
+  const masterApp=await read("assets/master-app.js");
+  assert.equal((data.match(/^\s+place\('/gm)||[]).length,21);
+  assert.match(data,/만나는 21개의 로컬 코스입니다/);
+  assert.match(html,/추천 근교 투어 21곳 보기/);
+  assert.match(tourApp,/const total = DATA\.places\.length/);
+  assert.match(masterApp,/const tourPlaceCount=window\.ANOTHER_HOUSE_TOURS\?\.places\?\.length\|\|20/);
+  assert.doesNotMatch(html,/id="openChatFab"|another-chat-fab/);
+  assert.match(masterApp,/\$\('#openChatFab'\)\?\.addEventListener\('click',openChat\)/);
 });

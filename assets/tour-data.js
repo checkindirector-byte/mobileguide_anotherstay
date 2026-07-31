@@ -39,10 +39,10 @@
     kicker: 'NEARBY TOURS',
     title: I('추천 근교 투어', 'Recommended Nearby Tours', 'おすすめ近郊ツアー', '推荐近郊路线'),
     summary: I(
-      '숙소에서 시작해 서울의 성곽, 시장, 궁궐과 디자인 명소를 만나는 20개의 로컬 코스입니다.',
-      'Twenty local places connecting Seoul’s city wall, markets, palaces and design landmarks.',
-      '宿から歩き始め、城郭・市場・宮殿・デザインスポットを巡る20のローカルコースです。',
-      '从住宿出发，探索首尔城墙、市场、宫殿与设计地标的20条本地路线。'
+      '숙소에서 시작해 서울의 성곽, 시장, 궁궐과 디자인 명소를 만나는 21개의 로컬 코스입니다.',
+      'Twenty-one local places connecting Seoul’s city wall, markets, palaces and design landmarks.',
+      '宿から歩き始め、城郭・市場・宮殿・デザインスポットを巡る21のローカルコースです。',
+      '从住宿出发，探索首尔城墙、市场、宫殿与设计地标的21条本地路线。'
     ),
     hostTitle: I('서울 여행의 첫 7곳', '7 best places to start', '最初の7スポット', '首尔精选7处'),
     hostCopy: I(
