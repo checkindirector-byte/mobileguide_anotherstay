@@ -40,7 +40,6 @@
       <span class="tour-cover-number">${esc(place.number)}</span>
       <span class="tour-cover-kicker">${place.host ? 'HOST’S PICK' : 'LOCAL ROUTE'}</span>
       <strong class="tour-cover-name">${esc(t(place.name))}</strong>
-      ${!compact && place.credit ? `<a class="tour-photo-credit" href="${esc(place.creditUrl)}" target="_blank" rel="noopener">PHOTO · ${esc(place.credit)}</a>` : ''}
     </figure>`;
 
   function card(place) {

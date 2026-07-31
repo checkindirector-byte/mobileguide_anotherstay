@@ -234,8 +234,8 @@ test("source document additions include parking, editorial story, OTA links, and
   const content=await read("assets/content-updates.js");
   assert.match(html,/class="hotel-section stay-story"/);
   assert.match(html,/id="homeBookingHint"/);
-  assert.match(html,/content-updates\.js\?v=20260730-54/);
-  assert.match(html,/gallery-overrides\.js\?v=20260730-54/);
+  assert.match(html,/content-updates\.js\?v=20260730-55/);
+  assert.match(html,/gallery-overrides\.js\?v=20260730-55/);
   assert.match(app,/parkingGuideMarkup/);
   assert.match(app,/renderBookingLinks/);
   assert.match(content,/동대문호텔 민영 주차장/);
@@ -272,4 +272,50 @@ test("refined intro, magazine gallery, luggage media, room lock, and home-native
   assert.match(overrides,/503호 앞 러기지 룸/);
   assert.match(overrides,/checkin-room-doorlock\.jpg/);
   await access(resolve(root,"assets/images/checkin-room-doorlock.jpg"));
+});
+
+test("opening hero becomes a touch carousel only after the automatic sequence",async()=>{
+  const html=await read("index.html");
+  const app=await read("assets/master-app.js");
+  assert.match(html,/id="heroSwipePrev"/);
+  assert.match(html,/id="heroSwipeNext"/);
+  assert.match(html,/body\.hero-carousel-ready \.hero-swipe-controls\{opacity:1\}/);
+  assert.doesNotMatch(html,/>\s*넘겨보기\s*</);
+  assert.match(app,/const heroSequenceDuration=5520/);
+  assert.match(app,/setTimeout\(ready,heroSequenceDuration\)/);
+  assert.match(app,/pointerdown[\s\S]*pointerup[\s\S]*Math\.abs\(delta\)>=42/);
+});
+
+test("nearby tours add Doota shopping, remove Ihwa from host picks, and hide photo banners",async()=>{
+  const html=await read("index.html");
+  const data=await read("assets/tour-data.js");
+  const app=await read("assets/tour-app.js");
+  const sw=await read("sw.js");
+  assert.match(data,/'doota-mall': \{ image: '\/assets\/images\/tours\/spots\/21-doota-mall\.webp'/);
+  assert.match(data,/place\('doota-mall', '21', 'shopping_bag', 'charcoal', true, \['shopping', 'culture'\]/);
+  assert.match(data,/place\('ihwa', '04', 'palette', 'terracotta', false/);
+  assert.match(data,/\{ id: 'shopping', label:/);
+  assert.doesNotMatch(app,/tour-photo-credit/);
+  assert.doesNotMatch(html,/tour-photo-credit/);
+  assert.ok(sw.includes('/assets/images/tours/spots/21-doota-mall.webp'));
+  await access(resolve(root,"assets/images/tours/spots/21-doota-mall.webp"));
+});
+
+test("laundry guide begins with the shelf supplies and omits the source-summary sentence",async()=>{
+  const updates=await read("assets/content-updates.js");
+  assert.match(updates,/D\.pages\.laundry\.summary = ''/);
+  assert.match(updates,/D\.pages\.laundry\.sections\[0\]\.steps = I\([\s\S]*'세제와 섬유유연제는 세탁기 위 선반에 있습니다\.'/);
+  assert.doesNotMatch(updates,/LG FY9WTB 공식 자료를 기준으로 세탁·건조 방법을 정리했습니다/);
+});
+
+test("device diagrams swipe in fullscreen, gallery captions stay hidden, and airport copy is explicit",async()=>{
+  const app=await read("assets/master-app.js");
+  const data=await read("assets/site-data.js");
+  assert.match(app,/data-device-guide-index/);
+  assert.match(app,/guideButtons\.map\(button=>\[button\.dataset\.fullscreenImage/);
+  assert.match(app,/const galleryItems=currentGalleryItems\(\)\.map\(item=>\[item\[0\],''\]\)/);
+  assert.match(data,/공항철도 AREX \+ 지하철 4호선/);
+  assert.match(data,/label:I\('공항철도 AREX'/);
+  assert.match(data,/동대문종합시장·종로6가\(01771\) 하차/);
+  assert.doesNotMatch(data,/동대문 권역 정류장/);
 });

@@ -64,7 +64,7 @@
             sourceLabel: I('인천공항 공식 교통정보 확인', 'Check Incheon Airport official transport info', '仁川空港の公式交通情報', '查看仁川机场官方交通信息'),
             routes: [
               {
-                title: I('AREX + 지하철 4호선', 'AREX + Subway Line 4', 'AREX + 地下鉄4号線', 'AREX + 地铁4号线'),
+                title: I('공항철도 AREX + 지하철 4호선', 'AREX + Subway Line 4', 'AREX + 地下鉄4号線', 'AREX + 地铁4号线'),
                 badge: I('추천', 'RECOMMENDED', 'おすすめ', '推荐'),
                 tags: I(['약 75–90분','환승 1회','교통체증 없음'],['About 75–90 min','1 transfer','Traffic-free'],['約75〜90分','乗換1回','渋滞なし'],['约75–90分钟','换乘1次','不受堵车影响']),
                 path: I('인천공항 → 서울역 → 동대문역', 'Incheon Airport → Seoul Station → Dongdaemun', '仁川空港 → ソウル駅 → 東大門駅', '仁川机场 → 首尔站 → 东大门站'),
@@ -72,7 +72,7 @@
                 color: '#B65C3D', soft: '#F0DED4',
                 steps: [
                   { icon:'flight_land', label:I('START','START','START','START'), title:I('인천공항 제1·2터미널', 'Incheon Airport T1 or T2', '仁川空港 第1・第2ターミナル', '仁川机场T1或T2'), body:I('공항철도 AREX 표지판을 따라갑니다.', 'Follow signs for Airport Railroad AREX.', '空港鉄道AREXの表示に従います。', '跟随机场铁路AREX标识。') },
-                  { icon:'train', label:I('AREX','AREX','AREX','AREX'), title:I('서울역까지 이동', 'Ride to Seoul Station', 'ソウル駅まで移動', '前往首尔站'), body:I('일반열차 또는 직통열차를 이용합니다.', 'Take an all-stop or express train.', '一般列車または直通列車を利用します。', '乘普通列车或直达列车。') },
+                  { icon:'train', label:I('공항철도 AREX','AREX','AREX','AREX'), title:I('서울역까지 이동', 'Ride to Seoul Station', 'ソウル駅まで移動', '前往首尔站'), body:I('일반열차 또는 직통열차를 이용합니다.', 'Take an all-stop or express train.', '一般列車または直通列車を利用します。', '乘普通列车或直达列车。') },
                   { icon:'subway', label:I('LINE 4','LINE 4','LINE 4','LINE 4'), title:I('4호선 진접 방면 환승', 'Transfer to Line 4 toward Jinjeop', '4号線・榛接方面へ乗換', '换乘4号线榛接方向'), body:I('서울역에서 동대문역까지 이동합니다.', 'Ride from Seoul Station to Dongdaemun.', 'ソウル駅から東大門駅へ移動します。', '从首尔站前往东大门站。') },
                   { icon:'directions_walk', label:I('EXIT 6','EXIT 6','EXIT 6','EXIT 6'), title:I('동대문역 6번 출구', 'Dongdaemun Station Exit 6', '東大門駅6番出口', '东大门站6号出口'), body:I('출구 앞 선일빌딩으로 들어가 5층으로 올라옵니다.', 'Enter Sunil Building by the exit and take the elevator to 5F.', '出口前のソニルビルに入り、5階へ上がります。', '进入出口前的Sunil大厦，乘电梯到5层。') }
                 ]
@@ -81,12 +81,12 @@
                 title: I('공항리무진 6002', 'Airport Limousine 6002', '空港リムジン6002', '机场大巴6002'),
                 badge: I('짐이 많을 때', 'LUGGAGE', '荷物が多い方', '行李较多'),
                 tags: I(['약 90–120분','환승 적음','교통상황 영향'],['About 90–120 min','Fewer transfers','Traffic dependent'],['約90〜120分','乗換少なめ','交通状況による'],['约90–120分钟','少换乘','受路况影响']),
-                path: I('인천공항 → 6002번 → 동대문 권역', 'Incheon Airport → Bus 6002 → Dongdaemun area', '仁川空港 → 6002番 → 東大門エリア', '仁川机场 → 6002路 → 东大门区域'),
+                path: I('인천공항 → 6002번 → 동대문종합시장·종로6가', 'Incheon Airport → Bus 6002 → Dongdaemun Shopping Complex · Jongno 6-ga', '仁川空港 → 6002番 → 東大門総合市場・鍾路6街', '仁川机场 → 6002路 → 东大门综合市场·钟路6街'),
                 note: I('탑승 전 전광판에서 당일 정류장과 운행시간을 확인하세요.', 'Confirm the operating stop and time on the airport display before boarding.', '乗車前に当日の停留所と運行時刻をご確認ください。', '上车前请在机场屏幕确认当天停靠站和班次。'),
                 color: '#7D5D49', soft: '#E9DED4',
                 steps: [
                   { icon:'local_activity', label:I('TICKET','TICKET','TICKET','TICKET'), title:I('6002번 승차권 확인', 'Check Bus 6002 ticket', '6002番の乗車券を確認', '确认6002路车票'), body:I('공항 버스 매표소·무인발권기에서 안내를 확인합니다.', 'Check the airport bus counter or ticket machine.', '空港バス案内所または券売機で確認します。', '在机场巴士售票处或售票机确认。') },
-                  { icon:'airport_shuttle', label:I('BUS 6002','BUS 6002','BUS 6002','BUS 6002'), title:I('청량리·동대문·종로 방면', 'Toward Cheongnyangni, Dongdaemun, Jongno', '清凉里・東大門・鍾路方面', '清凉里·东大门·钟路方向'), body:I('공식 노선의 동대문 권역 정류장으로 이동합니다.', 'Ride to the official Dongdaemun-area stop.', '公式ルートの東大門エリア停留所まで乗車します。', '前往官方路线的东大门区域站点。') },
+                  { icon:'airport_shuttle', label:I('BUS 6002','BUS 6002','BUS 6002','BUS 6002'), title:I('동대문종합시장·종로6가(01771) 하차', 'Get off at Dongdaemun Shopping Complex · Jongno 6-ga (01771)', '東大門総合市場・鍾路6街（01771）で下車', '在东大门综合市场·钟路6街（01771）下车'), body:I('숙소 바로 앞 중앙차로 정류장에서 하차합니다.', 'Get off at the center-lane stop directly in front of the house.', '宿のすぐ前にある中央車線の停留所で下車します。', '在住宿正前方的中央车道站点下车。') },
                   { icon:'directions_walk', label:I('LAST MILE','LAST MILE','LAST MILE','LAST MILE'), title:I('동대문역 6번 출구 방향', 'Head toward Dongdaemun Exit 6', '東大門駅6番出口方面へ', '前往东大门站6号出口'), body:I('실시간 하차 정류장을 확인한 뒤 선일빌딩 5층으로 이동합니다.', 'Check your live stop, then continue to Sunil Building 5F.', '当日の降車停留所を確認し、ソニルビル5階へ移動します。', '确认实时下车站后前往Sunil大厦5层。') }
                 ]
               },
@@ -111,7 +111,7 @@
             sourceLabel: I('김포공항 공식 교통정보 확인', 'Check Gimpo Airport official transport info', '金浦空港の公式交通情報', '查看金浦机场官方交通信息'),
             routes: [
               {
-                title: I('AREX + 지하철 4호선', 'AREX + Subway Line 4', 'AREX + 地下鉄4号線', 'AREX + 地铁4号线'),
+                title: I('공항철도 AREX + 지하철 4호선', 'AREX + Subway Line 4', 'AREX + 地下鉄4号線', 'AREX + 地铁4号线'),
                 badge: I('추천', 'RECOMMENDED', 'おすすめ', '推荐'),
                 tags: I(['약 45–60분','환승 1회','빠른 경로'],['About 45–60 min','1 transfer','Fast route'],['約45〜60分','乗換1回','速いルート'],['约45–60分钟','换乘1次','快捷路线']),
                 path: I('김포공항 → 서울역 → 동대문역', 'Gimpo Airport → Seoul Station → Dongdaemun', '金浦空港 → ソウル駅 → 東大門駅', '金浦机场 → 首尔站 → 东大门站'),
@@ -119,7 +119,7 @@
                 color: '#B65C3D', soft: '#F0DED4',
                 steps: [
                   { icon:'flight_land', label:I('START','START','START','START'), title:I('김포공항', 'Gimpo Airport', '金浦空港', '金浦机场'), body:I('공항철도 AREX 표지판을 따라갑니다.', 'Follow signs for Airport Railroad AREX.', '空港鉄道AREXの表示に従います。', '跟随机场铁路AREX标识。') },
-                  { icon:'train', label:I('AREX','AREX','AREX','AREX'), title:I('서울역까지 이동', 'Ride to Seoul Station', 'ソウル駅まで移動', '前往首尔站'), body:I('공항철도 일반열차를 이용합니다.', 'Take the AREX all-stop train.', '空港鉄道の一般列車を利用します。', '乘AREX普通列车。') },
+                  { icon:'train', label:I('공항철도 AREX','AREX','AREX','AREX'), title:I('서울역까지 이동', 'Ride to Seoul Station', 'ソウル駅まで移動', '前往首尔站'), body:I('공항철도 일반열차를 이용합니다.', 'Take the AREX all-stop train.', '空港鉄道の一般列車を利用します。', '乘AREX普通列车。') },
                   { icon:'subway', label:I('LINE 4','LINE 4','LINE 4','LINE 4'), title:I('4호선 진접 방면 환승', 'Transfer to Line 4 toward Jinjeop', '4号線・榛接方面へ乗換', '换乘4号线榛接方向'), body:I('동대문역에서 내려 6번 출구로 나옵니다.', 'Get off at Dongdaemun and use Exit 6.', '東大門駅で下車し、6番出口へ。', '在东大门站下车，从6号出口出站。') },
                   { icon:'directions_walk', label:I('30 SEC','30 SEC','30 SEC','30 SEC'), title:I('선일빌딩 5층', 'Sunil Building 5F', 'ソニルビル5階', 'Sunil大厦5层'), body:I('6번 출구 앞 건물, 엘리베이터로 5층입니다.', 'The building is by Exit 6; take the elevator to 5F.', '6番出口前の建物、エレベーターで5階です。', '大厦在6号出口前，乘电梯到5层。') }
                 ]

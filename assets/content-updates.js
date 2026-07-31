@@ -277,4 +277,39 @@
   );
 
   D.pages.laundry.photo = '/assets/images/laundry-machine-2.jpg';
+  D.pages.laundry.summary = '';
+  D.pages.laundry.sections[0].steps = I(
+    [
+      '세제와 섬유유연제는 세탁기 위 선반에 있습니다.',
+      '세탁물을 넣고 문을 완전히 닫습니다.',
+      '전원 버튼을 눌러 제품을 켭니다.',
+      '코스 선택 버튼으로 세탁물에 맞는 코스를 선택합니다.',
+      '필요하면 헹굼횟수·탈수세기·물온도를 조절한 뒤 시작/일시정지 버튼을 1초간 눌러 시작합니다. 밤 10시 이전에 이용을 마쳐 주세요.',
+      '완료 후 세탁물을 바로 꺼내고 세제 투입구와 문을 열어 둡니다. 건조 후에는 먼지 필터를 정리해 주세요.'
+    ],
+    [
+      'Detergent and fabric softener are on the shelf above the washer.',
+      'Load the laundry and close the door completely.',
+      'Press Power.',
+      'Select the appropriate cycle.',
+      'Adjust the rinse count, spin speed or water temperature if needed, then hold Start/Pause for one second. Finish before 22:00.',
+      'Remove laundry promptly, leave the detergent drawer and door open, and clean the lint filter after drying.'
+    ],
+    [
+      '洗剤と柔軟剤は洗濯機上の棚にあります。',
+      '洗濯物を入れてドアを完全に閉めます。',
+      '電源ボタンを押します。',
+      '洗濯物に合うコースを選択します。',
+      '必要に応じてすすぎ回数・脱水強さ・水温を調整し、スタート／一時停止を1秒押します。22時までに終えてください。',
+      '終了後はすぐ取り出し、洗剤投入口とドアを開け、乾燥後は糸くずフィルターを掃除してください。'
+    ],
+    [
+      '洗涤剂和柔顺剂位于洗衣机上方搁板。',
+      '放入衣物并完全关好机门。',
+      '按下电源键。',
+      '选择适合衣物的程序。',
+      '需要时调整漂洗次数、脱水强度或水温，然后长按启动／暂停1秒。请在22:00前结束。',
+      '结束后及时取出衣物，敞开洗涤剂盒和机门，烘干后清理绒毛过滤器。'
+    ]
+  );
 })();
